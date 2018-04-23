@@ -1,0 +1,85 @@
+  电工基础1本.LoginWnd.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.mainWnd.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.实验1Main.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.实验1原理说明.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.实验1原理说明视频.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.实验1实验内容1.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.实验1实验报告.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.实验1实验注意事项.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.实验1实验目的.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.实验1实验设备.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.实验1思考题.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.底部.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly 电工基础1本, Version=0.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Interop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly AxInterop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Class 电工基础1本.底部: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.实验1实验目的: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.实验1原理说明: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.实验1原理说明视频: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Threading.Thread t : Public
+  Methods:
+    test(): PrivateScope, Public, HideBySig
+Class 电工基础1本.实验1实验设备: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    listViewLoad(): PrivateScope, Public, HideBySig
+Class 电工基础1本.实验1实验内容1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    listView1Load(): PrivateScope, Public, HideBySig
+    listView2Load(): PrivateScope, Public, HideBySig
+    listView3Load(): PrivateScope, Public, HideBySig
+    listView4Load(): PrivateScope, Public, HideBySig
+    listView5Load(): PrivateScope, Public, HideBySig
+    listView6Load(): PrivateScope, Public, HideBySig
+Class 电工基础1本.实验1实验报告: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.实验1思考题: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.实验1实验注意事项: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.实验1Main: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.LoginWnd: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Boolean*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.mainWnd: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ShowLoginWnd(): PrivateScope, Public, HideBySig
+    C(): PrivateScope, Public, HideBySig

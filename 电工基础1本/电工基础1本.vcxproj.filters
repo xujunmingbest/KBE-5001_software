@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="主窗体">
+      <UniqueIdentifier>{38487fe6-4cd9-402f-80e7-54d7d6ca12e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="实验1元件伏安特性的测试">
+      <UniqueIdentifier>{27775686-c21d-423c-b3e4-140c22e2b11c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tool">
+      <UniqueIdentifier>{37ac6ce1-0321-4fc6-91a6-530dbb86f25b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{95bb901f-6e54-48c7-9def-d09e8171a85e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="登入框">
+      <UniqueIdentifier>{1cbfcc64-c345-475c-a48f-e00981a847b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="自定义弹出框">
+      <UniqueIdentifier>{2695b49c-c2d2-4d91-98f1-1b7b58aaa991}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mainWnd.cpp">
+      <Filter>主窗体</Filter>
+    </ClCompile>
+    <ClCompile Include="status.cpp">
+      <Filter>主窗体</Filter>
+    </ClCompile>
+    <ClCompile Include="tool.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\tinystr.cpp">
+      <Filter>xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\tinyxml.cpp">
+      <Filter>xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\tinyxmlerror.cpp">
+      <Filter>xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\tinyxmlparser.cpp">
+      <Filter>xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\xml.cpp">
+      <Filter>xml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mainWnd.h">
+      <Filter>主窗体</Filter>
+    </ClInclude>
+    <ClInclude Include="实验1Main.h">
+      <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="实验1实验目的.h">
+      <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="实验1原理说明.h">
+      <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="实验1原理说明视频.h">
+      <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="实验1实验设备.h">
+      <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="实验1实验内容1.h">
+      <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="tool.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="实验1实验注意事项.h">
+      <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="实验1思考题.h">
+      <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="实验1实验报告.h">
+      <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\tinystr.h">
+      <Filter>xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\tinyxml.h">
+      <Filter>xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\xml.h">
+      <Filter>xml</Filter>
+    </ClInclude>
+    <ClInclude Include="底部.h">
+      <Filter>自定义弹出框</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginWnd.h">
+      <Filter>登入框</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="mainWnd.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实验1Main.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实验1原理说明.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实验1原理说明视频.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实验1实验内容1.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实验1实验目的.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实验1实验设备.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实验1实验报告.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实验1实验注意事项.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实验1思考题.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="底部.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="pz.xml">
+      <Filter>tool</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>
