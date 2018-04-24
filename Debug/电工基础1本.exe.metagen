@@ -33,6 +33,10 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 	hash=None, flags=None
 Assembly Interop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=None, flags=None
+Assembly Interop.ShockwaveFlashObjects.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly AxInterop.ShockwaveFlashObjects.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
 Assembly AxInterop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=None, flags=None
 Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
@@ -40,6 +44,11 @@ Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934
 Class 电工基础1本.底部: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.Voice: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Close(): PrivateScope, Public, HideBySig
+    Speak(String): PrivateScope, Public, HideBySig
 Class 电工基础1本.实验1实验目的: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -49,10 +58,6 @@ Class 电工基础1本.实验1原理说明: AutoLayout, AnsiClass, Class, Public
 Class 电工基础1本.实验1原理说明视频: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    System.Threading.Thread t : Public
-  Methods:
-    test(): PrivateScope, Public, HideBySig
 Class 电工基础1本.实验1实验设备: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -67,10 +72,7 @@ Class 电工基础1本.实验1实验报告: AutoLayout, AnsiClass, Class, Public
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    System.Media.SoundPlayer player : Public
-    Microsoft.Speech.Synthesis.SpeechSynthesizer tts : Public
-  Methods:
-    Speak(String): PrivateScope, Public, HideBySig
+    电工基础1本.Voice v : Public
 Class 电工基础1本.实验1思考题: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

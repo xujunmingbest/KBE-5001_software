@@ -1,7 +1,6 @@
 ﻿  mainWnd.cpp
-e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
   status.cpp
-e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  实验1原理说明视频.cpp
   正在生成代码...
   mainWnd.obj :托管的代码存在时 /DEBUG:FASTLINK 不受支持；正在重新启动与 /DEBUG:FULL 的链接
   电工基础1本.vcxproj -> E:\clr\电工基础1本\Debug\电工基础1本.exe

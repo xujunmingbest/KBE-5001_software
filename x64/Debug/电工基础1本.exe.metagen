@@ -33,9 +33,11 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 	hash=None, flags=None
 Assembly Interop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=None, flags=None
-Assembly AxInterop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+Assembly Interop.ShockwaveFlashObjects.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=None, flags=None
-Assembly WMPLib, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+Assembly AxInterop.ShockwaveFlashObjects.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly AxInterop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=None, flags=None
 Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -56,10 +58,6 @@ Class 电工基础1本.实验1原理说明: AutoLayout, AnsiClass, Class, Public
 Class 电工基础1本.实验1原理说明视频: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    System.Threading.Thread t : Public
-  Methods:
-    test(): PrivateScope, Public, HideBySig
 Class 电工基础1本.实验1实验设备: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
