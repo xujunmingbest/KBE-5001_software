@@ -30,8 +30,8 @@ namespace 电工基础1本 {
 		{
 			InitializeComponent();
 			实验1MainIsOpened = true;
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->Font = gcnew System::Drawing::Font("Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
+			//this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			//this->Font = gcnew System::Drawing::Font("Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
 
 			//
 			//TODO:  在此处添加构造函数代码

@@ -12,6 +12,8 @@ namespace 电工基础1本 {
 	using namespace System::Drawing;
 	using namespace System::Windows::Forms::DataVisualization::Charting;
 	using namespace System::Threading;
+	using namespace Microsoft::Speech::Synthesis;
+	using namespace System::Media;
 	/// <summary>
 	/// 实验1实验报告 摘要
 	/// </summary>
@@ -25,20 +27,16 @@ namespace 电工基础1本 {
 			实验1实验报告IsOpened = true;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Font = gcnew System::Drawing::Font("Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
-
-			//
-			//TODO:  在此处添加构造函数代码
-			//
 		}
-
+		Voice^ v = gcnew Voice;
 	protected:
 		/// <summary>
 		/// 清理所有正在使用的资源。
 		/// </summary>
 		~实验1实验报告()
 		{
-			if(t!= nullptr) t->Abort();
 			实验1实验报告IsOpened = false;
+			v->Close();
 			if (components)
 			{
 				delete components;
@@ -63,7 +61,6 @@ namespace 电工基础1本 {
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
-
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -225,32 +222,10 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 	Series ^s = chart1->Series[0];
 	s->Points->AddXY(a++, a++);
 }
-		 Thread ^t;
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (t == nullptr) {
-			t = gcnew Thread(gcnew ThreadStart(this,&实验1实验报告::Speek));
-			t->Start();
-			t->IsBackground = true;
-			return;
-		}
-		if (t->ThreadState.ToString()->Contains("Background"))
-		{
-			底部^ 底部wnd = gcnew 底部("请等待朗读完毕");
-			底部wnd->ShowDialog();
-			return;
-		}
-		t = gcnew Thread(gcnew ThreadStart(this, &实验1实验报告::Speek));
-		t->Start();
-		t->IsBackground = true;
-		return;
-	}
 
-			 void Speek() {
-				 voice_speek(label3->Text);
-				 voice_speek(label1->Text);
-				 voice_speek(label2->Text);
-				 voice_speek(label4->Text);
-				 voice_speek(label5->Text);
-			 }
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		v->Speak(label3->Text+
+			label1->Text+ label2->Text+ label4->Text+ label5->Text);
+	}
 };
 }

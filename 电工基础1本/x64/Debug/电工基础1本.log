@@ -1,0 +1,68 @@
+﻿  mainWnd.cpp
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::WMPOpenState”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::WMPPlayState”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPControls”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPSettings”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPMedia”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPMediaCollection”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPPlaylistCollection”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPNetwork”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPPlaylist”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPCdromCollection”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPClosedCaption”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPError”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPDVD”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPPlayerApplication”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPPlayer4”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  status.cpp
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::WMPOpenState”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::WMPPlayState”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPControls”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPSettings”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPMedia”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPMediaCollection”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPPlaylistCollection”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPNetwork”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPPlaylist”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPCdromCollection”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPClosedCaption”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPError”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPDVD”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPPlayerApplication”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4691: “WMPLib::IWMPPlayer4”: 未引用的 程序集“WMPLib”中应使用引用的类型，但使用了当前翻译单元中定义的类型
+  e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): note: 在导入类型“AxWMPLib::AxWindowsMediaPlayer ”(从程序集“AxInterop.WMPLib.1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中导入)时发生此诊断。
+e:\clr\电工基础1本\电工基础1本\实验1原理说明视频.h(37): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  正在生成代码...
+  mainWnd.obj :托管的代码存在时 /DEBUG:FASTLINK 不受支持；正在重新启动与 /DEBUG:FULL 的链接
+  电工基础1本.vcxproj -> E:\clr\电工基础1本\x64\Debug\电工基础1本.exe
+  电工基础1本.vcxproj -> E:\clr\电工基础1本\x64\Debug\电工基础1本.pdb (Partial PDB)

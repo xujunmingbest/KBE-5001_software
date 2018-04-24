@@ -33,7 +33,7 @@ namespace 电工基础1本 {
 		/// </summary>
 		~实验1实验注意事项()
 		{
-			if (t != nullptr) t->Abort();
+			V->Close();
 			实验1实验注意事项IsOpened = false;
 			if (components)
 			{
@@ -133,33 +133,11 @@ namespace 电工基础1本 {
 #pragma endregion
 	private: System::Void 实验1实验注意事项_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
+			 Voice ^ V = gcnew Voice;
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		VoiceControl();
+		V->Speak(label1->Text + label2->Text +
+			label3->Text);
 	}
-			 Thread^t;
-			 void VoiceControl()
-			 {
-				 if (t == nullptr) {
-					 t = gcnew Thread(gcnew ThreadStart(this, &实验1实验注意事项::Speek));
-					 t->Start();
-					 t->IsBackground = true;
-					 return;
-				 }
-				 if (t->ThreadState.ToString()->Contains("Background"))
-				 {
-					 底部^ 底部wnd = gcnew 底部("请等待朗读完毕");
-					 底部wnd->ShowDialog();
-					 return;
-				 }
-				 t = gcnew Thread(gcnew ThreadStart(this, &实验1实验注意事项::Speek));
-				 t->Start();
-				 t->IsBackground = true;
-				 return;
-			 }
-			 void Speek() {
-				 voice_speek(label1->Text);
-				 voice_speek(label2->Text);
-				 voice_speek(label3->Text);
-			 }
+
 };
 }

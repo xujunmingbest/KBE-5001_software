@@ -36,7 +36,7 @@ namespace 电工基础1本 {
 		~实验1思考题()
 		{
 			实验1思考题IsOpened = false;
-			if (t != nullptr) t->Abort();
+			V->Close();
 			if (components)
 			{
 				delete components;
@@ -49,6 +49,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::DataGridView^  dataGridView1;
 
 	private:
 		/// <summary>
@@ -69,7 +70,9 @@ namespace 电工基础1本 {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -131,52 +134,39 @@ namespace 电工基础1本 {
 			this->panel1->Size = System::Drawing::Size(706, 408);
 			this->panel1->TabIndex = 12;
 			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(863, 147);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowTemplate->Height = 27;
+			this->dataGridView1->Size = System::Drawing::Size(240, 150);
+			this->dataGridView1->TabIndex = 13;
+			// 
 			// 实验1思考题
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(909, 512);
+			this->ClientSize = System::Drawing::Size(1420, 512);
+			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->button1);
 			this->Name = L"实验1思考题";
 			this->Text = L"思考题";
 			this->Load += gcnew System::EventHandler(this, &实验1思考题::实验1思考题_Load);
 			this->panel1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void 实验1思考题_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
-			 
+			 Voice ^ V = gcnew Voice;
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		VoiceControl();
+		V->Speak(label3->Text + label1->Text +
+			label2->Text + label4->Text);
 	}
-			 Thread^t;
-			 void VoiceControl()
-			 {
-				 if (t == nullptr) {
-					 t = gcnew Thread(gcnew ThreadStart(this, &实验1思考题::Speek));
-					 t->Start();
-					 t->IsBackground = true;
-					 return;
-				 }
-				 if (t->ThreadState.ToString()->Contains("Background"))
-				 {
-					 底部^ 底部wnd = gcnew 底部("请等待朗读完毕");
-					 底部wnd->ShowDialog();
-					 return;
-				 }
-				 t = gcnew Thread(gcnew ThreadStart(this, &实验1思考题::Speek));
-				 t->Start();
-				 t->IsBackground = true;
-				 return;
-			 }
-			 void Speek() {
-				 voice_speek(label3->Text);
-				 voice_speek(label1->Text);
-				 voice_speek(label2->Text);
-				 voice_speek(label4->Text);
-			 }
+
 };
 }

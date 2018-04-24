@@ -19,45 +19,38 @@ namespace 电工基础1本 {
 		{
 			InitializeComponent();
 			实验1实验内容1IsOpened = true;
-			listView1Load();
+			dataGridView1Load();
+			/*
 			listView2Load();
 			listView3Load();
 			listView4Load();
 			listView5Load();
 			listView6Load();
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			*/
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
 			this->Font = gcnew System::Drawing::Font("Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
 
 			//
 			//TODO:  在此处添加构造函数代码
 			//
 		}
-		void listView1Load() {
-			listView1->Columns->Add("");
-			listView1->Columns->Add("获取");
-			listView1->Columns->Add("获取");
-			listView1->Columns->Add("获取");
-			listView1->Columns->Add("获取");
-			listView1->Columns->Add("获取");
-			listView1->Columns->Add("获取");
+		void dataGridView1Load() {
+			chart1->Titles->Add("  元件伏安特性");
 
-			listView1->Items->Add("U(v)");
-			listView1->Items[0]->SubItems->Add("0");
-			listView1->Items[0]->SubItems->Add("2");
-			listView1->Items[0]->SubItems->Add("4");
-			listView1->Items[0]->SubItems->Add("6");
-			listView1->Items[0]->SubItems->Add("8");
-			listView1->Items[0]->SubItems->Add("10");
+			dataGridView1->Rows->Add();
+			dataGridView1->Rows[0]->HeaderCell->Value = "U(v)";
+			dataGridView1->Rows[0]->Cells[0]->Value = "0";
+			dataGridView1->Rows[0]->Cells[1]->Value = "2";
+			dataGridView1->Rows[0]->Cells[2]->Value = "4";
+			dataGridView1->Rows[0]->Cells[3]->Value = "6";
+			dataGridView1->Rows[0]->Cells[4]->Value = "8";
+			dataGridView1->Rows[0]->Cells[5]->Value = "10";
 
-			listView1->Items->Add("I(mA)");
-			listView1->Items[1]->SubItems->Add("");
-			listView1->Items[1]->SubItems->Add("");
-			listView1->Items[1]->SubItems->Add("");
-			listView1->Items[1]->SubItems->Add("");
-			listView1->Items[1]->SubItems->Add("");
-			listView1->Items[1]->SubItems->Add("");
+			dataGridView1->Rows[1]->HeaderCell->Value = "I(mA)";
+			dataGridView1->RowHeadersWidth = 100;
 		}
 
+		/*
 		void listView2Load() {
 			listView2->Columns->Add("");
 			listView2->Columns->Add("获取");
@@ -195,7 +188,7 @@ namespace 电工基础1本 {
 		}
 
 
-
+		*/
 
 
 
@@ -217,18 +210,18 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::Label^  label1;
 	protected:
 	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::ListView^  listView1;
+
 	private: System::Windows::Forms::TabControl^  实验2;
 	private: System::Windows::Forms::TabPage^  tabPage1;
 	private: System::Windows::Forms::TabPage^  tabPage2;
-	private: System::Windows::Forms::ListView^  listView2;
+
 
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::TabPage^  tabPage3;
 	private: System::Windows::Forms::Label^  label8;
 	private: System::Windows::Forms::Label^  label7;
-	private: System::Windows::Forms::ListView^  listView4;
-	private: System::Windows::Forms::ListView^  listView3;
+
+
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::TabPage^  tabPage4;
@@ -236,9 +229,9 @@ private: System::Windows::Forms::Label^  label12;
 private: System::Windows::Forms::Label^  label11;
 private: System::Windows::Forms::Label^  label10;
 private: System::Windows::Forms::Label^  label9;
-private: System::Windows::Forms::ListView^  listView6;
-private: System::Windows::Forms::ListView^  listView5;
-private: System::Windows::Forms::PictureBox^  pictureBox1;
+
+
+
 private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart1;
 private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart3;
 private: System::Windows::Forms::Label^  label13;
@@ -281,13 +274,41 @@ private: System::Windows::Forms::TextBox^  textBox9;
 private: System::Windows::Forms::Button^  button5;
 private: System::Windows::Forms::TextBox^  textBox10;
 private: System::Windows::Forms::Label^  label22;
+private: System::Windows::Forms::ContextMenuStrip^  contextMenuStrip1;
+private: System::Windows::Forms::ToolStripMenuItem^  黏贴ToolStripMenuItem;
+private: System::Windows::Forms::Button^  button7;
+
+private: System::Windows::Forms::DataGridView^  dataGridView1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  添加;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column4;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column5;
+
+
+
+
+
+
+
+private: System::Windows::Forms::Button^  button8;
+private: System::Windows::Forms::PictureBox^  pictureBox1;
+private: System::Windows::Forms::Label^  label25;
+
+
+
+
+
+
+private: System::ComponentModel::IContainer^  components;
 
 
 	private:
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -296,101 +317,110 @@ private: System::Windows::Forms::Label^  label22;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			this->components = (gcnew System::ComponentModel::Container());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(实验1实验内容1::typeid));
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->listView1 = (gcnew System::Windows::Forms::ListView());
+			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
+			this->黏贴ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->实验2 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->添加 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->chart3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->listView2 = (gcnew System::Windows::Forms::ListView());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->listView4 = (gcnew System::Windows::Forms::ListView());
-			this->listView3 = (gcnew System::Windows::Forms::ListView());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->chart4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-			this->listView6 = (gcnew System::Windows::Forms::ListView());
-			this->listView5 = (gcnew System::Windows::Forms::ListView());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label17 = (gcnew System::Windows::Forms::Label());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->chart3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->label20 = (gcnew System::Windows::Forms::Label());
-			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-			this->label21 = (gcnew System::Windows::Forms::Label());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
 			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->chart4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->contextMenuStrip1->SuspendLayout();
 			this->实验2->SuspendLayout();
 			this->tabPage1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->tabPage3->SuspendLayout();
+			this->groupBox2->SuspendLayout();
+			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->tabPage4->SuspendLayout();
+			this->groupBox4->SuspendLayout();
+			this->groupBox3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
-			this->groupBox1->SuspendLayout();
-			this->groupBox2->SuspendLayout();
-			this->groupBox3->SuspendLayout();
-			this->groupBox4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -419,17 +449,19 @@ private: System::Windows::Forms::Label^  label22;
 			this->label2->Text = L"按图25-2接线，调节稳压电源的输出电压U，从0伏开始缓慢地增加，一直到10V，记下相应的电压表和电流表的读数。";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// listView1
+			// contextMenuStrip1
 			// 
-			this->listView1->FullRowSelect = true;
-			this->listView1->GridLines = true;
-			this->listView1->Location = System::Drawing::Point(33, 579);
-			this->listView1->Name = L"listView1";
-			this->listView1->Size = System::Drawing::Size(681, 118);
-			this->listView1->TabIndex = 2;
-			this->listView1->UseCompatibleStateImageBehavior = false;
-			this->listView1->View = System::Windows::Forms::View::Details;
-			this->listView1->ColumnClick += gcnew System::Windows::Forms::ColumnClickEventHandler(this, &实验1实验内容1::listView1_ColumnClick);
+			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->contextMenuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->黏贴ToolStripMenuItem });
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(109, 28);
+			// 
+			// 黏贴ToolStripMenuItem
+			// 
+			this->黏贴ToolStripMenuItem->Name = L"黏贴ToolStripMenuItem";
+			this->黏贴ToolStripMenuItem->Size = System::Drawing::Size(108, 24);
+			this->黏贴ToolStripMenuItem->Text = L"黏贴";
+			this->黏贴ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1实验内容1::黏贴ToolStripMenuItem_Click);
 			// 
 			// 实验2
 			// 
@@ -446,14 +478,17 @@ private: System::Windows::Forms::Label^  label22;
 			// 
 			// tabPage1
 			// 
+			this->tabPage1->Controls->Add(this->label25);
+			this->tabPage1->Controls->Add(this->pictureBox1);
+			this->tabPage1->Controls->Add(this->button8);
+			this->tabPage1->Controls->Add(this->dataGridView1);
+			this->tabPage1->Controls->Add(this->button7);
 			this->tabPage1->Controls->Add(this->label14);
 			this->tabPage1->Controls->Add(this->textBox2);
 			this->tabPage1->Controls->Add(this->button1);
 			this->tabPage1->Controls->Add(this->label4);
 			this->tabPage1->Controls->Add(this->textBox1);
 			this->tabPage1->Controls->Add(this->chart1);
-			this->tabPage1->Controls->Add(this->pictureBox1);
-			this->tabPage1->Controls->Add(this->listView1);
 			this->tabPage1->Controls->Add(this->label1);
 			this->tabPage1->Controls->Add(this->label2);
 			this->tabPage1->Location = System::Drawing::Point(4, 25);
@@ -461,8 +496,68 @@ private: System::Windows::Forms::Label^  label22;
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage1->Size = System::Drawing::Size(1697, 778);
 			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"实验1";
+			this->tabPage1->Text = L"panel";
 			this->tabPage1->UseVisualStyleBackColor = true;
+			this->tabPage1->Click += gcnew System::EventHandler(this, &实验1实验内容1::tabPage1_Click_1);
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
+				this->添加, this->Column2,
+					this->Column1, this->Column3, this->Column4, this->Column5
+			});
+			this->dataGridView1->Location = System::Drawing::Point(32, 579);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowTemplate->Height = 27;
+			this->dataGridView1->Size = System::Drawing::Size(705, 122);
+			this->dataGridView1->TabIndex = 12;
+			// 
+			// 添加
+			// 
+			this->添加->HeaderText = L"添加";
+			this->添加->Name = L"添加";
+			this->添加->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"添加";
+			this->Column2->Name = L"Column2";
+			this->Column2->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"添加";
+			this->Column1->Name = L"Column1";
+			this->Column1->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"添加";
+			this->Column3->Name = L"Column3";
+			this->Column3->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"添加";
+			this->Column4->Name = L"Column4";
+			this->Column4->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"添加";
+			this->Column5->Name = L"Column5";
+			this->Column5->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// button7
+			// 
+			this->button7->Location = System::Drawing::Point(755, 579);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(75, 46);
+			this->button7->TabIndex = 11;
+			this->button7->Text = L"曲线生成";
+			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &实验1实验内容1::button7_Click);
 			// 
 			// label14
 			// 
@@ -511,36 +606,25 @@ private: System::Windows::Forms::Label^  label22;
 			// 
 			// chart1
 			// 
-			chartArea1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+			chartArea5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			chartArea1->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea1);
-			legend1->Name = L"Legend1";
-			this->chart1->Legends->Add(legend1);
+			chartArea5->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea5);
+			legend5->Name = L"Legend1";
+			this->chart1->Legends->Add(legend5);
 			this->chart1->Location = System::Drawing::Point(920, 62);
 			this->chart1->Name = L"chart1";
-			series1->BorderColor = System::Drawing::Color::White;
-			series1->BorderWidth = 10;
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series1->Color = System::Drawing::Color::Red;
-			series1->Legend = L"Legend1";
-			series1->Name = L"Series1";
-			this->chart1->Series->Add(series1);
+			series5->BorderColor = System::Drawing::Color::White;
+			series5->BorderWidth = 10;
+			series5->ChartArea = L"ChartArea1";
+			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series5->Color = System::Drawing::Color::Red;
+			series5->Legend = L"Legend1";
+			series5->Name = L"Series1";
+			this->chart1->Series->Add(series5);
 			this->chart1->Size = System::Drawing::Size(551, 532);
 			this->chart1->TabIndex = 4;
 			this->chart1->Text = L"chart1";
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.InitialImage")));
-			this->pictureBox1->Location = System::Drawing::Point(32, 62);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(777, 430);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox1->TabIndex = 3;
-			this->pictureBox1->TabStop = false;
 			// 
 			// tabPage2
 			// 
@@ -552,7 +636,6 @@ private: System::Windows::Forms::Label^  label22;
 			this->tabPage2->Controls->Add(this->chart3);
 			this->tabPage2->Controls->Add(this->label13);
 			this->tabPage2->Controls->Add(this->pictureBox2);
-			this->tabPage2->Controls->Add(this->listView2);
 			this->tabPage2->Controls->Add(this->label3);
 			this->tabPage2->Location = System::Drawing::Point(4, 25);
 			this->tabPage2->Name = L"tabPage2";
@@ -562,331 +645,6 @@ private: System::Windows::Forms::Label^  label22;
 			this->tabPage2->Text = L"实验2";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			this->tabPage2->Click += gcnew System::EventHandler(this, &实验1实验内容1::tabPage2_Click);
-			// 
-			// chart3
-			// 
-			chartArea2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			chartArea2->Name = L"ChartArea1";
-			this->chart3->ChartAreas->Add(chartArea2);
-			legend2->Name = L"Legend1";
-			this->chart3->Legends->Add(legend2);
-			this->chart3->Location = System::Drawing::Point(939, 32);
-			this->chart3->Name = L"chart3";
-			series2->BorderWidth = 10;
-			series2->ChartArea = L"ChartArea1";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series2->Legend = L"Legend1";
-			series2->Name = L"Series1";
-			this->chart3->Series->Add(series2);
-			this->chart3->Size = System::Drawing::Size(618, 553);
-			this->chart3->TabIndex = 6;
-			this->chart3->Text = L"chart3";
-			// 
-			// label13
-			// 
-			this->label13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label13->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label13->Location = System::Drawing::Point(49, 540);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(435, 52);
-			this->label13->TabIndex = 5;
-			this->label13->Text = L"将图25－2中的RL换成一只12V的汽车灯泡，重复1的步骤。";
-			this->label13->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// pictureBox2
-			// 
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(33, 108);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(747, 417);
-			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox2->TabIndex = 4;
-			this->pictureBox2->TabStop = false;
-			// 
-			// listView2
-			// 
-			this->listView2->FullRowSelect = true;
-			this->listView2->GridLines = true;
-			this->listView2->Location = System::Drawing::Point(53, 608);
-			this->listView2->Name = L"listView2";
-			this->listView2->Size = System::Drawing::Size(590, 99);
-			this->listView2->TabIndex = 3;
-			this->listView2->UseCompatibleStateImageBehavior = false;
-			this->listView2->View = System::Windows::Forms::View::Details;
-			this->listView2->ColumnClick += gcnew System::Windows::Forms::ColumnClickEventHandler(this, &实验1实验内容1::listView2_ColumnClick);
-			// 
-			// label3
-			// 
-			this->label3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label3->Location = System::Drawing::Point(66, 16);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(339, 63);
-			this->label3->TabIndex = 1;
-			this->label3->Text = L"2．测定非线性白炽灯泡的伏安特性";
-			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// tabPage3
-			// 
-			this->tabPage3->Controls->Add(this->groupBox2);
-			this->tabPage3->Controls->Add(this->groupBox1);
-			this->tabPage3->Controls->Add(this->chart2);
-			this->tabPage3->Controls->Add(this->pictureBox3);
-			this->tabPage3->Controls->Add(this->label8);
-			this->tabPage3->Controls->Add(this->label7);
-			this->tabPage3->Controls->Add(this->listView4);
-			this->tabPage3->Controls->Add(this->listView3);
-			this->tabPage3->Controls->Add(this->label6);
-			this->tabPage3->Controls->Add(this->label5);
-			this->tabPage3->Location = System::Drawing::Point(4, 25);
-			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage3->Size = System::Drawing::Size(1697, 778);
-			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"实验3";
-			this->tabPage3->UseVisualStyleBackColor = true;
-			this->tabPage3->Click += gcnew System::EventHandler(this, &实验1实验内容1::tabPage3_Click);
-			// 
-			// chart2
-			// 
-			chartArea3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			chartArea3->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea3);
-			legend3->Name = L"Legend1";
-			this->chart2->Legends->Add(legend3);
-			this->chart2->Location = System::Drawing::Point(940, 108);
-			this->chart2->Name = L"chart2";
-			series3->BorderWidth = 10;
-			series3->ChartArea = L"ChartArea1";
-			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series3->Color = System::Drawing::Color::Red;
-			series3->Legend = L"Legend1";
-			series3->Name = L"Series1";
-			this->chart2->Series->Add(series3);
-			this->chart2->Size = System::Drawing::Size(604, 483);
-			this->chart2->TabIndex = 9;
-			this->chart2->Text = L"chart2";
-			// 
-			// pictureBox3
-			// 
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(37, 141);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(726, 407);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox3->TabIndex = 8;
-			this->pictureBox3->TabStop = false;
-			// 
-			// label8
-			// 
-			this->label8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label8->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label8->Location = System::Drawing::Point(45, 669);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(190, 23);
-			this->label8->TabIndex = 7;
-			this->label8->Text = L"反向特性实验数据";
-			this->label8->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// label7
-			// 
-			this->label7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label7->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label7->Location = System::Drawing::Point(45, 553);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(190, 23);
-			this->label7->TabIndex = 6;
-			this->label7->Text = L"正向特性实验数据";
-			this->label7->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// listView4
-			// 
-			this->listView4->FullRowSelect = true;
-			this->listView4->GridLines = true;
-			this->listView4->Location = System::Drawing::Point(48, 695);
-			this->listView4->Name = L"listView4";
-			this->listView4->Size = System::Drawing::Size(590, 83);
-			this->listView4->TabIndex = 5;
-			this->listView4->UseCompatibleStateImageBehavior = false;
-			this->listView4->View = System::Windows::Forms::View::Details;
-			this->listView4->ColumnClick += gcnew System::Windows::Forms::ColumnClickEventHandler(this, &实验1实验内容1::listView4_ColumnClick);
-			// 
-			// listView3
-			// 
-			this->listView3->FullRowSelect = true;
-			this->listView3->GridLines = true;
-			this->listView3->Location = System::Drawing::Point(48, 579);
-			this->listView3->Name = L"listView3";
-			this->listView3->Size = System::Drawing::Size(590, 87);
-			this->listView3->TabIndex = 4;
-			this->listView3->UseCompatibleStateImageBehavior = false;
-			this->listView3->View = System::Windows::Forms::View::Details;
-			this->listView3->ColumnClick += gcnew System::Windows::Forms::ColumnClickEventHandler(this, &实验1实验内容1::listView3_ColumnClick);
-			// 
-			// label6
-			// 
-			this->label6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label6->Location = System::Drawing::Point(60, 38);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(703, 100);
-			this->label6->TabIndex = 3;
-			this->label6->Text = L"按图25－3接线，R为限流电阻器，测二极管的正向特性时，其正向电流不得超过25mA，二极管D的正向压降可在0～0.75V之间取值。特别是在0.5～0.75之间更应"
-				L"多取几个测量点。作反向特性实验时，只需将图25－3中的二极管D反接，且其反向电压可加到30V。";
-			this->label6->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// label5
-			// 
-			this->label5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label5->Location = System::Drawing::Point(60, 3);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(340, 23);
-			this->label5->TabIndex = 2;
-			this->label5->Text = L"3．测定半导体二极管的伏安特性";
-			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// tabPage4
-			// 
-			this->tabPage4->Controls->Add(this->groupBox4);
-			this->tabPage4->Controls->Add(this->groupBox3);
-			this->tabPage4->Controls->Add(this->chart4);
-			this->tabPage4->Controls->Add(this->pictureBox4);
-			this->tabPage4->Controls->Add(this->listView6);
-			this->tabPage4->Controls->Add(this->listView5);
-			this->tabPage4->Controls->Add(this->label12);
-			this->tabPage4->Controls->Add(this->label11);
-			this->tabPage4->Controls->Add(this->label10);
-			this->tabPage4->Controls->Add(this->label9);
-			this->tabPage4->Location = System::Drawing::Point(4, 25);
-			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage4->Size = System::Drawing::Size(1697, 778);
-			this->tabPage4->TabIndex = 3;
-			this->tabPage4->Text = L"实验4";
-			this->tabPage4->UseVisualStyleBackColor = true;
-			this->tabPage4->Click += gcnew System::EventHandler(this, &实验1实验内容1::tabPage4_Click);
-			// 
-			// chart4
-			// 
-			chartArea4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			chartArea4->Name = L"ChartArea1";
-			this->chart4->ChartAreas->Add(chartArea4);
-			legend4->Name = L"Legend1";
-			this->chart4->Legends->Add(legend4);
-			this->chart4->Location = System::Drawing::Point(931, 67);
-			this->chart4->Name = L"chart4";
-			series4->BorderWidth = 10;
-			series4->ChartArea = L"ChartArea1";
-			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series4->Color = System::Drawing::Color::Red;
-			series4->Legend = L"Legend1";
-			series4->Name = L"Series1";
-			this->chart4->Series->Add(series4);
-			this->chart4->Size = System::Drawing::Size(674, 528);
-			this->chart4->TabIndex = 7;
-			this->chart4->Text = L"chart4";
-			// 
-			// pictureBox4
-			// 
-			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(34, 80);
-			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(739, 428);
-			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox4->TabIndex = 6;
-			this->pictureBox4->TabStop = false;
-			// 
-			// listView6
-			// 
-			this->listView6->FullRowSelect = true;
-			this->listView6->GridLines = true;
-			this->listView6->Location = System::Drawing::Point(68, 672);
-			this->listView6->Name = L"listView6";
-			this->listView6->Size = System::Drawing::Size(497, 98);
-			this->listView6->TabIndex = 5;
-			this->listView6->UseCompatibleStateImageBehavior = false;
-			this->listView6->View = System::Windows::Forms::View::Details;
-			this->listView6->ColumnClick += gcnew System::Windows::Forms::ColumnClickEventHandler(this, &实验1实验内容1::listView6_ColumnClick);
-			// 
-			// listView5
-			// 
-			this->listView5->FullRowSelect = true;
-			this->listView5->GridLines = true;
-			this->listView5->Location = System::Drawing::Point(68, 543);
-			this->listView5->Name = L"listView5";
-			this->listView5->Size = System::Drawing::Size(497, 89);
-			this->listView5->TabIndex = 4;
-			this->listView5->UseCompatibleStateImageBehavior = false;
-			this->listView5->View = System::Windows::Forms::View::Details;
-			this->listView5->ColumnClick += gcnew System::Windows::Forms::ColumnClickEventHandler(this, &实验1实验内容1::listView5_ColumnClick);
-			// 
-			// label12
-			// 
-			this->label12->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label12->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label12->Location = System::Drawing::Point(65, 646);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(305, 23);
-			this->label12->TabIndex = 3;
-			this->label12->Text = L"反向特性实验数据";
-			this->label12->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// label11
-			// 
-			this->label11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label11->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label11->Location = System::Drawing::Point(65, 517);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(305, 23);
-			this->label11->TabIndex = 2;
-			this->label11->Text = L"正向特性实验数据";
-			this->label11->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// label10
-			// 
-			this->label10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label10->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label10->Location = System::Drawing::Point(31, 35);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(673, 42);
-			this->label10->TabIndex = 1;
-			this->label10->Text = L"只要将图25-3中的二极管换成稳压二极管，重复实验内容3的测量。";
-			this->label10->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// label9
-			// 
-			this->label9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->label9->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label9->Location = System::Drawing::Point(30, 12);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(393, 23);
-			this->label9->TabIndex = 0;
-			this->label9->Text = L"4．测定稳压二极管的伏安特性";
-			this->label9->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// label15
 			// 
@@ -933,64 +691,80 @@ private: System::Windows::Forms::Label^  label22;
 			this->textBox4->Size = System::Drawing::Size(228, 30);
 			this->textBox4->TabIndex = 10;
 			// 
-			// label17
+			// chart3
 			// 
-			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(6, 107);
-			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(67, 15);
-			this->label17->TabIndex = 14;
-			this->label17->Text = L"结果电流";
+			chartArea6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			chartArea6->Name = L"ChartArea1";
+			this->chart3->ChartAreas->Add(chartArea6);
+			legend6->Name = L"Legend1";
+			this->chart3->Legends->Add(legend6);
+			this->chart3->Location = System::Drawing::Point(939, 32);
+			this->chart3->Name = L"chart3";
+			series6->BorderWidth = 10;
+			series6->ChartArea = L"ChartArea1";
+			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series6->Legend = L"Legend1";
+			series6->Name = L"Series1";
+			this->chart3->Series->Add(series6);
+			this->chart3->Size = System::Drawing::Size(618, 553);
+			this->chart3->TabIndex = 6;
+			this->chart3->Text = L"chart3";
 			// 
-			// textBox5
+			// label13
 			// 
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label13->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox5->Location = System::Drawing::Point(125, 100);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(228, 30);
-			this->textBox5->TabIndex = 13;
+			this->label13->Location = System::Drawing::Point(49, 540);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(435, 52);
+			this->label13->TabIndex = 5;
+			this->label13->Text = L"将图25－2中的RL换成一只12V的汽车灯泡，重复1的步骤。";
+			this->label13->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// button3
+			// pictureBox2
 			// 
-			this->button3->Location = System::Drawing::Point(153, 63);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(75, 30);
-			this->button3->TabIndex = 12;
-			this->button3->Text = L"获取";
-			this->button3->UseVisualStyleBackColor = true;
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(33, 108);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(747, 417);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox2->TabIndex = 4;
+			this->pictureBox2->TabStop = false;
 			// 
-			// label18
+			// label3
 			// 
-			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(6, 33);
-			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(113, 15);
-			this->label18->TabIndex = 11;
-			this->label18->Text = L"电压(单位伏特)";
-			// 
-			// textBox6
-			// 
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox6->Location = System::Drawing::Point(125, 26);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(228, 30);
-			this->textBox6->TabIndex = 10;
+			this->label3->Location = System::Drawing::Point(66, 16);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(339, 63);
+			this->label3->TabIndex = 1;
+			this->label3->Text = L"2．测定非线性白炽灯泡的伏安特性";
+			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// groupBox1
+			// tabPage3
 			// 
-			this->groupBox1->Controls->Add(this->label18);
-			this->groupBox1->Controls->Add(this->textBox6);
-			this->groupBox1->Controls->Add(this->button3);
-			this->groupBox1->Controls->Add(this->textBox5);
-			this->groupBox1->Controls->Add(this->label17);
-			this->groupBox1->Location = System::Drawing::Point(645, 598);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(360, 141);
-			this->groupBox1->TabIndex = 20;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"正向特性实验数据";
+			this->tabPage3->Controls->Add(this->groupBox2);
+			this->tabPage3->Controls->Add(this->groupBox1);
+			this->tabPage3->Controls->Add(this->chart2);
+			this->tabPage3->Controls->Add(this->pictureBox3);
+			this->tabPage3->Controls->Add(this->label8);
+			this->tabPage3->Controls->Add(this->label7);
+			this->tabPage3->Controls->Add(this->label6);
+			this->tabPage3->Controls->Add(this->label5);
+			this->tabPage3->Location = System::Drawing::Point(4, 25);
+			this->tabPage3->Name = L"tabPage3";
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage3->Size = System::Drawing::Size(1697, 778);
+			this->tabPage3->TabIndex = 2;
+			this->tabPage3->Text = L"实验3";
+			this->tabPage3->UseVisualStyleBackColor = true;
+			this->tabPage3->Click += gcnew System::EventHandler(this, &实验1实验内容1::tabPage3_Click);
 			// 
 			// groupBox2
 			// 
@@ -1051,64 +825,167 @@ private: System::Windows::Forms::Label^  label22;
 			this->label20->TabIndex = 14;
 			this->label20->Text = L"结果电流";
 			// 
-			// groupBox3
+			// groupBox1
 			// 
-			this->groupBox3->Controls->Add(this->label21);
-			this->groupBox3->Controls->Add(this->textBox9);
-			this->groupBox3->Controls->Add(this->button5);
-			this->groupBox3->Controls->Add(this->textBox10);
-			this->groupBox3->Controls->Add(this->label22);
-			this->groupBox3->Location = System::Drawing::Point(604, 579);
-			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(360, 141);
-			this->groupBox3->TabIndex = 21;
-			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"真实设备检测";
+			this->groupBox1->Controls->Add(this->label18);
+			this->groupBox1->Controls->Add(this->textBox6);
+			this->groupBox1->Controls->Add(this->button3);
+			this->groupBox1->Controls->Add(this->textBox5);
+			this->groupBox1->Controls->Add(this->label17);
+			this->groupBox1->Location = System::Drawing::Point(645, 598);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(360, 141);
+			this->groupBox1->TabIndex = 20;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"正向特性实验数据";
 			// 
-			// label21
+			// label18
 			// 
-			this->label21->AutoSize = true;
-			this->label21->Location = System::Drawing::Point(6, 33);
-			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(113, 15);
-			this->label21->TabIndex = 11;
-			this->label21->Text = L"电压(单位伏特)";
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(6, 33);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(113, 15);
+			this->label18->TabIndex = 11;
+			this->label18->Text = L"电压(单位伏特)";
 			// 
-			// textBox9
+			// textBox6
 			// 
-			this->textBox9->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->textBox6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox9->Location = System::Drawing::Point(125, 26);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(228, 30);
-			this->textBox9->TabIndex = 10;
+			this->textBox6->Location = System::Drawing::Point(125, 26);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(228, 30);
+			this->textBox6->TabIndex = 10;
 			// 
-			// button5
+			// button3
 			// 
-			this->button5->Location = System::Drawing::Point(153, 63);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(75, 30);
-			this->button5->TabIndex = 12;
-			this->button5->Text = L"获取";
-			this->button5->UseVisualStyleBackColor = true;
+			this->button3->Location = System::Drawing::Point(153, 63);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(75, 30);
+			this->button3->TabIndex = 12;
+			this->button3->Text = L"获取";
+			this->button3->UseVisualStyleBackColor = true;
 			// 
-			// textBox10
+			// textBox5
 			// 
-			this->textBox10->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->textBox5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->textBox10->Location = System::Drawing::Point(125, 100);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(228, 30);
-			this->textBox10->TabIndex = 13;
+			this->textBox5->Location = System::Drawing::Point(125, 100);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(228, 30);
+			this->textBox5->TabIndex = 13;
 			// 
-			// label22
+			// label17
 			// 
-			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(6, 107);
-			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(67, 15);
-			this->label22->TabIndex = 14;
-			this->label22->Text = L"结果电流";
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(6, 107);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(67, 15);
+			this->label17->TabIndex = 14;
+			this->label17->Text = L"结果电流";
+			// 
+			// chart2
+			// 
+			chartArea7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			chartArea7->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea7);
+			legend7->Name = L"Legend1";
+			this->chart2->Legends->Add(legend7);
+			this->chart2->Location = System::Drawing::Point(940, 108);
+			this->chart2->Name = L"chart2";
+			series7->BorderWidth = 10;
+			series7->ChartArea = L"ChartArea1";
+			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series7->Color = System::Drawing::Color::Red;
+			series7->Legend = L"Legend1";
+			series7->Name = L"Series1";
+			this->chart2->Series->Add(series7);
+			this->chart2->Size = System::Drawing::Size(604, 483);
+			this->chart2->TabIndex = 9;
+			this->chart2->Text = L"chart2";
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(37, 141);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(726, 407);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox3->TabIndex = 8;
+			this->pictureBox3->TabStop = false;
+			// 
+			// label8
+			// 
+			this->label8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label8->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label8->Location = System::Drawing::Point(45, 669);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(190, 23);
+			this->label8->TabIndex = 7;
+			this->label8->Text = L"反向特性实验数据";
+			this->label8->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// label7
+			// 
+			this->label7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label7->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label7->Location = System::Drawing::Point(45, 553);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(190, 23);
+			this->label7->TabIndex = 6;
+			this->label7->Text = L"正向特性实验数据";
+			this->label7->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// label6
+			// 
+			this->label6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label6->Location = System::Drawing::Point(60, 38);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(703, 100);
+			this->label6->TabIndex = 3;
+			this->label6->Text = L"按图25－3接线，R为限流电阻器，测二极管的正向特性时，其正向电流不得超过25mA，二极管D的正向压降可在0～0.75V之间取值。特别是在0.5～0.75之间更应"
+				L"多取几个测量点。作反向特性实验时，只需将图25－3中的二极管D反接，且其反向电压可加到30V。";
+			this->label6->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// label5
+			// 
+			this->label5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label5->Location = System::Drawing::Point(60, 3);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(340, 23);
+			this->label5->TabIndex = 2;
+			this->label5->Text = L"3．测定半导体二极管的伏安特性";
+			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// tabPage4
+			// 
+			this->tabPage4->Controls->Add(this->groupBox4);
+			this->tabPage4->Controls->Add(this->groupBox3);
+			this->tabPage4->Controls->Add(this->chart4);
+			this->tabPage4->Controls->Add(this->pictureBox4);
+			this->tabPage4->Controls->Add(this->label12);
+			this->tabPage4->Controls->Add(this->label11);
+			this->tabPage4->Controls->Add(this->label10);
+			this->tabPage4->Controls->Add(this->label9);
+			this->tabPage4->Location = System::Drawing::Point(4, 25);
+			this->tabPage4->Name = L"tabPage4";
+			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage4->Size = System::Drawing::Size(1697, 778);
+			this->tabPage4->TabIndex = 3;
+			this->tabPage4->Text = L"实验4";
+			this->tabPage4->UseVisualStyleBackColor = true;
+			this->tabPage4->Click += gcnew System::EventHandler(this, &实验1实验内容1::tabPage4_Click);
 			// 
 			// groupBox4
 			// 
@@ -1169,6 +1046,176 @@ private: System::Windows::Forms::Label^  label22;
 			this->label24->TabIndex = 14;
 			this->label24->Text = L"结果电流";
 			// 
+			// groupBox3
+			// 
+			this->groupBox3->Controls->Add(this->label21);
+			this->groupBox3->Controls->Add(this->textBox9);
+			this->groupBox3->Controls->Add(this->button5);
+			this->groupBox3->Controls->Add(this->textBox10);
+			this->groupBox3->Controls->Add(this->label22);
+			this->groupBox3->Location = System::Drawing::Point(497, 517);
+			this->groupBox3->Name = L"groupBox3";
+			this->groupBox3->Size = System::Drawing::Size(360, 141);
+			this->groupBox3->TabIndex = 21;
+			this->groupBox3->TabStop = false;
+			this->groupBox3->Text = L"真实设备检测";
+			// 
+			// label21
+			// 
+			this->label21->AutoSize = true;
+			this->label21->Location = System::Drawing::Point(6, 33);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(113, 15);
+			this->label21->TabIndex = 11;
+			this->label21->Text = L"电压(单位伏特)";
+			// 
+			// textBox9
+			// 
+			this->textBox9->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox9->Location = System::Drawing::Point(125, 26);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(228, 30);
+			this->textBox9->TabIndex = 10;
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(153, 63);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(75, 30);
+			this->button5->TabIndex = 12;
+			this->button5->Text = L"获取";
+			this->button5->UseVisualStyleBackColor = true;
+			// 
+			// textBox10
+			// 
+			this->textBox10->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBox10->Location = System::Drawing::Point(125, 100);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(228, 30);
+			this->textBox10->TabIndex = 13;
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Location = System::Drawing::Point(6, 107);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(67, 15);
+			this->label22->TabIndex = 14;
+			this->label22->Text = L"结果电流";
+			// 
+			// chart4
+			// 
+			chartArea8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			chartArea8->Name = L"ChartArea1";
+			this->chart4->ChartAreas->Add(chartArea8);
+			legend8->Name = L"Legend1";
+			this->chart4->Legends->Add(legend8);
+			this->chart4->Location = System::Drawing::Point(931, 67);
+			this->chart4->Name = L"chart4";
+			series8->BorderWidth = 10;
+			series8->ChartArea = L"ChartArea1";
+			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series8->Color = System::Drawing::Color::Red;
+			series8->Legend = L"Legend1";
+			series8->Name = L"Series1";
+			this->chart4->Series->Add(series8);
+			this->chart4->Size = System::Drawing::Size(674, 528);
+			this->chart4->TabIndex = 7;
+			this->chart4->Text = L"chart4";
+			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
+			this->pictureBox4->Location = System::Drawing::Point(34, 80);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(739, 428);
+			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox4->TabIndex = 6;
+			this->pictureBox4->TabStop = false;
+			// 
+			// label12
+			// 
+			this->label12->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label12->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label12->Location = System::Drawing::Point(65, 646);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(305, 23);
+			this->label12->TabIndex = 3;
+			this->label12->Text = L"反向特性实验数据";
+			this->label12->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// label11
+			// 
+			this->label11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label11->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label11->Location = System::Drawing::Point(65, 517);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(305, 23);
+			this->label11->TabIndex = 2;
+			this->label11->Text = L"正向特性实验数据";
+			this->label11->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// label10
+			// 
+			this->label10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label10->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label10->Location = System::Drawing::Point(31, 35);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(673, 42);
+			this->label10->TabIndex = 1;
+			this->label10->Text = L"只要将图25-3中的二极管换成稳压二极管，重复实验内容3的测量。";
+			this->label10->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// label9
+			// 
+			this->label9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->label9->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label9->Location = System::Drawing::Point(30, 12);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(393, 23);
+			this->label9->TabIndex = 0;
+			this->label9->Text = L"4．测定稳压二极管的伏安特性";
+			this->label9->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// button8
+			// 
+			this->button8->Location = System::Drawing::Point(1361, 106);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(75, 46);
+			this->button8->TabIndex = 20;
+			this->button8->Text = L"曲线生成";
+			this->button8->UseVisualStyleBackColor = true;
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.InitialImage")));
+			this->pictureBox1->Location = System::Drawing::Point(20, 62);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(777, 430);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox1->TabIndex = 3;
+			this->pictureBox1->TabStop = false;
+			// 
+			// label25
+			// 
+			this->label25->Location = System::Drawing::Point(86, 423);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(10, 54);
+			this->label25->TabIndex = 21;
+			this->label25->Text = L"label25";
+			// 
 			// 实验1实验内容1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
@@ -1178,31 +1225,33 @@ private: System::Windows::Forms::Label^  label22;
 			this->Name = L"实验1实验内容1";
 			this->Text = L"bel";
 			this->Load += gcnew System::EventHandler(this, &实验1实验内容1::实验1实验内容1_Load);
+			this->contextMenuStrip1->ResumeLayout(false);
 			this->实验2->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart4))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
-			this->groupBox2->ResumeLayout(false);
-			this->groupBox2->PerformLayout();
-			this->groupBox3->ResumeLayout(false);
-			this->groupBox3->PerformLayout();
 			this->groupBox4->ResumeLayout(false);
 			this->groupBox4->PerformLayout();
+			this->groupBox3->ResumeLayout(false);
+			this->groupBox3->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1257,6 +1306,56 @@ private: System::Void listView5_ColumnClick(System::Object^  sender, System::Win
 }
 private: System::Void listView6_ColumnClick(System::Object^  sender, System::Windows::Forms::ColumnClickEventArgs^  e) {
 	MessageBox::Show(e->Column.ToString());
+}
+private: System::Void listView1_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+	
+	/*if (e->Button == System::Windows::Forms::MouseButtons::Right)
+	{
+		contextMenuStrip1->Show(e->Location);
+		ListViewItem ^li = listView1->GetItemAt(e->X, e->Y);//获得所在行
+		if (li != nullptr)
+		{
+			ListViewItem::ListViewSubItem^ lii = li->GetSubItemAt(e->X, e->Y);//获得所在行的所在列
+			if (lii != nullptr)
+			{
+				System::Windows::Forms::IDataObject^ iData = Clipboard::GetDataObject(); 
+				lii->Text = (String^)iData->GetData(DataFormats::Text);
+			}
+		}
+	}
+	*/
+}
+private: System::Void tabPage1_Click_1(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void listView1_MouseClick(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+	if (e->Button == System::Windows::Forms::MouseButtons::Right)
+	{
+		contextMenuStrip1->Show(e->Location);
+		ml = e;
+	}
+}
+		 System::Windows::Forms::MouseEventArgs ^ml;
+private: System::Void 黏贴ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+
+}
+
+private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
+	Series ^s = chart1->Series[0];
+	s->Points->Clear();
+	//chart1->ChartAreas[0]->AxisX->LabelStyle->Format = "HH:mm:ss";
+	chart1->ChartAreas[0]->AxisX->Interval = 2;
+	chart1->ChartAreas[0]->AxisX->ScrollBar->IsPositionedInside = true;
+	chart1->ChartAreas[0]->AxisX->ScrollBar->Enabled = true;
+	chart1->ChartAreas[0]->AxisX->Title = "电压";
+	chart1->ChartAreas[0]->AxisY->Title = "电流";
+	chart1->ChartAreas[0]->AxisY->TextOrientation = TextOrientation::Horizontal;
+	for (int i = 0; i <= 5; i++) {
+		s->Points->AddXY(dataGridView1->Rows[0]->Cells[i]->Value, dataGridView1->Rows[1]->Cells[i]->Value);
+	}
+}
+private: System::Void label27_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 }
 };
 }

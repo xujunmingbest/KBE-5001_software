@@ -142,6 +142,9 @@
     <EmbeddedResource Include="底部.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginWnd.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="pz.xml">
