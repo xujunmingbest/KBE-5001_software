@@ -71,6 +71,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::ToolStripMenuItem^  实验报告ToolStripMenuItem;
 
 	private: System::Windows::Forms::ToolStripMenuItem^  返回ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  退出ToolStripMenuItem;
 
 	private:
 		/// <summary>
@@ -96,6 +97,7 @@ namespace 电工基础1本 {
 			this->思考题ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->实验报告ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->返回ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->退出ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -103,14 +105,14 @@ namespace 电工基础1本 {
 			// 
 			this->menuStrip1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(9) {
 				this->实验ToolStripMenuItem,
 					this->原理说明ToolStripMenuItem, this->实验设备ToolStripMenuItem, this->实验内容ToolStripMenuItem, this->实验注意事项ToolStripMenuItem, this->思考题ToolStripMenuItem,
-					this->实验报告ToolStripMenuItem, this->返回ToolStripMenuItem
+					this->实验报告ToolStripMenuItem, this->返回ToolStripMenuItem, this->退出ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(121, 432);
+			this->menuStrip1->Size = System::Drawing::Size(117, 432);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &实验1Main::menuStrip1_ItemClicked);
@@ -135,14 +137,14 @@ namespace 电工基础1本 {
 			// 视频说明ToolStripMenuItem
 			// 
 			this->视频说明ToolStripMenuItem->Name = L"视频说明ToolStripMenuItem";
-			this->视频说明ToolStripMenuItem->Size = System::Drawing::Size(181, 26);
+			this->视频说明ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->视频说明ToolStripMenuItem->Text = L"视频说明";
 			this->视频说明ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::视频说明ToolStripMenuItem_Click);
 			// 
 			// 文字说明ToolStripMenuItem
 			// 
 			this->文字说明ToolStripMenuItem->Name = L"文字说明ToolStripMenuItem";
-			this->文字说明ToolStripMenuItem->Size = System::Drawing::Size(181, 26);
+			this->文字说明ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->文字说明ToolStripMenuItem->Text = L"文字说明";
 			this->文字说明ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::文字说明ToolStripMenuItem_Click);
 			// 
@@ -187,6 +189,12 @@ namespace 电工基础1本 {
 			this->返回ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
 			this->返回ToolStripMenuItem->Text = L"返回";
 			this->返回ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::返回ToolStripMenuItem_Click);
+			// 
+			// 退出ToolStripMenuItem
+			// 
+			this->退出ToolStripMenuItem->Name = L"退出ToolStripMenuItem";
+			this->退出ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->退出ToolStripMenuItem->Text = L"退出";
 			// 
 			// 实验1Main
 			// 

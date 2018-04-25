@@ -23,7 +23,7 @@ namespace 电工基础1本 {
 			CheckForIllegalCrossThreadCalls = false;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Font = gcnew System::Drawing::Font("Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
-			Thread ^c = gcnew Thread(gcnew ThreadStart(this, &mainWnd::C));
+			c = gcnew Thread(gcnew ThreadStart(this, &mainWnd::C));
 			c->Start();
 			c->IsBackground = true;
 
@@ -34,14 +34,13 @@ namespace 电工基础1本 {
 			//TODO:  在此处添加构造函数代码
 			//
 		}
-
 		void ShowLoginWnd() {
 			bool Success = false;
 			LoginWnd ^ lw = gcnew LoginWnd(Success);
 			lw->ShowDialog();
 		}
 
-
+		Thread ^c;
 		void C() {
 			while (1) {
 				g_c.Stop();
@@ -55,6 +54,7 @@ namespace 电工基础1本 {
 		/// </summary>
 		~mainWnd()
 		{
+			c->Abort();
 			if (components)
 			{
 				delete components;
@@ -65,6 +65,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::ToolStripMenuItem^  实验ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  元件伏安特性的测试ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  退出ToolStripMenuItem;
+	private: System::Windows::Forms::Label^  label1;
 
 
 	private:
@@ -84,6 +85,7 @@ namespace 电工基础1本 {
 			this->实验ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->元件伏安特性的测试ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->退出ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -120,12 +122,28 @@ namespace 电工基础1本 {
 			this->退出ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
 			this->退出ToolStripMenuItem->Text = L"退出";
 			// 
+			// label1
+			// 
+			this->label1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label1->Location = System::Drawing::Point(0, 28);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(772, 504);
+			this->label1->TabIndex = 1;
+			this->label1->Text = L"欢迎使用中腾科教教学软件";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// mainWnd
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
 			this->ClientSize = System::Drawing::Size(772, 532);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"mainWnd";

@@ -49,6 +49,12 @@ Class 电工基础1本.Voice: AutoLayout, AnsiClass, Class, Public, BeforeFieldI
   Methods:
     Close(): PrivateScope, Public, HideBySig
     Speak(String): PrivateScope, Public, HideBySig
+Class 电工基础1本.Waver: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    LabelWaver(): PrivateScope, Public, HideBySig
+    ArrayInit(Int32): PrivateScope, Public, HideBySig
+    Add(Label): PrivateScope, Public, HideBySig
 Class 电工基础1本.实验1实验目的: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -66,7 +72,10 @@ Class 电工基础1本.实验1实验设备: AutoLayout, AnsiClass, Class, Public
 Class 电工基础1本.实验1实验内容1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.Label[] a : Public
   Methods:
+    WaverInit(): PrivateScope, Public, HideBySig
     dataGridView1Load(): PrivateScope, Public, HideBySig
 Class 电工基础1本.实验1实验报告: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
@@ -88,6 +97,8 @@ Class 电工基础1本.LoginWnd: AutoLayout, AnsiClass, Class, Public, BeforeFie
 Class 电工基础1本.mainWnd: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Threading.Thread c : Public
   Methods:
     ShowLoginWnd(): PrivateScope, Public, HideBySig
     C(): PrivateScope, Public, HideBySig

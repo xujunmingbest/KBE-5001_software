@@ -1,7 +1,4 @@
 ﻿  mainWnd.cpp
-  status.cpp
-  实验1原理说明视频.cpp
-  正在生成代码...
-  mainWnd.obj :托管的代码存在时 /DEBUG:FASTLINK 不受支持；正在重新启动与 /DEBUG:FULL 的链接
+  exception.obj :托管的代码存在时 /DEBUG:FASTLINK 不受支持；正在重新启动与 /DEBUG:FULL 的链接
   电工基础1本.vcxproj -> E:\clr\电工基础1本\Debug\电工基础1本.exe
   电工基础1本.vcxproj -> E:\clr\电工基础1本\Debug\电工基础1本.pdb (Partial PDB)

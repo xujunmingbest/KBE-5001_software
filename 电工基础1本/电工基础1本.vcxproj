@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="exception.cpp" />
     <ClCompile Include="mainWnd.cpp" />
     <ClCompile Include="status.cpp" />
     <ClCompile Include="tool.cpp">
@@ -133,7 +134,6 @@
     <ClCompile Include="xml\tinyxmlerror.cpp" />
     <ClCompile Include="xml\tinyxmlparser.cpp" />
     <ClCompile Include="xml\xml.cpp" />
-    <ClCompile Include="实验1原理说明视频.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoginWnd.h">

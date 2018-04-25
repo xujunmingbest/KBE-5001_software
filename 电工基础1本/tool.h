@@ -25,7 +25,7 @@ void voice_speek(String^ in);
 using namespace System;
 using namespace Microsoft::Speech::Synthesis;
 using namespace System::Media;
-
+using namespace System::Threading;
 namespace 电工基础1本 {
 	public ref class Voice
 	{
@@ -66,4 +66,38 @@ namespace 电工基础1本 {
 	}
 		   // TODO:  在此处添加此类的方法。
 	};
+	public ref class Waver
+	{
+		cli::array<Label^>^ a;
+		int pos=0;
+		void LabelWaverT() {
+			for (int i = 0; i < 2; i++) {
+				for (int i = 0; i < a->Length; i++) {
+					a[i]->Visible = true;
+				}
+				Thread::Sleep(500);
+				for (int i = 0; i < a->Length; i++) {
+					a[i]->Visible = false;
+				}
+				Thread::Sleep(500);
+			}
+		}
+	public: void LabelWaver() {
+			Thread ^ t = gcnew Thread(gcnew ThreadStart(this,&Waver::LabelWaverT));
+			t->Start();
+		}
+	public:void ArrayInit(int count) {
+			a = gcnew cli::array<Label^>(count);
+			pos = 0;
+		}
+	public:	void Add(Label^l) {
+			if (pos < a->Length) {
+				a[pos++] = l;
+			}
+		}
+
+	};
 }
+
+
+void Exceptioninit();

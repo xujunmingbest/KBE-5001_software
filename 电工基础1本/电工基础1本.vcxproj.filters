@@ -57,8 +57,8 @@
     <ClCompile Include="xml\xml.cpp">
       <Filter>xml</Filter>
     </ClCompile>
-    <ClCompile Include="实验1原理说明视频.cpp">
-      <Filter>实验1元件伏安特性的测试</Filter>
+    <ClCompile Include="exception.cpp">
+      <Filter>tool</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

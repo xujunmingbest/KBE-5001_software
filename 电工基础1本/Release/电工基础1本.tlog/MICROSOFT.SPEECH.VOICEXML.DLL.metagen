@@ -1,0 +1,196 @@
+  LocalizedStrings.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v2.0.50727
+Assembly Microsoft.Speech.VoiceXml, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.Speech.VoiceXml.Adapter, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly Microsoft.Speech, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly Microsoft.Speech.VoiceXml.Interpreter, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class LocalizedStrings: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Resources.ResourceManager ResourceManager 'get ' : 
+    System.Globalization.CultureInfo Culture 'get set' : 
+    System.String BrowserNeedsToBeBoundToCall 'get ' : 
+    System.String InputChangesNotAllowed 'get ' : 
+    System.String InputFileCannotBeEmptyString 'get ' : 
+    System.String InputNotSpecified 'get ' : 
+    System.String MultipleCallsToRunAreInvalidWhileActive 'get ' : 
+    System.String OutputFileCannotBeEmptyString 'get ' : 
+    System.String OutputNotSpecified 'get ' : 
+    System.String UnsupportedLanguage 'get ' : 
+  Methods:
+    get_ResourceManager(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_Culture(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    set_Culture(CultureInfo): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_BrowserNeedsToBeBoundToCall(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_InputChangesNotAllowed(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_InputFileCannotBeEmptyString(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_InputNotSpecified(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_MultipleCallsToRunAreInvalidWhileActive(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_OutputFileCannotBeEmptyString(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_OutputNotSpecified(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+    get_UnsupportedLanguage(): PrivateScope, Assembly, Static, HideBySig, SpecialName
+Struct Microsoft.Speech.VoiceXml.Common.TransferType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Speech.VoiceXml.Common.TransferType Blind = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.TransferType Bridge = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.TransferType Consultation = 2 : Public, Static, Literal, HasDefault
+Struct Microsoft.Speech.VoiceXml.Common.SessionState: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Speech.VoiceXml.Common.SessionState Idle = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.SessionState Active = 1 : Public, Static, Literal, HasDefault
+Struct Microsoft.Speech.VoiceXml.Common.ExitReason: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Speech.VoiceXml.Common.ExitReason None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.ExitReason HostExitRequested = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.ExitReason ExitElementEncountered = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.ExitReason DialogEndEncountered = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.ExitReason UnhandledPageException = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.ExitReason MalFormedXml = 5 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.ExitReason ServerNotAvailable = 6 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.ExitReason AudioTerminated = 7 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.ExitReason PageNotFound = 8 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.ExitReason UnknownExit = 2147483647 : Public, Static, Literal, HasDefault
+Struct Microsoft.Speech.VoiceXml.Common.TransferState: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Speech.VoiceXml.Common.TransferState None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.TransferState Transferring = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.TransferState Transferred = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.TransferState Failed = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.TransferState UnknownError = 2147483647 : Public, Static, Literal, HasDefault
+Struct Microsoft.Speech.VoiceXml.Common.DisconnectState: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Speech.VoiceXml.Common.DisconnectState None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.DisconnectState UserDisconnected = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.DisconnectState HostDisconnected = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.DisconnectState PageDisconnected = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.DisconnectState ConnectionError = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.DisconnectState UnknownError = 2147483647 : Public, Static, Literal, HasDefault
+Struct Microsoft.Speech.VoiceXml.Common.RecognitionType: AutoLayout, AnsiClass, Class, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Speech.VoiceXml.Common.RecognitionType Speech = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.RecognitionType Dtmf = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Speech.VoiceXml.Common.RecognitionType Recorder = 2 : Public, Static, Literal, HasDefault
+Class Microsoft.Speech.VoiceXml.Common.TransferringEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(System.String, Microsoft.Speech.VoiceXml.Common.TransferType, Microsoft.Speech.VoiceXml.Common.TransferState): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String TargetSip 'get ' : 
+    Microsoft.Speech.VoiceXml.Common.TransferType Type 'get ' : 
+    Microsoft.Speech.VoiceXml.Common.TransferState State 'get ' : 
+  Methods:
+    get_TargetSip(): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Speech.VoiceXml.Common.TransferredEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(System.String, Microsoft.Speech.VoiceXml.Common.TransferType, Microsoft.Speech.VoiceXml.Common.TransferState): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String TargetSip 'get ' : 
+    Microsoft.Speech.VoiceXml.Common.TransferType Type 'get ' : 
+    Microsoft.Speech.VoiceXml.Common.TransferState State 'get ' : 
+  Methods:
+    get_TargetSip(): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Speech.VoiceXml.Common.DisconnectingEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Microsoft.Speech.VoiceXml.Common.SessionState): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Speech.VoiceXml.Common.SessionState SessionState 'get ' : 
+  Methods:
+    get_SessionState(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Speech.VoiceXml.Common.DisconnectedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(System.Collections.Generic.Dictionary`2[System.String,System.Object], Microsoft.Speech.VoiceXml.Common.DisconnectState): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] Namelist 'get ' : 
+    Microsoft.Speech.VoiceXml.Common.DisconnectState State 'get ' : 
+  Methods:
+    get_Namelist(): PrivateScope, Public, HideBySig, SpecialName
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Speech.VoiceXml.Common.SessionCompletedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.AsyncCompletedEventArgs
+    Void .ctor(Microsoft.Speech.VoiceXml.Common.VoiceXmlResult, System.Exception, Boolean): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Speech.VoiceXml.Common.VoiceXmlResult Result 'get ' : 
+  Methods:
+    get_Result(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Speech.VoiceXml.Common.PageEvent: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Event 'get ' : 
+    System.String Message 'get ' : 
+  Methods:
+    get_Event(): PrivateScope, Public, HideBySig, SpecialName
+    get_Message(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Speech.VoiceXml.Common.VoiceXmlResult: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Collections.Generic.Dictionary`2[System.String,System.Object], Microsoft.Speech.VoiceXml.Common.ExitReason, Microsoft.Speech.VoiceXml.Common.PageEvent, System.Net.CookieContainer): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] Namelist 'get ' : 
+    Microsoft.Speech.VoiceXml.Common.ExitReason Reason 'get ' : 
+    Microsoft.Speech.VoiceXml.Common.PageEvent UnhandledThrowElement 'get ' : 
+    System.Net.CookieContainer Cookies 'get ' : 
+  Methods:
+    get_Namelist(): PrivateScope, Public, HideBySig, SpecialName
+    get_Reason(): PrivateScope, Public, HideBySig, SpecialName
+    get_UnhandledThrowElement(): PrivateScope, Public, HideBySig, SpecialName
+    get_Cookies(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Speech.VoiceXml.Browser: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.String VXI_UNHANDLED_EXCEPTION_KEY = d4c3e217637011df8aff001517666ef0 : Assembly, Static, Literal, HasDefault
+  Properties:
+    Microsoft.Speech.VoiceXml.Common.SessionState State 'get ' : 
+  Events:
+    System.EventHandler`1[Microsoft.Speech.VoiceXml.Common.DisconnectingEventArgs] Disconnecting: 
+    System.EventHandler`1[Microsoft.Speech.VoiceXml.Common.DisconnectedEventArgs] Disconnected: 
+    System.EventHandler`1[Microsoft.Speech.VoiceXml.Common.TransferringEventArgs] Transferring: 
+    System.EventHandler`1[Microsoft.Speech.VoiceXml.Common.TransferredEventArgs] Transferred: 
+    System.EventHandler`1[Microsoft.Speech.VoiceXml.Common.SessionCompletedEventArgs] SessionCompleted: 
+  Methods:
+    SetOnRecognizingCallback(RecognizingCallback): PrivateScope, Assembly, HideBySig
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+    Run(Uri, CookieContainer): PrivateScope, Public, HideBySig
+    RunAsync(Uri, CookieContainer): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    StopAsync(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_Disconnecting(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_Disconnecting(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_Disconnected(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_Disconnected(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_Transferring(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_Transferring(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_Transferred(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_Transferred(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_SessionCompleted(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_SessionCompleted(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Speech.VoiceXml.Browser+RecognizingCallback: AutoLayout, AnsiClass, Class, NestedAssembly, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RecognitionType): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(RecognitionType, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
