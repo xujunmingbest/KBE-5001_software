@@ -36,9 +36,6 @@
     <ClCompile Include="mainWnd.cpp">
       <Filter>主窗体</Filter>
     </ClCompile>
-    <ClCompile Include="status.cpp">
-      <Filter>主窗体</Filter>
-    </ClCompile>
     <ClCompile Include="tool.cpp">
       <Filter>tool</Filter>
     </ClCompile>
@@ -59,6 +56,15 @@
     </ClCompile>
     <ClCompile Include="exception.cpp">
       <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="_Mutex.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="log.h">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="resource.cpp">
+      <Filter>主窗体</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="实验1原理说明视频.h">
       <Filter>实验1元件伏安特性的测试</Filter>
+    </ClInclude>
+    <ClInclude Include="_Mutex.h">
+      <Filter>tool</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

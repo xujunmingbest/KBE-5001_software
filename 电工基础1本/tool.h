@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <iostream>
 #include "xml/xml.h"
+#include "log.h"
 using namespace std;
 #include "底部.h"
 using namespace 电工基础1本;
@@ -101,3 +102,4 @@ namespace 电工基础1本 {
 
 
 void Exceptioninit();
+string T_to_string(String^in);

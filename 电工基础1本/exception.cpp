@@ -238,7 +238,7 @@ LONG ApplicationCrashHandler(EXCEPTION_POINTERS *pException)
 		info += ")";
 		cout << callstackinfo.MethodName << "() : [" << callstackinfo.ModuleName << "] (File: " << callstackinfo.FileName << " @Line " << callstackinfo.LineNumber << ")" << endl;
 	}
-	MessageBoxA(NULL, info.c_str(), "你好", MB_OK);
+	MessageBoxA(NULL, info.c_str(), info.c_str(), MB_OK);
 
 	// 这里弹出一个错误对话框并退出程序  
 	//  

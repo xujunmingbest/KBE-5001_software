@@ -40,7 +40,6 @@ CControl::~CControl()
 
 
 void trim(string &s);
-string T_to_string(const String^in, int len);
 wchar_t *multiByteToWideChar(const string& pKey);
 
 //确保只有一个按钮在运行
@@ -64,7 +63,7 @@ void voice_speek(string &in)
 
 void voice_speek(String^ in)
 {
-	return voice_speek(T_to_string(in, in->Length * 2));
+	return voice_speek(T_to_string(in));
 }
 
 void trim(string &s)
@@ -91,8 +90,9 @@ wchar_t *multiByteToWideChar(const string& pKey)
 }
 
 
-string T_to_string(const String^in, int len)
+string T_to_string(String^in)
 {
+	int len = in->Length*2;
 	char *buff = new char[len + 1];
 	memset(buff, 0x00, len + 1);
 	snprintf(buff, len + 1, "%s", in);

@@ -1,5 +1,2 @@
-﻿  mainWnd.cpp
-  status.cpp
-  正在生成代码...
-  电工基础1本.vcxproj -> E:\clr\电工基础1本\Release\电工基础1本.exe
-  电工基础1本.vcxproj -> E:\clr\电工基础1本\Release\电工基础1本.pdb (Full PDB)
+﻿  _Mutex.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\mutex(8): fatal error C1189: #error:  <mutex> is not supported when compiling with /clr or /clr:pure.

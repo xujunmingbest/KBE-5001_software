@@ -1,0 +1,18 @@
+--------------------[2018-04-26 13:16:25] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-26 13:16:25] [mainWnd.cpp:WinMain:19] [EXCEPTION]: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WinMain(HINSTANCE__* hInstance, HINSTANCE__* hPrevInstance, SByte* lpCmdLine, Int32 nCmdShow) 位置 e:\clr\电工基础1本\电工基础1本\mainwnd.cpp:行号 16 ;
+--------------------[2018-04-26 13:16:30] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-26 13:17:39] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-26 13:17:39] [mainWnd.cpp:WinMain:19] [EXCEPTION]: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WinMain(HINSTANCE__* hInstance, HINSTANCE__* hPrevInstance, SByte* lpCmdLine, Int32 nCmdShow) 位置 e:\clr\电工基础1本\电工基础1本\mainwnd.cpp:行号 16 ;
+--------------------[2018-04-26 13:17:42] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-26 13:17:50] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-26 13:17:50] [mainWnd.cpp:WinMain:19] [EXCEPTION]: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WinMain(HINSTANCE__* hInstance, HINSTANCE__* hPrevInstance, SByte* lpCmdLine, Int32 nCmdShow) 位置 e:\clr\电工基础1本\电工基础1本\mainwnd.cpp:行号 16 ;
+--------------------[2018-04-26 13:17:52] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-26 13:18:23] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-26 13:18:23] [mainWnd.cpp:WinMain:19] [EXCEPTION]: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WinMain(HINSTANCE__* hInstance, HINSTANCE__* hPrevInstance, SByte* lpCmdLine, Int32 nCmdShow) 位置 e:\clr\电工基础1本\电工基础1本\mainwnd.cpp:行号 16 ;
+--------------------[2018-04-26 13:18:28] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-26 13:21:30] [电工基础1本.exe]  [Begin]--------------------
+--------------------[2018-04-26 13:26:27] [电工基础1本.exe]  [End]  --------------------

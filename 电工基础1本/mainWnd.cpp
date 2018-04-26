@@ -8,17 +8,9 @@ using namespace 电工基础1本;
 #include "实验1实验内容1.h"
 
 [STAThreadAttribute]
-//int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
-int main()
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	Exceptioninit(); //全局异常初始化
-	try {
-		int *a = NULL;
-		*a = 0;
-	}
-	catch(System::Exception ^e){
-		Console::Write(e->ToString());
-	}
 
 	try {
 		Voice ^ v = gcnew Voice;
@@ -29,7 +21,6 @@ int main()
 		Application::Run(gcnew mainWnd);
 	}
 	catch (System::Exception ^e) {
-		Console::Write(e->ToString());
+		LOG_EXCEPTION(T_to_string(e->ToString()));
 	}
-	system("pause");
 }
