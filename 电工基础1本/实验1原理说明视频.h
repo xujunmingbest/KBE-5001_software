@@ -74,6 +74,7 @@ namespace 电工基础1本 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScroll = true;
 			this->ClientSize = System::Drawing::Size(505, 423);
 			this->Controls->Add(this->axWindowsMediaPlayer1);
 			this->Name = L"实验1原理说明视频";

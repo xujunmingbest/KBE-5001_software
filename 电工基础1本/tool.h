@@ -98,6 +98,89 @@ namespace 电工基础1本 {
 		}
 
 	};
+
+	/**************************
+	检测视屏播放的时候 在固定秒数播放对应的
+	label 或者 pictureBox
+
+	根据视屏 播放控件
+	****************************/
+	public ref class VideoShowWidget
+	{
+	private: Hashtable ^ht = gcnew Hashtable;
+			 Mutex ^ mutex = gcnew Mutex;
+			 int NowTime = 0;
+
+			 void TShow() {
+				 mutex->WaitOne();
+				 for each (Object^ var in ht)
+				 {
+					 DictionaryEntry^ d = (DictionaryEntry^)var;
+					 int v = (int)d->Value;
+					 if (v < NowTime) {
+						 ((Label^)d->Key)->Visible = true;
+					 }
+					 else if (v > NowTime) {
+						 ((Label^)d->Key)->Visible = false;
+					 }
+				 }
+				 for (int i = 0; i < 2; i++) {
+					 for each (Object^ var in ht)
+					 {
+						 DictionaryEntry^ d = (DictionaryEntry^)var;
+						 if ((int)d->Value == NowTime) {
+							 ((Label^)d->Key)->Visible = false;
+						 }
+					 }
+					 Thread::Sleep(500);
+
+					 for each (Object^ var in ht)
+					 {
+						 DictionaryEntry^ d = (DictionaryEntry^)var;
+						 if ((int)d->Value == NowTime)
+							 ((Label^)d->Key)->Visible = true;
+					 }
+					 Thread::Sleep(500);
+				 }
+				 mutex->ReleaseMutex();
+			 }
+
+	public:
+		void Clear() {
+			ht->Clear();
+		}
+
+		void AddLabel(Label^l, int showTime) {
+			ht->Add(l, showTime);
+		}
+		void ShowLabel(int second) {
+			NowTime = second;
+			Thread^ t = gcnew Thread(gcnew ThreadStart(this, &VideoShowWidget::TShow));
+			t->Start();
+		}
+		/***************************
+		根据突然变化的秒数进行文件的检测
+
+
+		**************************/
+		void SuddenChange(int second) {
+
+			mutex->WaitOne();
+			NowTime = second;
+			for each (Object^ var in ht)
+			{
+				DictionaryEntry^ d = (DictionaryEntry^)var;
+				int v = (int)d->Value;
+				if (v <= NowTime) {
+					((Label^)d->Key)->Visible = true;
+				}
+				else if (v > NowTime) {
+					((Label^)d->Key)->Visible = false;
+				}
+			}
+			mutex->ReleaseMutex();
+		}
+	};
 }
 
 

@@ -688,6 +688,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->dataGridView1->RowTemplate->Height = 27;
 			this->dataGridView1->Size = System::Drawing::Size(705, 122);
 			this->dataGridView1->TabIndex = 12;
+			this->dataGridView1->ColumnHeaderMouseClick += gcnew System::Windows::Forms::DataGridViewCellMouseEventHandler(this, &实验1实验内容1::dataGridView1_ColumnHeaderMouseClick);
 			// 
 			// 添加
 			// 
@@ -1488,6 +1489,10 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 	return;
 }
 private: System::Void chart1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void dataGridView1_ColumnHeaderMouseClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellMouseEventArgs^  e) {
+	MessageBox::Show(e->ColumnIndex.ToString());
+
 }
 };
 }

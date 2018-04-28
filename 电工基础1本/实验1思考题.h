@@ -22,7 +22,7 @@ namespace 电工基础1本 {
 			CheckForIllegalCrossThreadCalls = false;
 			实验1思考题IsOpened = true;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->Font = gcnew System::Drawing::Font("Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
+			this->Font = gcnew System::Drawing::Font("宋体", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
 
 			//
 			//TODO:  在此处添加构造函数代码
@@ -136,6 +136,7 @@ namespace 电工基础1本 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScroll = true;
 			this->ClientSize = System::Drawing::Size(1420, 512);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->button1);
