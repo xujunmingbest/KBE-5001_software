@@ -6,7 +6,9 @@
 using namespace std;
 
 struct ConfigXml {
-	string LangDuNvPath;
+	string DesMac;
+	string RepeaterPort;
+	string RepeaterIp;
 };
 
 

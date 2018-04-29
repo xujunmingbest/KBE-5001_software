@@ -31,6 +31,9 @@
     <Filter Include="自定义弹出框">
       <UniqueIdentifier>{2695b49c-c2d2-4d91-98f1-1b7b58aaa991}</UniqueIdentifier>
     </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{d9ed4b8c-211a-4e06-a7ef-7e258b41ab1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainWnd.cpp">
@@ -65,6 +68,27 @@
     </ClCompile>
     <ClCompile Include="resource.cpp">
       <Filter>主窗体</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_reader.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_value.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_writer.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\main.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeSegmentTransmissionProtocol.h">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="series_Port.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="message_Queue.h">
+      <Filter>tool</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +143,33 @@
     <ClInclude Include="_Mutex.h">
       <Filter>tool</Filter>
     </ClInclude>
+    <ClInclude Include="json\autolink.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\config.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\features.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\forwards.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json_batchallocator.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\reader.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\value.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\writer.h">
+      <Filter>json</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mainWnd.resx">
@@ -162,5 +213,19 @@
     <Xml Include="pz.xml">
       <Filter>tool</Filter>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json\json_internalarray.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="json\json_internalmap.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="json\json_valueiterator.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="json\sconscript">
+      <Filter>json</Filter>
+    </None>
   </ItemGroup>
 </Project>

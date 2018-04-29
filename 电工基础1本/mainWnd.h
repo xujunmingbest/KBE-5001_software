@@ -38,7 +38,14 @@ namespace 电工基础1本 {
 			bool Success = false;
 			LoginWnd ^ lw = gcnew LoginWnd(Success);
 			lw->ShowDialog();
+			if (!Success)
+			{
+				exit(-1);
+			}
 		}
+	private: System::Windows::Forms::ToolStripMenuItem^  网络重连ToolStripMenuItem;
+	private: System::IO::Ports::SerialPort^  serialPort1;
+	public:
 
 		Thread ^c;
 		void C() {
@@ -64,15 +71,16 @@ namespace 电工基础1本 {
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^  实验ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  元件伏安特性的测试ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  退出ToolStripMenuItem;
+
 	private: System::Windows::Forms::Label^  label1;
+	private: System::ComponentModel::IContainer^  components;
 
 
 	private:
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -81,11 +89,13 @@ namespace 电工基础1本 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->实验ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->元件伏安特性的测试ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->退出ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->网络重连ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->serialPort1 = (gcnew System::IO::Ports::SerialPort(this->components));
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -94,13 +104,14 @@ namespace 电工基础1本 {
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->实验ToolStripMenuItem,
-					this->退出ToolStripMenuItem
+					this->网络重连ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Size = System::Drawing::Size(772, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
+			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &mainWnd::menuStrip1_ItemClicked);
 			// 
 			// 实验ToolStripMenuItem
 			// 
@@ -116,11 +127,12 @@ namespace 电工基础1本 {
 			this->元件伏安特性的测试ToolStripMenuItem->Text = L"实验一 元件伏安特性的测试";
 			this->元件伏安特性的测试ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::元件伏安特性的测试ToolStripMenuItem_Click);
 			// 
-			// 退出ToolStripMenuItem
+			// 网络重连ToolStripMenuItem
 			// 
-			this->退出ToolStripMenuItem->Name = L"退出ToolStripMenuItem";
-			this->退出ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
-			this->退出ToolStripMenuItem->Text = L"退出";
+			this->网络重连ToolStripMenuItem->Name = L"网络重连ToolStripMenuItem";
+			this->网络重连ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->网络重连ToolStripMenuItem->Text = L"网络重连";
+			this->网络重连ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::网络重连ToolStripMenuItem_Click);
 			// 
 			// label1
 			// 
@@ -136,6 +148,7 @@ namespace 电工基础1本 {
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"欢迎使用中腾科教教学软件";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label1->Click += gcnew System::EventHandler(this, &mainWnd::label1_Click);
 			// 
 			// mainWnd
 			// 
@@ -179,5 +192,26 @@ namespace 电工基础1本 {
 	}
 	private: System::Void mainWnd_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
+private: System::Void 网络重连ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	/*
+	//在登入窗体应该做的事情
+	g_TSTP.initParam(string("mac1"), configXml.DesMac);
+	g_TSTP.ProtocolStart(configXml.RepeaterIp, configXml.RepeaterPort);
+	TSTPBody b;
+	g_TSTP.ProtocolSend(b);
+	g_TSTP.ProtocolSend(b);
+	g_TSTP.ProtocolSend(b);
+	while (1) {
+		TSTPBody a = g_TSTP.ProtocolRecv();
+		MessageBox::Show(gcnew String(a.trial_name.c_str()));
+		Json::FastWriter w;
+		MessageBox::Show(gcnew String(w.write(a.trial_data).c_str()));
+	}
+	*/
+}
+private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+}
+private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 }

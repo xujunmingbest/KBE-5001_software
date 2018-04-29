@@ -1,5 +1,8 @@
-#include "log.h"
+#include "tool.h"
 Mylog Mlog;
+#include "ThreeSegmentTransmissionProtocol.h"
+ThreeSegmentTransmissionProtocol g_TSTP; 
+
 
 #include "实验1实验目的.h"
 bool 实验1实验目的IsOpened = false;
@@ -20,4 +23,15 @@ bool 实验1实验注意事项IsOpened = false;
 #include "实验1实验报告.h"
 bool 实验1实验报告IsOpened = false;
 
+
+
+
+
+
+MsgQueue trial1part1;
+
+void MsgQueueRegister() {
+	trial1part1.QueueRegister(string("实验1第一个实验"));
+
+}
 

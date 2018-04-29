@@ -47,7 +47,7 @@ void voice_speek(string &in)
 {
 	trim(in);
 	//MessageBox::Show(gcnew String((g_cx.LangDuNvPath + in).c_str()));
-	system((g_cx.LangDuNvPath + in).c_str());
+	//system((g_cx.LangDuNvPath + in).c_str());
 	//WinExec((g_cx.LangDuNvPath + in).c_str(), SW_SHOW);
 	PROCESS_INFORMATION piProcInfo;
 	STARTUPINFO siStartInfo = { sizeof(STARTUPINFO) };

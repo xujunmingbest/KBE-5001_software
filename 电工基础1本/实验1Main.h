@@ -103,7 +103,11 @@ namespace 电工基础1本 {
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->menuStrip1->Dock = System::Windows::Forms::DockStyle::Left;
+			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"幼圆", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(134)));
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(9) {
 				this->实验ToolStripMenuItem,
@@ -112,7 +116,7 @@ namespace 电工基础1本 {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(117, 432);
+			this->menuStrip1->Size = System::Drawing::Size(153, 432);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &实验1Main::menuStrip1_ItemClicked);
@@ -120,7 +124,7 @@ namespace 电工基础1本 {
 			// 实验ToolStripMenuItem
 			// 
 			this->实验ToolStripMenuItem->Name = L"实验ToolStripMenuItem";
-			this->实验ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->实验ToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->实验ToolStripMenuItem->Text = L"实验目的";
 			this->实验ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::实验ToolStripMenuItem_Click);
 			// 
@@ -131,70 +135,71 @@ namespace 电工基础1本 {
 					this->文字说明ToolStripMenuItem
 			});
 			this->原理说明ToolStripMenuItem->Name = L"原理说明ToolStripMenuItem";
-			this->原理说明ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->原理说明ToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->原理说明ToolStripMenuItem->Text = L"原理说明";
 			// 
 			// 视频说明ToolStripMenuItem
 			// 
 			this->视频说明ToolStripMenuItem->Name = L"视频说明ToolStripMenuItem";
-			this->视频说明ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->视频说明ToolStripMenuItem->Size = System::Drawing::Size(168, 26);
 			this->视频说明ToolStripMenuItem->Text = L"视频说明";
 			this->视频说明ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::视频说明ToolStripMenuItem_Click);
 			// 
 			// 文字说明ToolStripMenuItem
 			// 
 			this->文字说明ToolStripMenuItem->Name = L"文字说明ToolStripMenuItem";
-			this->文字说明ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->文字说明ToolStripMenuItem->Size = System::Drawing::Size(168, 26);
 			this->文字说明ToolStripMenuItem->Text = L"文字说明";
 			this->文字说明ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::文字说明ToolStripMenuItem_Click);
 			// 
 			// 实验设备ToolStripMenuItem
 			// 
 			this->实验设备ToolStripMenuItem->Name = L"实验设备ToolStripMenuItem";
-			this->实验设备ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->实验设备ToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->实验设备ToolStripMenuItem->Text = L"实验设备";
 			this->实验设备ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::实验设备ToolStripMenuItem_Click);
 			// 
 			// 实验内容ToolStripMenuItem
 			// 
 			this->实验内容ToolStripMenuItem->Name = L"实验内容ToolStripMenuItem";
-			this->实验内容ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->实验内容ToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->实验内容ToolStripMenuItem->Text = L"实验内容";
 			this->实验内容ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::实验内容ToolStripMenuItem_Click);
 			// 
 			// 实验注意事项ToolStripMenuItem
 			// 
 			this->实验注意事项ToolStripMenuItem->Name = L"实验注意事项ToolStripMenuItem";
-			this->实验注意事项ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->实验注意事项ToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->实验注意事项ToolStripMenuItem->Text = L"实验注意事项";
 			this->实验注意事项ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::实验注意事项ToolStripMenuItem_Click);
 			// 
 			// 思考题ToolStripMenuItem
 			// 
 			this->思考题ToolStripMenuItem->Name = L"思考题ToolStripMenuItem";
-			this->思考题ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->思考题ToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->思考题ToolStripMenuItem->Text = L"思考题";
 			this->思考题ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::思考题ToolStripMenuItem_Click);
 			// 
 			// 实验报告ToolStripMenuItem
 			// 
 			this->实验报告ToolStripMenuItem->Name = L"实验报告ToolStripMenuItem";
-			this->实验报告ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->实验报告ToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->实验报告ToolStripMenuItem->Text = L"实验报告";
 			this->实验报告ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::实验报告ToolStripMenuItem_Click);
 			// 
 			// 返回ToolStripMenuItem
 			// 
 			this->返回ToolStripMenuItem->Name = L"返回ToolStripMenuItem";
-			this->返回ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->返回ToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->返回ToolStripMenuItem->Text = L"返回";
 			this->返回ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::返回ToolStripMenuItem_Click);
 			// 
 			// 退出ToolStripMenuItem
 			// 
 			this->退出ToolStripMenuItem->Name = L"退出ToolStripMenuItem";
-			this->退出ToolStripMenuItem->Size = System::Drawing::Size(104, 24);
+			this->退出ToolStripMenuItem->Size = System::Drawing::Size(140, 24);
 			this->退出ToolStripMenuItem->Text = L"退出";
+			this->退出ToolStripMenuItem->Click += gcnew System::EventHandler(this, &实验1Main::退出ToolStripMenuItem_Click);
 			// 
 			// 实验1Main
 			// 
@@ -242,6 +247,16 @@ namespace 电工基础1本 {
 			 实验1实验注意事项^ 实验1实验注意事项Wnd;
 			 实验1思考题^ 实验1思考题Wnd;
 private: System::Void 实验1Main_Load(System::Object^  sender, System::EventArgs^  e) {
+	if (实验1实验目的IsOpened == true)
+	{
+		实验1实验目的Wnd->BringToFront(); //这个可以置于最前面
+		实验1实验目的Wnd->WindowState = FormWindowState::Maximized;
+		return;
+	}
+	实验1实验目的Wnd = gcnew 实验1实验目的;
+	实验1实验目的Wnd->MdiParent = this;
+	实验1实验目的Wnd->Show();
+	实验1实验目的Wnd->WindowState = FormWindowState::Maximized;
 }
 private: System::Void 文字说明ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (实验1原理说明IsOpened == true)
@@ -351,6 +366,9 @@ private: System::Void 实验内容ToolStripMenuItem_Click(System::Object^  sender, S
 	实验1实验内容1Wnd->MdiParent = this;
 	实验1实验内容1Wnd->Show();
 	实验1实验内容1Wnd->WindowState = FormWindowState::Maximized;
+}
+private: System::Void 退出ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	exit(-1);
 }
 };
 }

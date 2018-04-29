@@ -3,6 +3,8 @@
 #include <iostream>
 #include "xml/xml.h"
 #include "log.h"
+#include "ThreeSegmentTransmissionProtocol.h"
+#include "message_Queue.h"
 using namespace std;
 #include "底部.h"
 using namespace 电工基础1本;
@@ -19,6 +21,7 @@ public:
 
 extern CControl g_c;
 extern ConfigXml g_cx;
+extern ThreeSegmentTransmissionProtocol g_TSTP;
 void voice_speek(String^ in);
 
 

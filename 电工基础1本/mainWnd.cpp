@@ -2,6 +2,7 @@
 #include "tool.h"
 #include "xml/xml.h"
 #include <windows.h>
+
 #pragma comment(lib, "User32.lib")
 using namespace 电工基础1本;
 
@@ -11,6 +12,9 @@ using namespace 电工基础1本;
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	Exceptioninit(); //全局异常初始化
+	readXmlConfigFile(configXml);
+	LOG_DETAIL(configXml.DesMac, configXml.RepeaterIp, configXml.RepeaterPort);
+
 
 	try {
 		Voice ^ v = gcnew Voice;

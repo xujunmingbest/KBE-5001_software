@@ -12,3 +12,6 @@ void LogLock() {
 void LogUnLock() {
 	log_mutex.unlock();
 }
+
+
+

@@ -24,8 +24,14 @@ bool readXmlConfigFile(ConfigXml &configXml)
 		// StuElement->Value() 节点名称  
 		string zd(CldElement->Value());
 		string value(CldElement->FirstChild()->Value());
-		if (zd == "LangDuNvPath") {
-			configXml.LangDuNvPath = value;
+		if (zd == "DesMac") {
+			configXml.DesMac = value;
+		}
+		else if (zd == "RepeaterPort") {
+			configXml.RepeaterPort = value;
+		}
+		else if (zd == "RepeaterIp") {
+			configXml.RepeaterIp = value;
 		}
 	}
 	return true;
@@ -43,10 +49,10 @@ bool writeXmlConfigFile(ConfigXml &configXml) {
 	writeDoc->LinkEndChild(RootElement);
 
 	/******添加字段和值******/
-	TiXmlElement *pz1 = new TiXmlElement("LangDuNvPath");
-	RootElement->LinkEndChild(pz1);//父节点写入文档  
-	TiXmlText *pz1Text = new TiXmlText(configXml.LangDuNvPath.c_str());//Stu  //设置属性  
-	pz1->LinkEndChild(pz1Text);
+	//TiXmlElement *pz1 = new TiXmlElement("LangDuNvPath");
+	//RootElement->LinkEndChild(pz1);//父节点写入文档  
+	//TiXmlText *pz1Text = new TiXmlText(configXml.LangDuNvPath.c_str());//Stu  //设置属性  
+	//pz1->LinkEndChild(pz1Text);
 
 
 	writeDoc->SaveFile("pz.xml");

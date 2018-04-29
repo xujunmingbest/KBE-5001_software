@@ -1,5 +1,5 @@
 #pragma once
-
+#include "tool.h"
 namespace 电工基础1本 {
 
 	using namespace System;
@@ -18,7 +18,7 @@ namespace 电工基础1本 {
 		LoginWnd(bool &Success)
 		{
 			InitializeComponent();
-			Success = true;
+			Success = false;
 			//
 			//TODO:  在此处添加构造函数代码
 			//
@@ -153,7 +153,7 @@ namespace 电工基础1本 {
 			this->Controls->Add(this->label1);
 			this->Name = L"LoginWnd";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"请登入";
+			this->Text = L"请登入-KBE-5001电工指导书";
 			this->Load += gcnew System::EventHandler(this, &LoginWnd::LoginWnd_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -163,7 +163,7 @@ namespace 电工基础1本 {
 	private: System::Void LoginWnd_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-	MessageBox::Show("登入成功");
+	
 	this->Close();
 }
 };

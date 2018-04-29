@@ -1,6 +1,110 @@
---------------------[2018-04-28 09:50:45] [电工基础1本.exe]  [Begin]--------------------
---------------------[2018-04-28 09:51:04] [电工基础1本.exe]  [End]  --------------------
---------------------[2018-04-28 09:57:22] [电工基础1本.exe]  [Begin]--------------------
---------------------[2018-04-28 09:58:18] [电工基础1本.exe]  [End]  --------------------
---------------------[2018-04-28 10:00:46] [电工基础1本.exe]  [Begin]--------------------
---------------------[2018-04-28 10:01:04] [电工基础1本.exe]  [End]  --------------------
+[2018-04-28 14:37:20] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::Start:109] [ERROR]: Connect failed 10051 ;
+[2018-04-28 14:37:20] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:121] [DETAIL]: 0 ;
+[2018-04-28 14:37:21] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::Start:109] [ERROR]: Connect failed 10051 ;
+[2018-04-28 14:37:21] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:121] [DETAIL]: 0 ;
+[2018-04-28 14:37:22] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::Start:109] [ERROR]: Connect failed 10051 ;
+[2018-04-28 14:37:22] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:121] [DETAIL]: 0 ;
+[2018-04-28 14:37:23] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::Start:109] [ERROR]: Connect failed 10051 ;
+[2018-04-28 14:37:23] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:121] [DETAIL]: 0 ;
+[2018-04-28 14:37:24] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::Start:109] [ERROR]: Connect failed 10051 ;
+[2018-04-28 14:37:24] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:121] [DETAIL]: 0 ;
+[2018-04-28 14:37:25] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::Start:109] [ERROR]: Connect failed 10051 ;
+[2018-04-28 14:37:25] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:121] [DETAIL]: 0 ;
+--------------------[2018-04-28 14:39:29] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 14:39:30] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 14:39:30] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:121] [DETAIL]: 1 ;
+--------------------[2018-04-28 14:39:33] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-28 14:40:32] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 14:40:33] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 14:40:33] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:121] [DETAIL]: 1 ;
+--------------------[2018-04-28 14:40:38] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-28 14:55:26] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 14:55:26] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 14:55:26] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 14:57:06] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 14:57:06] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 14:57:06] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 14:58:25] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 14:58:25] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 14:58:25] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:15:49] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:15:49] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:15:50] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:17:36] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:17:37] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:17:37] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:18:55] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:18:55] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:18:55] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:19:35] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:19:35] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:19:35] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:20:13] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:20:13] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:20:13] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:20:48] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:20:48] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:20:48] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:21:17] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:21:18] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:21:18] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:21:54] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:21:55] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:21:55] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:37:19] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:37:20] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:37:20] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:135] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:44:35] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:44:35] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 15:44:44] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-28 15:49:24] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:49:25] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-04-28 15:49:40] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-28 15:49:57] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:49:57] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-04-28 15:50:01] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-28 15:50:23] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 15:50:23] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-04-28 15:50:25] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-28 16:50:34] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 16:50:34] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-04-28 16:50:39] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-28 16:50:59] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 16:50:59] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-04-28 16:51:09] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-28 16:51:47] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 16:51:47] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 16:51:51] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-28 16:52:59] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 16:52:59] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 16:53:01] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-28 17:01:53] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 17:01:53] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-04-28 17:02:00] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-04-28 17:02:03] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 17:02:04] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 17:02:06] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-28 17:04:56] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 17:04:56] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 17:04:59] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-28 17:05:41] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 17:05:41] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 17:05:43] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-28 17:07:45] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 17:07:45] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 17:07:47] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-28 17:08:31] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 17:08:31] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 17:08:33] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-28 17:09:12] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 17:09:13] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 17:09:15] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-28 17:10:42] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-28 17:10:42] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-28 17:10:50] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-29 14:36:36] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-29 14:36:36] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+[2018-04-29 14:36:41] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:137] [DETAIL]: 1 ;
+--------------------[2018-04-29 16:36:48] [电工基础1本.exe]  [Begin]--------------------
+[2018-04-29 16:36:48] [mainWnd.cpp:WinMain:16] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-04-29 16:57:46] [电工基础1本.exe]  [End]  --------------------
