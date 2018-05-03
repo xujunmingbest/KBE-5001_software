@@ -34,6 +34,9 @@
     <Filter Include="json">
       <UniqueIdentifier>{d9ed4b8c-211a-4e06-a7ef-7e258b41ab1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="单元测试">
+      <UniqueIdentifier>{0aef3c68-6522-4105-8ab8-57737754944d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainWnd.cpp">
@@ -89,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="message_Queue.h">
       <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="单元测试.cpp">
+      <Filter>单元测试</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +175,9 @@
     </ClInclude>
     <ClInclude Include="json\writer.h">
       <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="单元测试.h">
+      <Filter>单元测试</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

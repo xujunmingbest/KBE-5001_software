@@ -2,6 +2,7 @@
 #include "tool.h"
 #include "xml/xml.h"
 #include <windows.h>
+#include "单元测试.h"
 
 #pragma comment(lib, "User32.lib")
 using namespace 电工基础1本;
@@ -11,7 +12,21 @@ using namespace 电工基础1本;
 [STAThreadAttribute]
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+
 	Exceptioninit(); //全局异常初始化
+
+
+#ifdef unit_testing
+	testForLog();
+	testForMessageQueue();
+	testForThreeSegmentTransmissionProtocol();
+#endif
+
+
+
+
+
+
 	readXmlConfigFile(configXml);
 	LOG_DETAIL(configXml.DesMac, configXml.RepeaterIp, configXml.RepeaterPort);
 

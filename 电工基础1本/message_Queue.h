@@ -1,7 +1,6 @@
 /**************
 clr  windows 消息队列 
 
-
 *************/
 
 #include <queue>
@@ -48,21 +47,20 @@ public:
 
 
 
-/**********c语言石城县消息队列***********/
+/**********c语言实现县消息队列***********/
 class MsgQueue {
 	private:
 		queue<string> Queue;
 		QueueMutex QM;
-		bool QueueEnable = false;
 		HANDLE ENT;
 		bool Enable() {
 			return QueueEnable;
 		}
     public:  //register
-
+		bool QueueEnable = false;
 		/************
 		队列注册: 包括  sem 注册
-		          包
+
 		*****/
 		void QueueRegister(string &name) {
 			QueueEnable = QM.Create(name);
@@ -70,10 +68,10 @@ class MsgQueue {
 				return;
 			}
 			wchar_t *w_name = multiByteToWideChar(name+"Event");
-			ENT =  CreateEventW(0,
+			ENT =  CreateEvent(0,
 				false,  // WaitForMultipleObjects 后恢复到无信号状态
 				false,  // 一开始就是无信号
-				w_name);
+				NULL);
 			delete[]w_name;
 			if (GetLastError() == ERROR_ALREADY_EXISTS)
 			{
@@ -93,7 +91,6 @@ class MsgQueue {
 		}
 
 		string Consume() {
-			if (!Enable()) return "";
 			WaitForMultipleObjects(1, &ENT, FALSE, INFINITE);
 			QM.Lock();
 			string t;

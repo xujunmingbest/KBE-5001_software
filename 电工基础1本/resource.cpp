@@ -30,6 +30,9 @@ bool 实验1实验报告IsOpened = false;
 
 MsgQueue trial1part1;
 
+
+
+//程序启动的时候 消息队列初始化
 void MsgQueueRegister() {
 	trial1part1.QueueRegister(string("实验1第一个实验"));
 

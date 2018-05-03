@@ -60,6 +60,7 @@ private:
 			int templ = recv(sockClient, buff + lena, rl - lena, 0);
 			if (templ == 0 || templ == -1) {
 				delete[]buff;
+				Enabled = false;
 				return "socket_error";
 			}
 			lena += templ;
@@ -89,6 +90,7 @@ private:
 	}
 
 public:
+	bool Enabled = false;
 	void initParam(string &Srcmac, string &Desmac) {
 		srcmac = Srcmac;
 		desmac = Desmac;
@@ -143,6 +145,7 @@ public:
 				return;
 			}
 		}
+		Enabled = true;
 		MessageBox::Show("网络连接成功");
 	};
 	void ProtocolDestroy()
@@ -187,16 +190,16 @@ public:
 		}
 	}
 	TSTPBody ProtocolRecv() {
-		char buff[1000];
 		TSTPBody tb;
 		string lh = R(4);
 		string lb = R(8);
 		string head = R(atoi(lh.c_str()));
+		MessageBox::Show(gcnew String(head.c_str()));
 		string a = U2G(head.c_str());
 		MessageBox::Show(gcnew String(a.c_str()));
 		string body = R(atoi(lb.c_str()));
 		Json::Reader reader;
-		Json::Value root;  
+		Json::Value root;
 		if (reader.parse(body, root))
 		{
 			tb.trial_name = root["trial_name"].asString();
