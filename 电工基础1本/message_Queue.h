@@ -1,3 +1,5 @@
+#pragma once
+
 /**************
 clr  windows 消息队列 
 

@@ -18,8 +18,9 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 
 #ifdef unit_testing
 	testForLog();
-	testForMessageQueue();
-	testForThreeSegmentTransmissionProtocol();
+	//testForMessageQueue();
+	//testForThreeSegmentTransmissionProtocol();
+	testForSerialControl();
 #endif
 
 

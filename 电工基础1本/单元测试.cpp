@@ -54,3 +54,23 @@ void testForThreeSegmentTransmissionProtocol()
 	Thread^ t = gcnew Thread(gcnew ThreadStart(TstpRecv));
 	t->Start();
 }
+
+void testForSerialControl()
+{
+	SerialHandle^ sh = gcnew SerialHandle;
+	sh->SerialHandleInit();
+	sh->MonitorTesterId(9);
+
+	LOG_DETAIL( sh->GetMonitorTesterId());
+
+	S_PLCRecv r =   sh->GetliKongData();
+	LOG_DETAIL(r.Fhz);
+	LOG_DETAIL(r.U);
+	r = sh->GetliKongData();
+	LOG_DETAIL(r.Fhz);
+	LOG_DETAIL(r.U);
+	r = sh->GetliKongData();
+	LOG_DETAIL(r.Fhz);
+	LOG_DETAIL(r.U);
+	sh->SerialHandleClose();
+}

@@ -55,3 +55,197 @@
 [2018-05-03 13:38:44] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
 [2018-05-03 13:38:45] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:139] [DETAIL]: 1 ;
 [2018-05-03 13:38:49] [mainWnd.cpp:WinMain:31] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:42:53] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:42:53] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:42:53] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:42:53] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:42:53] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:143] [DETAIL]: 1 ;
+[2018-05-05 15:42:58] [mainWnd.cpp:WinMain:31] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:44:03] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:44:03] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:44:03] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:44:03] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:44:03] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:143] [DETAIL]: 1 ;
+[2018-05-05 15:44:07] [单元测试.cpp:testForSerialControl:63] [DETAIL]: 9 ;
+[2018-05-05 15:44:07] [单元测试.cpp:testForSerialControl:66] [DETAIL]: 4996 ;
+[2018-05-05 15:44:07] [单元测试.cpp:testForSerialControl:67] [DETAIL]: 23603 ;
+[2018-05-05 15:44:07] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 4996 ;
+[2018-05-05 15:44:07] [单元测试.cpp:testForSerialControl:70] [DETAIL]: 23603 ;
+[2018-05-05 15:44:07] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 4996 ;
+[2018-05-05 15:44:07] [单元测试.cpp:testForSerialControl:73] [DETAIL]: 23603 ;
+[2018-05-05 15:44:07] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:46:07] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:46:07] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:46:07] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:46:07] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:46:07] [单元测试.cpp:testForSerialControl:63] [DETAIL]: 9 ;
+[2018-05-05 15:46:07] [单元测试.cpp:testForSerialControl:66] [DETAIL]: 4996 ;
+[2018-05-05 15:46:07] [单元测试.cpp:testForSerialControl:67] [DETAIL]: 23611 ;
+[2018-05-05 15:46:07] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 4996 ;
+[2018-05-05 15:46:07] [单元测试.cpp:testForSerialControl:70] [DETAIL]: 23611 ;
+[2018-05-05 15:46:07] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 4996 ;
+[2018-05-05 15:46:07] [单元测试.cpp:testForSerialControl:73] [DETAIL]: 23611 ;
+[2018-05-05 15:46:07] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:46:47] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:46:47] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:46:47] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:46:47] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:46:47] [单元测试.cpp:testForSerialControl:63] [DETAIL]: 9 ;
+[2018-05-05 15:46:47] [单元测试.cpp:testForSerialControl:66] [DETAIL]: 5002 ;
+[2018-05-05 15:46:47] [单元测试.cpp:testForSerialControl:67] [DETAIL]: 23627 ;
+[2018-05-05 15:46:47] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 5002 ;
+[2018-05-05 15:46:47] [单元测试.cpp:testForSerialControl:70] [DETAIL]: 23627 ;
+[2018-05-05 15:46:47] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 5002 ;
+[2018-05-05 15:46:47] [单元测试.cpp:testForSerialControl:73] [DETAIL]: 23627 ;
+[2018-05-05 15:46:47] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:47:20] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:47:20] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:47:20] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:47:20] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:47:20] [单元测试.cpp:testForSerialControl:63] [DETAIL]: 9 ;
+[2018-05-05 15:47:21] [单元测试.cpp:testForSerialControl:66] [DETAIL]: 4998 ;
+[2018-05-05 15:47:21] [单元测试.cpp:testForSerialControl:67] [DETAIL]: 23590 ;
+[2018-05-05 15:47:21] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 4998 ;
+[2018-05-05 15:47:21] [单元测试.cpp:testForSerialControl:70] [DETAIL]: 23590 ;
+[2018-05-05 15:47:21] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 4998 ;
+[2018-05-05 15:47:21] [单元测试.cpp:testForSerialControl:73] [DETAIL]: 23590 ;
+[2018-05-05 15:47:21] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:47:35] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:47:35] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:47:35] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:47:35] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:47:35] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:47:44] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-05-05 15:48:30] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:48:30] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:48:30] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:48:30] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:48:34] [单元测试.cpp:testForSerialControl:65] [DETAIL]: 9 ;
+[2018-05-05 15:48:34] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 5001 ;
+[2018-05-05 15:48:34] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 23634 ;
+[2018-05-05 15:48:34] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 5001 ;
+[2018-05-05 15:48:34] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 23634 ;
+[2018-05-05 15:48:34] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 5001 ;
+[2018-05-05 15:48:34] [单元测试.cpp:testForSerialControl:75] [DETAIL]: 23635 ;
+[2018-05-05 15:48:34] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:50:58] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:50:58] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:50:58] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:50:58] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:51:00] [单元测试.cpp:testForSerialControl:65] [DETAIL]: 9 ;
+[2018-05-05 15:51:00] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 5000 ;
+[2018-05-05 15:51:00] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 23563 ;
+[2018-05-05 15:51:00] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 5000 ;
+[2018-05-05 15:51:00] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 23563 ;
+[2018-05-05 15:51:00] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 5000 ;
+[2018-05-05 15:51:00] [单元测试.cpp:testForSerialControl:75] [DETAIL]: 23563 ;
+[2018-05-05 15:51:03] [mainWnd.cpp:WinMain:33] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:51:40] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:51:40] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:51:40] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:51:40] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:51:41] [mainWnd.cpp:WinMain:33] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:51:45] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-05-05 15:53:45] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:53:46] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:53:46] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:53:46] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:53:51] [单元测试.cpp:testForSerialControl:65] [DETAIL]: 9 ;
+[2018-05-05 15:53:51] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 5002 ;
+[2018-05-05 15:53:51] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 23578 ;
+[2018-05-05 15:53:51] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 5002 ;
+[2018-05-05 15:53:51] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 23588 ;
+[2018-05-05 15:53:51] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 5002 ;
+[2018-05-05 15:53:51] [单元测试.cpp:testForSerialControl:75] [DETAIL]: 23588 ;
+[2018-05-05 15:53:52] [mainWnd.cpp:WinMain:33] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:55:00] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:55:00] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:55:00] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:55:00] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:55:01] [单元测试.cpp:testForSerialControl:65] [DETAIL]: 9 ;
+[2018-05-05 15:55:01] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 4998 ;
+[2018-05-05 15:55:01] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 23620 ;
+[2018-05-05 15:55:01] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 4999 ;
+[2018-05-05 15:55:01] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 23620 ;
+[2018-05-05 15:55:01] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 4999 ;
+[2018-05-05 15:55:01] [单元测试.cpp:testForSerialControl:75] [DETAIL]: 23620 ;
+[2018-05-05 15:55:02] [mainWnd.cpp:WinMain:33] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:55:02] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-05-05 15:55:10] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:55:11] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:55:11] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:55:11] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:55:12] [单元测试.cpp:testForSerialControl:65] [DETAIL]: 9 ;
+[2018-05-05 15:55:12] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 5002 ;
+[2018-05-05 15:55:12] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 23629 ;
+[2018-05-05 15:55:12] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 5002 ;
+[2018-05-05 15:55:12] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 23629 ;
+[2018-05-05 15:55:12] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 5002 ;
+[2018-05-05 15:55:12] [单元测试.cpp:testForSerialControl:75] [DETAIL]: 23629 ;
+[2018-05-05 15:55:13] [mainWnd.cpp:WinMain:33] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:55:13] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-05-05 15:55:52] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:55:53] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:55:53] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:55:53] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:55:55] [单元测试.cpp:testForSerialControl:65] [DETAIL]: 9 ;
+[2018-05-05 15:55:55] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 4996 ;
+[2018-05-05 15:55:55] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 23619 ;
+[2018-05-05 15:55:55] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 4996 ;
+[2018-05-05 15:55:55] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 23619 ;
+[2018-05-05 15:55:55] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 4996 ;
+[2018-05-05 15:55:55] [单元测试.cpp:testForSerialControl:75] [DETAIL]: 23619 ;
+[2018-05-05 15:55:55] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:55:55] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-05-05 15:56:13] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:56:13] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:56:13] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:56:13] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:56:14] [单元测试.cpp:testForSerialControl:65] [DETAIL]: 9 ;
+[2018-05-05 15:56:14] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 4998 ;
+[2018-05-05 15:56:14] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 23611 ;
+[2018-05-05 15:56:14] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 4998 ;
+[2018-05-05 15:56:14] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 23611 ;
+[2018-05-05 15:56:14] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 4998 ;
+[2018-05-05 15:56:14] [单元测试.cpp:testForSerialControl:75] [DETAIL]: 23611 ;
+[2018-05-05 15:56:14] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 15:56:37] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-05-05 15:57:13] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:57:13] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:57:13] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:57:13] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:57:15] [单元测试.cpp:testForSerialControl:65] [DETAIL]: 9 ;
+[2018-05-05 15:57:15] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 5002 ;
+[2018-05-05 15:57:15] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 23584 ;
+[2018-05-05 15:57:15] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 5002 ;
+[2018-05-05 15:57:15] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 23584 ;
+[2018-05-05 15:57:15] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 5002 ;
+[2018-05-05 15:57:15] [单元测试.cpp:testForSerialControl:75] [DETAIL]: 23584 ;
+[2018-05-05 15:57:15] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 16:47:36] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-05-05 16:49:25] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 16:49:25] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 16:49:25] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 16:49:25] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 16:49:26] [单元测试.cpp:testForSerialControl:65] [DETAIL]: 9 ;
+[2018-05-05 16:49:26] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 0 ;
+[2018-05-05 16:49:26] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 0 ;
+[2018-05-05 16:49:26] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 0 ;
+[2018-05-05 16:49:26] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 0 ;
+[2018-05-05 16:49:26] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 0 ;
+[2018-05-05 16:49:26] [单元测试.cpp:testForSerialControl:75] [DETAIL]: 0 ;
+[2018-05-05 16:49:26] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 16:49:28] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-05-05 16:49:41] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 16:49:41] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 16:49:41] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 16:49:41] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 16:49:41] [单元测试.cpp:testForSerialControl:64] [DETAIL]: 9 ;
+[2018-05-05 16:49:42] [单元测试.cpp:testForSerialControl:67] [DETAIL]: 0 ;
+[2018-05-05 16:49:42] [单元测试.cpp:testForSerialControl:68] [DETAIL]: 0 ;
+[2018-05-05 16:49:42] [单元测试.cpp:testForSerialControl:70] [DETAIL]: 0 ;
+[2018-05-05 16:49:42] [单元测试.cpp:testForSerialControl:71] [DETAIL]: 0 ;
+[2018-05-05 16:49:42] [单元测试.cpp:testForSerialControl:73] [DETAIL]: 0 ;
+[2018-05-05 16:49:42] [单元测试.cpp:testForSerialControl:74] [DETAIL]: 0 ;
+[2018-05-05 16:49:42] [mainWnd.cpp:WinMain:32] [DETAIL]: zt 47.94.219.135 10001 ;
+--------------------[2018-05-05 17:03:59] [电工基础1本.exe]  [End]  --------------------

@@ -8,4 +8,6 @@
 void testForLog();
 void testForMessageQueue();
 void testForThreeSegmentTransmissionProtocol();
+void testForSerialControl();
+
 #endif

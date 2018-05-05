@@ -5,6 +5,8 @@
 #include "log.h"
 #include "ThreeSegmentTransmissionProtocol.h"
 #include "message_Queue.h"
+#include "seriesPort.h"
+
 using namespace std;
 #include "底部.h"
 using namespace 电工基础1本;

@@ -18,3 +18,22 @@
 --------------------[2018-04-26 13:26:27] [电工基础1本.exe]  [End]  --------------------
 --------------------[2018-04-28 14:13:36] [电工基础1本.exe]  [Begin]--------------------
 --------------------[2018-04-28 14:13:52] [电工基础1本.exe]  [End]  --------------------
+--------------------[2018-05-04 09:40:21] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-04 09:40:21] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-04 09:40:21] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-04 09:40:21] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-04 09:40:21] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:139] [DETAIL]: 1 ;
+[2018-05-04 09:40:27] [mainWnd.cpp:WinMain:31] [DETAIL]:    ;
+--------------------[2018-05-05 15:45:17] [电工基础1本.exe]  [Begin]--------------------
+[2018-05-05 15:45:18] [单元测试.cpp:testForLog:7] [ERROR]: 单元测试 错误日志 ;
+[2018-05-05 15:45:18] [单元测试.cpp:testForLog:8] [DEBUG]: 单元测试 调试 ;
+[2018-05-05 15:45:18] [单元测试.cpp:testForLog:9] [DETAIL]: 单元测试 详细日志 ;
+[2018-05-05 15:45:18] [ThreeSegmentTransmissionProtocol.h:ThreeSegmentTransmissionProtocol::ProtocolStart:143] [DETAIL]: 1 ;
+[2018-05-05 15:45:33] [单元测试.cpp:testForSerialControl:63] [DETAIL]: 9 ;
+[2018-05-05 15:45:33] [单元测试.cpp:testForSerialControl:66] [DETAIL]: 0 ;
+[2018-05-05 15:45:33] [单元测试.cpp:testForSerialControl:67] [DETAIL]: 0 ;
+[2018-05-05 15:45:33] [单元测试.cpp:testForSerialControl:69] [DETAIL]: 0 ;
+[2018-05-05 15:45:33] [单元测试.cpp:testForSerialControl:70] [DETAIL]: 0 ;
+[2018-05-05 15:45:33] [单元测试.cpp:testForSerialControl:72] [DETAIL]: 5001 ;
+[2018-05-05 15:45:33] [单元测试.cpp:testForSerialControl:73] [DETAIL]: 23598 ;
+[2018-05-05 15:45:33] [mainWnd.cpp:WinMain:32] [DETAIL]:    ;

@@ -132,7 +132,7 @@
     <ClCompile Include="mainWnd.cpp" />
     <ClCompile Include="message_Queue.h" />
     <ClCompile Include="resource.cpp" />
-    <ClCompile Include="series_Port.cpp" />
+    <ClCompile Include="seriesPort.cpp" />
     <ClCompile Include="ThreeSegmentTransmissionProtocol.h" />
     <ClCompile Include="tool.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
@@ -164,6 +164,7 @@
     <ClInclude Include="mainWnd.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="seriesPort.h" />
     <ClInclude Include="tool.h" />
     <ClInclude Include="xml\tinystr.h" />
     <ClInclude Include="xml\tinyxml.h" />

@@ -87,14 +87,14 @@
     <ClCompile Include="ThreeSegmentTransmissionProtocol.h">
       <Filter>tool</Filter>
     </ClCompile>
-    <ClCompile Include="series_Port.cpp">
-      <Filter>tool</Filter>
-    </ClCompile>
     <ClCompile Include="message_Queue.h">
       <Filter>tool</Filter>
     </ClCompile>
     <ClCompile Include="单元测试.cpp">
       <Filter>单元测试</Filter>
+    </ClCompile>
+    <ClCompile Include="seriesPort.cpp">
+      <Filter>tool</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +178,9 @@
     </ClInclude>
     <ClInclude Include="单元测试.h">
       <Filter>单元测试</Filter>
+    </ClInclude>
+    <ClInclude Include="seriesPort.h">
+      <Filter>tool</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
