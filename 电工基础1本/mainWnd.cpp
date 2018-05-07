@@ -12,7 +12,6 @@ using namespace 电工基础1本;
 [STAThreadAttribute]
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-
 	Exceptioninit(); //全局异常初始化
 
 

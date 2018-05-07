@@ -191,3 +191,12 @@ namespace 电工基础1本 {
 
 void Exceptioninit();
 string T_to_string(String^in);
+
+
+
+public ref class global {
+public:
+	static SerialHandle^ sh = gcnew SerialHandle;
+	
+
+};

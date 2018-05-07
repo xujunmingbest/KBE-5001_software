@@ -131,6 +131,7 @@
     <ClCompile Include="log.h" />
     <ClCompile Include="mainWnd.cpp" />
     <ClCompile Include="message_Queue.h" />
+    <ClCompile Include="Ref_global_var.h" />
     <ClCompile Include="resource.cpp" />
     <ClCompile Include="seriesPort.cpp" />
     <ClCompile Include="ThreeSegmentTransmissionProtocol.h" />
@@ -171,6 +172,24 @@
     <ClInclude Include="xml\xml.h" />
     <ClInclude Include="_Mutex.h" />
     <ClInclude Include="单元测试.h" />
+    <ClInclude Include="基尔霍夫定律.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验内容.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验原理.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验器件.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验步骤.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验目的.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="实验1Main.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -208,6 +227,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mainWnd.resx">
       <DependentUpon>mainWnd.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律.resx">
+      <DependentUpon>基尔霍夫定律.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验内容.resx">
+      <DependentUpon>基尔霍夫定律实验内容.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验原理.resx">
+      <DependentUpon>基尔霍夫定律实验原理.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验器件.resx">
+      <DependentUpon>基尔霍夫定律实验器件.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验步骤.resx">
+      <DependentUpon>基尔霍夫定律实验步骤.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验目的.resx">
+      <DependentUpon>基尔霍夫定律实验目的.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="实验1Main.resx">
       <DependentUpon>实验1Main.h</DependentUpon>

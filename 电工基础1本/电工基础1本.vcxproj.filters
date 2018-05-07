@@ -37,6 +37,9 @@
     <Filter Include="单元测试">
       <UniqueIdentifier>{0aef3c68-6522-4105-8ab8-57737754944d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="基尔霍夫定律">
+      <UniqueIdentifier>{37c8e5e4-9305-4cb6-abfa-237979f83c95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainWnd.cpp">
@@ -94,6 +97,9 @@
       <Filter>单元测试</Filter>
     </ClCompile>
     <ClCompile Include="seriesPort.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Ref_global_var.h">
       <Filter>tool</Filter>
     </ClCompile>
   </ItemGroup>
@@ -181,6 +187,24 @@
     </ClInclude>
     <ClInclude Include="seriesPort.h">
       <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律.h">
+      <Filter>基尔霍夫定律</Filter>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验原理.h">
+      <Filter>基尔霍夫定律</Filter>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验器件.h">
+      <Filter>基尔霍夫定律</Filter>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验步骤.h">
+      <Filter>基尔霍夫定律</Filter>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验目的.h">
+      <Filter>基尔霍夫定律</Filter>
+    </ClInclude>
+    <ClInclude Include="基尔霍夫定律实验内容.h">
+      <Filter>基尔霍夫定律</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

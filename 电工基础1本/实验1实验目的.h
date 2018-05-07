@@ -149,8 +149,8 @@ namespace 电工基础1本 {
 	}
 			 Voice ^v = gcnew Voice;
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		v->Speak(label3->Text + 
-			label1->Text + label2->Text);
+		v->Speak(label1->Text + 
+			label2->Text + label3->Text);
 	}
 
 };

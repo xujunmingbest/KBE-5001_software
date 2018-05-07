@@ -1,6 +1,11 @@
-﻿  单元测试.cpp
-e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+﻿  seriesPort.cpp
+seriesPort.cpp(24): warning C4101: “e”: 未引用的局部变量
+seriesPort.cpp(45): warning C4267: “参数”: 从“size_t”转换到“unsigned char”，可能丢失数据
+seriesPort.cpp(82): warning C4101: “e”: 未引用的局部变量
+seriesPort.cpp(98): warning C4018: “<”: 有符号/无符号不匹配
+seriesPort.cpp(107): warning C4018: “<”: 有符号/无符号不匹配
+seriesPort.cpp(118): warning C4267: “参数”: 从“size_t”转换到“unsigned char”，可能丢失数据
+e:\clr\电工基础1本\电工基础1本\seriesport.cpp(227): warning C4700: 使用了未初始化的局部变量“pr”
   exception.obj :托管的代码存在时 /DEBUG:FASTLINK 不受支持；正在重新启动与 /DEBUG:FULL 的链接
   电工基础1本.vcxproj -> E:\clr\电工基础1本\Debug\电工基础1本.exe
   电工基础1本.vcxproj -> E:\clr\电工基础1本\Debug\电工基础1本.pdb (Partial PDB)

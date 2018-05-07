@@ -1,5 +1,7 @@
 #include "seriesPort.h"
 
+#include "底部.h"
+
 using namespace 电工基础1本;
 
 
@@ -55,6 +57,7 @@ bool SerialControl::Send(string &s) {
 	catch (System::Exception ^e) {
 		return false;
 	}
+	return true;
 }
 
 string SerialControl::Recv(int len) {
@@ -164,7 +167,7 @@ uint crc16(uchar *buf, uchar len)			//校验函数 高位在前，低位在后
 
 void SerialHandle::SerialHandleInit()
 {
-	sc->serialPortOpen("com7");
+	sc->serialPortOpen("com10");
 }
 
 void SerialHandle::SerialHandleClose()
@@ -200,7 +203,7 @@ void SerialHandle::MonitorTesterId(uint TesterId)
 	buff[4] = TesterId >> 8;
 	buff[5] = TesterId & 0Xff;
 
-	sc->Send(string(buff, 6));
+	sc->Send(string(buff, 6)).ToString();
 	string r = sc->Recv(8);
 
 }

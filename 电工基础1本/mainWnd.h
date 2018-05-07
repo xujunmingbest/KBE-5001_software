@@ -2,6 +2,7 @@
 #include "实验1Main.h"
 #include "tool.h"
 #include "LoginWnd.h"
+#include "基尔霍夫定律.h"
 namespace 电工基础1本 {
 
 	using namespace System;
@@ -26,7 +27,7 @@ namespace 电工基础1本 {
 			c = gcnew Thread(gcnew ThreadStart(this, &mainWnd::C));
 			c->Start();
 			c->IsBackground = true;
-
+			//this->skinEngine1->SkinFile = "E:\\clr\\电工基础1本\\res\\皮肤\\DeepGreen.ssk";
 			//ShowLoginWnd();
 
 
@@ -45,6 +46,8 @@ namespace 电工基础1本 {
 		}
 	private: System::Windows::Forms::ToolStripMenuItem^  网络重连ToolStripMenuItem;
 	private: System::IO::Ports::SerialPort^  serialPort1;
+	private: System::Windows::Forms::ToolStripMenuItem^  基尔霍夫定律实验ToolStripMenuItem;
+
 	public:
 
 		Thread ^c;
@@ -93,6 +96,7 @@ namespace 电工基础1本 {
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->实验ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->元件伏安特性的测试ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->基尔霍夫定律实验ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->网络重连ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->serialPort1 = (gcnew System::IO::Ports::SerialPort(this->components));
@@ -101,6 +105,8 @@ namespace 电工基础1本 {
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->实验ToolStripMenuItem,
@@ -115,22 +121,32 @@ namespace 电工基础1本 {
 			// 
 			// 实验ToolStripMenuItem
 			// 
-			this->实验ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->元件伏安特性的测试ToolStripMenuItem });
+			this->实验ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->元件伏安特性的测试ToolStripMenuItem,
+					this->基尔霍夫定律实验ToolStripMenuItem
+			});
 			this->实验ToolStripMenuItem->Name = L"实验ToolStripMenuItem";
-			this->实验ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
+			this->实验ToolStripMenuItem->Size = System::Drawing::Size(63, 24);
 			this->实验ToolStripMenuItem->Text = L"实验";
 			// 
 			// 元件伏安特性的测试ToolStripMenuItem
 			// 
 			this->元件伏安特性的测试ToolStripMenuItem->Name = L"元件伏安特性的测试ToolStripMenuItem";
-			this->元件伏安特性的测试ToolStripMenuItem->Size = System::Drawing::Size(268, 26);
-			this->元件伏安特性的测试ToolStripMenuItem->Text = L"实验一 元件伏安特性的测试";
+			this->元件伏安特性的测试ToolStripMenuItem->Size = System::Drawing::Size(273, 26);
+			this->元件伏安特性的测试ToolStripMenuItem->Text = L"元件伏安特性的测试";
 			this->元件伏安特性的测试ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::元件伏安特性的测试ToolStripMenuItem_Click);
+			// 
+			// 基尔霍夫定律实验ToolStripMenuItem
+			// 
+			this->基尔霍夫定律实验ToolStripMenuItem->Name = L"基尔霍夫定律实验ToolStripMenuItem";
+			this->基尔霍夫定律实验ToolStripMenuItem->Size = System::Drawing::Size(273, 26);
+			this->基尔霍夫定律实验ToolStripMenuItem->Text = L"基尔霍夫定律实验";
+			this->基尔霍夫定律实验ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::基尔霍夫定律实验ToolStripMenuItem_Click);
 			// 
 			// 网络重连ToolStripMenuItem
 			// 
 			this->网络重连ToolStripMenuItem->Name = L"网络重连ToolStripMenuItem";
-			this->网络重连ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->网络重连ToolStripMenuItem->Size = System::Drawing::Size(105, 24);
 			this->网络重连ToolStripMenuItem->Text = L"网络重连";
 			this->网络重连ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::网络重连ToolStripMenuItem_Click);
 			// 
@@ -192,6 +208,9 @@ namespace 电工基础1本 {
 	}
 	private: System::Void mainWnd_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
+
+
+
 private: System::Void 网络重连ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	/*
 	//在登入窗体应该做的事情
@@ -212,6 +231,22 @@ private: System::Void 网络重连ToolStripMenuItem_Click(System::Object^  sender, S
 private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
 }
 private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+
+
+		 基尔霍夫定律^ 基尔霍夫定律Wnd;
+private: System::Void 基尔霍夫定律实验ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (基尔霍夫定律IsOpened == true)
+	{
+		基尔霍夫定律Wnd->BringToFront(); //这个可以置于最前面
+		基尔霍夫定律Wnd->WindowState = FormWindowState::Maximized;
+		return;
+	}
+	基尔霍夫定律Wnd = gcnew 基尔霍夫定律;
+	基尔霍夫定律Wnd->Show();
+	基尔霍夫定律Wnd->WindowState = FormWindowState::Maximized;
+	this->Visible = false;
+
 }
 };
 }

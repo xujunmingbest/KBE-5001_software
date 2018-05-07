@@ -57,7 +57,9 @@ void testForThreeSegmentTransmissionProtocol()
 
 void testForSerialControl()
 {
-	SerialHandle^ sh = gcnew SerialHandle;
+	SerialHandle^ sh = global::sh;
+
+	//SerialHandle^ sh = gcnew SerialHandle;
 	sh->SerialHandleInit();
 	sh->MonitorTesterId(9);
 
