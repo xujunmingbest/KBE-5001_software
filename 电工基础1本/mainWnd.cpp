@@ -11,15 +11,16 @@ using namespace 电工基础1本;
 
 [STAThreadAttribute]
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+//int main()
 {
 	Exceptioninit(); //全局异常初始化
-
+	global::sh->SerialHandleInit();
 
 #ifdef unit_testing
 	testForLog();
 	//testForMessageQueue();
 	//testForThreeSegmentTransmissionProtocol();
-	testForSerialControl();
+	//testForSerialControl();
 #endif
 
 
@@ -42,4 +43,5 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	catch (System::Exception ^e) {
 		LOG_EXCEPTION(T_to_string(e->ToString()));
 	}
+	exit(0);
 }

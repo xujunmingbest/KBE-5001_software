@@ -1,5 +1,5 @@
 #pragma once
-
+#include "tool.h"
 
 extern bool 基尔霍夫定律实验内容IsOpened;
 namespace 电工基础1本 {
@@ -330,7 +330,12 @@ namespace 电工基础1本 {
 	}
 private: System::Void dataGridView1_ColumnHeaderMouseClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellMouseEventArgs^  e) {
 
-	MessageBox::Show(e->ColumnIndex.ToString());
+	switch (e->ColumnIndex)
+	{
+	case 0:;
+	default:S_PLCRecv Spr = global::sh->GetliKongData();
+		dataGridView1->Rows[1]->Cells[e->ColumnIndex]->Value = global::IntToFormatFloatString(Spr.U);;
+	}
 
 }
 		 Voice^ v = gcnew Voice;

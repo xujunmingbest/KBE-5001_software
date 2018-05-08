@@ -43,7 +43,7 @@ namespace 电工基础1本 {
 			tts->Rate = -2;
 	}
 	public:void Close() {
-		player->Stop();
+		player->Stop(); 
 	}
 	private: System::Void tts_SpeakCompleted(System::Object^ sender, SpeakCompletedEventArgs^ e)
 	{
@@ -123,10 +123,10 @@ namespace 电工基础1本 {
 					 DictionaryEntry^ d = (DictionaryEntry^)var;
 					 int v = (int)d->Value;
 					 if (v < NowTime) {
-						 ((Label^)d->Key)->Visible = true;
+						 ((Label^)d->Key)->Visible = false;
 					 }
 					 else if (v > NowTime) {
-						 ((Label^)d->Key)->Visible = false;
+						 ((Label^)d->Key)->Visible = true;
 					 }
 				 }
 				 for (int i = 0; i < 2; i++) {
@@ -134,7 +134,7 @@ namespace 电工基础1本 {
 					 {
 						 DictionaryEntry^ d = (DictionaryEntry^)var;
 						 if ((int)d->Value == NowTime) {
-							 ((Label^)d->Key)->Visible = false;
+							 ((Label^)d->Key)->Visible = true;
 						 }
 					 }
 					 Thread::Sleep(500);
@@ -143,7 +143,7 @@ namespace 电工基础1本 {
 					 {
 						 DictionaryEntry^ d = (DictionaryEntry^)var;
 						 if ((int)d->Value == NowTime)
-							 ((Label^)d->Key)->Visible = true;
+							 ((Label^)d->Key)->Visible = false;
 					 }
 					 Thread::Sleep(500);
 				 }
@@ -177,10 +177,10 @@ namespace 电工基础1本 {
 				DictionaryEntry^ d = (DictionaryEntry^)var;
 				int v = (int)d->Value;
 				if (v <= NowTime) {
-					((Label^)d->Key)->Visible = true;
+					((Label^)d->Key)->Visible = false;
 				}
 				else if (v > NowTime) {
-					((Label^)d->Key)->Visible = false;
+					((Label^)d->Key)->Visible = true;
 				}
 			}
 			mutex->ReleaseMutex();
@@ -196,7 +196,20 @@ string T_to_string(String^in);
 
 public ref class global {
 public:
-	static SerialHandle^ sh = gcnew SerialHandle;
+	static SerialHandle^ sh = gcnew SerialHandle;  //全局seriesPort 变量
 	
+
+	static String^ IntToFormatFloatString(int i) {
+		int xiaoshu = i % 100;
+		int zhengshu = i / 100;
+		String^ t;
+		if (xiaoshu == 0) {
+			t = zhengshu.ToString() + "." + "00";
+		}
+		else {
+			t = zhengshu.ToString() + "." + xiaoshu.ToString();
+		}
+		return t;
+	}
 
 };

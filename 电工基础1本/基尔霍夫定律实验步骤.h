@@ -10,7 +10,7 @@ namespace 电工基础1本 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+	using namespace System::Threading;
 	/// <summary>
 	/// 基尔霍夫定律实验步骤 摘要
 	/// </summary>
@@ -20,6 +20,7 @@ namespace 电工基础1本 {
 		基尔霍夫定律实验步骤(void)
 		{
 			InitializeComponent();
+			CheckForIllegalCrossThreadCalls = false;
 			基尔霍夫定律实验步骤IsOpened = true;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Font = gcnew System::Drawing::Font("宋体", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
@@ -41,6 +42,7 @@ namespace 电工基础1本 {
 		~基尔霍夫定律实验步骤()
 		{
 			基尔霍夫定律实验步骤IsOpened = false;
+			t->Abort();
 			if (components)
 			{
 				delete components;
@@ -379,11 +381,44 @@ namespace 电工基础1本 {
 	private: System::Void 基尔霍夫定律实验步骤_Load(System::Object^  sender, System::EventArgs^  e) {
 		axWindowsMediaPlayer1->Width = 900;
 		axWindowsMediaPlayer1->Height = 800;
+		t = gcnew Thread(gcnew ThreadStart(this,&基尔霍夫定律实验步骤::vedioOnPlay));
+		t->Start();
 	}
 			 Voice ^v = gcnew Voice;
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		v->Speak(label1->Text + label2->Text + label3->Text
 			+ label4->Text + label5->Text + label19->Text);
 	}
+
+			 Thread^t;
+			 void vedioOnPlay() {
+				 VideoShowWidget ^ vsw = gcnew VideoShowWidget;
+				 vsw->AddLabel(label9, 0);
+				 vsw->AddLabel(label7, 0); //接1K 的电阻
+
+				 vsw->AddLabel(label11, 52);
+				 vsw->AddLabel(label13, 52); //介入E1电压源
+
+				 vsw->AddLabel(label15, 73);
+				 vsw->AddLabel(label17, 73); //介入E1电压源
+				 while (1) {
+					 int pos = 0;
+					 try {
+						 Console::WriteLine(axWindowsMediaPlayer1->Ctlcontrols->currentPosition);
+						 pos = axWindowsMediaPlayer1->Ctlcontrols->currentPosition;
+					 }
+					 catch (System::Exception^e) {
+
+					 }
+					 switch (pos) {
+					 case 0:vsw->ShowLabel(pos); break;
+					 case 52:vsw->ShowLabel(pos); break;
+					 case 73:vsw->ShowLabel(pos); break;
+					 default:
+						 vsw->SuddenChange(pos);
+					 }
+					 Thread::Sleep(1000);
+				 }
+			 }
 };
 }
