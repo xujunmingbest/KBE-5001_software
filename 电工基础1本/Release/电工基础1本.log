@@ -1,6 +1,59 @@
-﻿  mainWnd.cpp
+﻿  exception.cpp
 e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
-e:\clr\电工基础1本\电工基础1本\ThreeSegmentTransmissionProtocol.h(190): warning C4101: “buff”: 未引用的局部变量
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\DbgHelp.h(1544): warning C4091: “typedef ”: 没有声明变量时忽略“”的左侧
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\DbgHelp.h(3190): warning C4091: “typedef ”: 没有声明变量时忽略“”的左侧
+exception.cpp(68): warning C4477: “sprintf_s”: 格式字符串“%08X”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“const PVOID”
+  json_reader.cpp
+  json_value.cpp
+  json_writer.cpp
+  main.cpp
+  log.h
+log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+  mainWnd.cpp
+e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(410): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(412): warning C4101: “e”: 未引用的局部变量
+  message_Queue.h
+e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+  Ref_global_var.h
+  resource.cpp
+e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(410): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(412): warning C4101: “e”: 未引用的局部变量
+  seriesPort.cpp
+seriesPort.cpp(24): warning C4101: “e”: 未引用的局部变量
+seriesPort.cpp(45): warning C4267: “参数”: 从“size_t”转换到“unsigned char”，可能丢失数据
+seriesPort.cpp(57): warning C4101: “e”: 未引用的局部变量
+seriesPort.cpp(81): warning C4101: “e”: 未引用的局部变量
+seriesPort.cpp(97): warning C4018: “<”: 有符号/无符号不匹配
+seriesPort.cpp(106): warning C4018: “<”: 有符号/无符号不匹配
+seriesPort.cpp(117): warning C4267: “参数”: 从“size_t”转换到“unsigned char”，可能丢失数据
+  ThreeSegmentTransmissionProtocol.h
+e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+  tool.cpp
+e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+tool.cpp(52): warning C4101: “piProcInfo”: 未引用的局部变量
+tool.cpp(98): warning C4477: “snprintf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“System::String ^”
+  tinystr.cpp
+  tinyxml.cpp
+  tinyxmlerror.cpp
+  tinyxmlparser.cpp
+  xml.cpp
+  单元测试.cpp
+e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+  正在生成代码...
+e:\clr\电工基础1本\电工基础1本\seriesport.cpp(226): warning C4700: 使用了未初始化的局部变量“pr”
+e:\clr\电工基础1本\电工基础1本\exception.cpp(206): warning C4793: “ApplicationCrashHandler”: 编译为本机的函数:
+  	托管代码中不支持内联本机程序集
+  _Mutex.cpp
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   电工基础1本.vcxproj -> E:\clr\电工基础1本\Release\电工基础1本.exe
   电工基础1本.vcxproj -> E:\clr\电工基础1本\Release\电工基础1本.pdb (Full PDB)

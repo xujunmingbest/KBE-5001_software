@@ -79,11 +79,14 @@ Class 电工基础1本.Waver: AutoLayout, AnsiClass, Class, Public, BeforeFieldI
     Add(Label): PrivateScope, Public, HideBySig
 Class 电工基础1本.VideoShowWidget: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
   Methods:
     Clear(): PrivateScope, Public, HideBySig
     AddLabel(Label, Int32): PrivateScope, Public, HideBySig
     ShowLabel(Int32): PrivateScope, Public, HideBySig
     SuddenChange(Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
 Class global: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:

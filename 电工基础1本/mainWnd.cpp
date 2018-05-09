@@ -35,7 +35,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	try {
 		Voice ^ v = gcnew Voice;
 		v->Speak("大家好，欢迎使用中腾科教软件，本软件制作者:徐军明");
-
+    
 		readXmlConfigFile(g_cx);
 		Application::EnableVisualStyles();
 		Application::Run(gcnew mainWnd);
@@ -44,4 +44,6 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 		LOG_EXCEPTION(T_to_string(e->ToString()));
 	}
 	exit(0);
+
+
 }

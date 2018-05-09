@@ -10,6 +10,12 @@
 using namespace std;
 #include "底部.h"
 using namespace 电工基础1本;
+
+void Exceptioninit();
+string T_to_string(String^in);
+
+
+
 class CControl
 {
 	HANDLE hMutex1;
@@ -115,41 +121,58 @@ namespace 电工基础1本 {
 	private: Hashtable ^ht = gcnew Hashtable;
 			 Mutex ^ mutex = gcnew Mutex;
 			 int NowTime = 0;
-
+			 ~VideoShowWidget() {
+				 t->Abort();
+			 }
 			 void TShow() {
 				 mutex->WaitOne();
-				 for each (Object^ var in ht)
-				 {
-					 DictionaryEntry^ d = (DictionaryEntry^)var;
-					 int v = (int)d->Value;
-					 if (v < NowTime) {
-						 ((Label^)d->Key)->Visible = false;
+				 try {
+					 for each (Object^ var in ht)
+					 {
+						 DictionaryEntry^ d = (DictionaryEntry^)var;
+						 int v = (int)d->Value;
+						 if (v < NowTime) {
+							 ((Label^)d->Key)->Visible = false;
+						 }
+						 else if (v > NowTime) {
+							 ((Label^)d->Key)->Visible = true;
+						 }
+						 else if (v == NowTime) {
+							 ((Label^)d->Key)->BackColor = Color::Red;
+						 }
 					 }
-					 else if (v > NowTime) {
-						 ((Label^)d->Key)->Visible = true;
+					 for (int i = 0; i < 2; i++) {
+						 for each (Object^ var in ht)
+						 {
+							 DictionaryEntry^ d = (DictionaryEntry^)var;
+							 if ((int)d->Value == NowTime) {
+								 ((Label^)d->Key)->Visible = true;
+							 }
+						 }
+						 Thread::Sleep(500);
+
+						 for each (Object^ var in ht)
+						 {
+							 DictionaryEntry^ d = (DictionaryEntry^)var;
+							 if ((int)d->Value == NowTime)
+								 ((Label^)d->Key)->Visible = false;
+						 }
+						 Thread::Sleep(500);
 					 }
-				 }
-				 for (int i = 0; i < 2; i++) {
 					 for each (Object^ var in ht)
 					 {
 						 DictionaryEntry^ d = (DictionaryEntry^)var;
 						 if ((int)d->Value == NowTime) {
-							 ((Label^)d->Key)->Visible = true;
+							 ((Label^)d->Key)->BackColor = Color::White;
 						 }
 					 }
-					 Thread::Sleep(500);
-
-					 for each (Object^ var in ht)
-					 {
-						 DictionaryEntry^ d = (DictionaryEntry^)var;
-						 if ((int)d->Value == NowTime)
-							 ((Label^)d->Key)->Visible = false;
-					 }
-					 Thread::Sleep(500);
+				 }
+				 catch (System::Exception ^e ) {
+					 LOG_EXCEPTION(T_to_string(e->ToString()));
 				 }
 				 mutex->ReleaseMutex();
 			 }
-
+			 Thread^ t;
 	public:
 		void Clear() {
 			ht->Clear();
@@ -160,7 +183,7 @@ namespace 电工基础1本 {
 		}
 		void ShowLabel(int second) {
 			NowTime = second;
-			Thread^ t = gcnew Thread(gcnew ThreadStart(this, &VideoShowWidget::TShow));
+			t = gcnew Thread(gcnew ThreadStart(this, &VideoShowWidget::TShow));
 			t->Start();
 		}
 		/***************************
@@ -187,10 +210,6 @@ namespace 电工基础1本 {
 		}
 	};
 }
-
-
-void Exceptioninit();
-string T_to_string(String^in);
 
 
 

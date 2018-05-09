@@ -37,6 +37,7 @@ namespace 电工基础1本 {
 		~基尔霍夫定律实验内容()
 		{
 			基尔霍夫定律实验内容IsOpened = false;
+			v->Close();
 			if (components)
 			{
 				delete components;
@@ -61,6 +62,33 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::TextBox^  textBoxI1;
+	private: System::Windows::Forms::TextBox^  textBoxI2;
+	private: System::Windows::Forms::TextBox^  textBoxI3;
+	private: System::Windows::Forms::TextBox^  textBoxE1;
+
+
+
+
+	private: System::Windows::Forms::TextBox^  textBoxUAF;
+
+	private: System::Windows::Forms::TextBox^  textBoxUAB;
+
+	private: System::Windows::Forms::TextBox^  textBoxUAD;
+	private: System::Windows::Forms::TextBox^  textBoxUCD;
+
+
+	private: System::Windows::Forms::TextBox^  textBoxUDE;
+	private: System::Windows::Forms::TextBox^  textBoxE2;
+	private: System::Windows::Forms::Label^  label18;
+	private: System::Windows::Forms::Label^  label14;
+	private: System::Windows::Forms::Label^  label16;
+	private: System::Windows::Forms::Label^  label12;
+	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Label^  label10;
+
+
 
 
 	protected:
@@ -82,6 +110,7 @@ namespace 电工基础1本 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(基尔霍夫定律实验内容::typeid));
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -101,8 +130,26 @@ namespace 电工基础1本 {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBoxI1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxI2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxI3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxE1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxUAF = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxUAB = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxUAD = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxUCD = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxUDE = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxE2 = (gcnew System::Windows::Forms::TextBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// dataGridView1
@@ -114,10 +161,10 @@ namespace 电工基础1本 {
 					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8, this->Column9, this->Column10
 			});
 			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->dataGridView1->Location = System::Drawing::Point(0, 484);
+			this->dataGridView1->Location = System::Drawing::Point(0, 665);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowTemplate->Height = 27;
-			this->dataGridView1->Size = System::Drawing::Size(1489, 282);
+			this->dataGridView1->Size = System::Drawing::Size(1655, 182);
 			this->dataGridView1->TabIndex = 0;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &基尔霍夫定律实验内容::dataGridView1_CellContentClick);
 			this->dataGridView1->ColumnHeaderMouseClick += gcnew System::Windows::Forms::DataGridViewCellMouseEventHandler(this, &基尔霍夫定律实验内容::dataGridView1_ColumnHeaderMouseClick);
@@ -194,7 +241,7 @@ namespace 电工基础1本 {
 			this->panel1->Controls->Add(this->label3);
 			this->panel1->Font = (gcnew System::Drawing::Font(L"楷体", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->panel1->Location = System::Drawing::Point(12, 12);
+			this->panel1->Location = System::Drawing::Point(814, 12);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(803, 329);
 			this->panel1->TabIndex = 7;
@@ -273,11 +320,177 @@ namespace 电工基础1本 {
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"2．将开关向上拔，即电阻接入电路中。分别将两路直流稳压源接入电路，令E1＝12V，E2＝6V。";
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(12, 12);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(796, 647);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox1->TabIndex = 9;
+			this->pictureBox1->TabStop = false;
+			// 
+			// textBoxI1
+			// 
+			this->textBoxI1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxI1->Location = System::Drawing::Point(218, 20);
+			this->textBoxI1->Name = L"textBoxI1";
+			this->textBoxI1->Size = System::Drawing::Size(100, 30);
+			this->textBoxI1->TabIndex = 10;
+			// 
+			// textBoxI2
+			// 
+			this->textBoxI2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxI2->Location = System::Drawing::Point(539, 20);
+			this->textBoxI2->Name = L"textBoxI2";
+			this->textBoxI2->Size = System::Drawing::Size(100, 30);
+			this->textBoxI2->TabIndex = 11;
+			// 
+			// textBoxI3
+			// 
+			this->textBoxI3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxI3->Location = System::Drawing::Point(331, 193);
+			this->textBoxI3->Name = L"textBoxI3";
+			this->textBoxI3->Size = System::Drawing::Size(100, 30);
+			this->textBoxI3->TabIndex = 12;
+			// 
+			// textBoxE1
+			// 
+			this->textBoxE1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxE1->Location = System::Drawing::Point(77, 366);
+			this->textBoxE1->Name = L"textBoxE1";
+			this->textBoxE1->Size = System::Drawing::Size(100, 30);
+			this->textBoxE1->TabIndex = 13;
+			// 
+			// textBoxUAF
+			// 
+			this->textBoxUAF->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxUAF->Location = System::Drawing::Point(479, 598);
+			this->textBoxUAF->Name = L"textBoxUAF";
+			this->textBoxUAF->Size = System::Drawing::Size(100, 30);
+			this->textBoxUAF->TabIndex = 14;
+			// 
+			// textBoxUAB
+			// 
+			this->textBoxUAB->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxUAB->Location = System::Drawing::Point(256, 598);
+			this->textBoxUAB->Name = L"textBoxUAB";
+			this->textBoxUAB->Size = System::Drawing::Size(100, 30);
+			this->textBoxUAB->TabIndex = 15;
+			// 
+			// textBoxUAD
+			// 
+			this->textBoxUAD->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxUAD->Location = System::Drawing::Point(331, 311);
+			this->textBoxUAD->Name = L"textBoxUAD";
+			this->textBoxUAD->Size = System::Drawing::Size(100, 30);
+			this->textBoxUAD->TabIndex = 16;
+			// 
+			// textBoxUCD
+			// 
+			this->textBoxUCD->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxUCD->Location = System::Drawing::Point(77, 70);
+			this->textBoxUCD->Name = L"textBoxUCD";
+			this->textBoxUCD->Size = System::Drawing::Size(100, 30);
+			this->textBoxUCD->TabIndex = 17;
+			// 
+			// textBoxUDE
+			// 
+			this->textBoxUDE->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxUDE->Location = System::Drawing::Point(630, 193);
+			this->textBoxUDE->Name = L"textBoxUDE";
+			this->textBoxUDE->Size = System::Drawing::Size(100, 30);
+			this->textBoxUDE->TabIndex = 18;
+			// 
+			// textBoxE2
+			// 
+			this->textBoxE2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->textBoxE2->Location = System::Drawing::Point(630, 366);
+			this->textBoxE2->Name = L"textBoxE2";
+			this->textBoxE2->Size = System::Drawing::Size(100, 30);
+			this->textBoxE2->TabIndex = 19;
+			// 
+			// label18
+			// 
+			this->label18->BackColor = System::Drawing::Color::White;
+			this->label18->Location = System::Drawing::Point(595, 505);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(28, 10);
+			this->label18->TabIndex = 31;
+			// 
+			// label14
+			// 
+			this->label14->BackColor = System::Drawing::Color::White;
+			this->label14->Location = System::Drawing::Point(183, 505);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(28, 10);
+			this->label14->TabIndex = 28;
+			// 
+			// label16
+			// 
+			this->label16->BackColor = System::Drawing::Color::White;
+			this->label16->Location = System::Drawing::Point(595, 322);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(28, 10);
+			this->label16->TabIndex = 29;
+			// 
+			// label12
+			// 
+			this->label12->BackColor = System::Drawing::Color::White;
+			this->label12->Location = System::Drawing::Point(183, 322);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(28, 10);
+			this->label12->TabIndex = 30;
+			// 
+			// label8
+			// 
+			this->label8->BackColor = System::Drawing::Color::White;
+			this->label8->Location = System::Drawing::Point(183, 187);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(28, 10);
+			this->label8->TabIndex = 27;
+			// 
+			// label10
+			// 
+			this->label10->BackColor = System::Drawing::Color::White;
+			this->label10->Location = System::Drawing::Point(183, 99);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(28, 10);
+			this->label10->TabIndex = 26;
+			// 
 			// 基尔霍夫定律实验内容
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1489, 766);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->ClientSize = System::Drawing::Size(1655, 847);
+			this->Controls->Add(this->label18);
+			this->Controls->Add(this->label14);
+			this->Controls->Add(this->label16);
+			this->Controls->Add(this->label12);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->textBoxE2);
+			this->Controls->Add(this->textBoxUDE);
+			this->Controls->Add(this->textBoxUCD);
+			this->Controls->Add(this->textBoxUAD);
+			this->Controls->Add(this->textBoxUAB);
+			this->Controls->Add(this->textBoxUAF);
+			this->Controls->Add(this->textBoxE1);
+			this->Controls->Add(this->textBoxI3);
+			this->Controls->Add(this->textBoxI2);
+			this->Controls->Add(this->textBoxI1);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->dataGridView1);
 			this->Name = L"基尔霍夫定律实验内容";
@@ -286,7 +499,9 @@ namespace 电工基础1本 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -307,7 +522,7 @@ namespace 电工基础1本 {
 				 dataGridView1->Rows[0]->Cells[1]->Value = "I2（mA）";
 				 dataGridView1->Rows[0]->Cells[2]->Value = "I3（mA）";
 				 dataGridView1->Rows[0]->Cells[3]->Value = "E1（v）";
-				 dataGridView1->Rows[0]->Cells[4]->Value = "U12（v）";
+				 dataGridView1->Rows[0]->Cells[4]->Value = "E2（v）";
 				 dataGridView1->Rows[0]->Cells[5]->Value = "UFA（v）";
 				 dataGridView1->Rows[0]->Cells[6]->Value = "UAB（v）";
 				 dataGridView1->Rows[0]->Cells[7]->Value = "UAD（v）";
@@ -332,9 +547,37 @@ private: System::Void dataGridView1_ColumnHeaderMouseClick(System::Object^  send
 
 	switch (e->ColumnIndex)
 	{
-	case 0:;
-	default:S_PLCRecv Spr = global::sh->GetliKongData();
-		dataGridView1->Rows[1]->Cells[e->ColumnIndex]->Value = global::IntToFormatFloatString(Spr.U);;
+	case 0:
+		S_PLCRecv Spr1 = global::sh->GetliKongData();
+		textBoxI1->Text = global::IntToFormatFloatString(Spr1.I); break;
+	case 1:
+		S_PLCRecv Spr2 = global::sh->GetliKongData();
+		textBoxI2->Text = global::IntToFormatFloatString(Spr2.I); break;
+	case 2:
+		S_PLCRecv Spr3 = global::sh->GetliKongData();
+		textBoxI3->Text = global::IntToFormatFloatString(Spr3.I); break;
+	case 3:
+		S_PLCRecv Spr4 = global::sh->GetliKongData();
+		textBoxE1->Text = global::IntToFormatFloatString(Spr4.U); break;
+	case 4:
+		S_PLCRecv Spr5 = global::sh->GetliKongData();
+		textBoxE2->Text = global::IntToFormatFloatString(Spr5.U); break;
+	case 5:
+		S_PLCRecv Spr6 = global::sh->GetliKongData();
+		textBoxUAF->Text = global::IntToFormatFloatString(Spr6.U); break;
+	case 6:
+		S_PLCRecv Spr7 = global::sh->GetliKongData();
+		textBoxUAB->Text = global::IntToFormatFloatString(Spr7.U); break;
+	case 7:
+		S_PLCRecv Spr8 = global::sh->GetliKongData();
+		textBoxUAD->Text = global::IntToFormatFloatString(Spr8.U); break;
+	case 8:
+		S_PLCRecv Spr9 = global::sh->GetliKongData();
+		textBoxUCD->Text = global::IntToFormatFloatString(Spr9.U); break;
+	case 9:
+		S_PLCRecv Spr10 = global::sh->GetliKongData();
+		textBoxUDE->Text = global::IntToFormatFloatString(Spr10.U); break;
+	default:;
 	}
 
 }

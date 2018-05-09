@@ -63,6 +63,7 @@ namespace 电工基础1本 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(实验1实验目的::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -74,7 +75,7 @@ namespace 电工基础1本 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(18, 55);
+			this->label1->Location = System::Drawing::Point(18, 126);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(135, 20);
 			this->label1->TabIndex = 0;
@@ -83,7 +84,7 @@ namespace 电工基础1本 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(18, 137);
+			this->label2->Location = System::Drawing::Point(18, 208);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(587, 20);
 			this->label2->TabIndex = 1;
@@ -92,7 +93,7 @@ namespace 电工基础1本 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(18, 238);
+			this->label3->Location = System::Drawing::Point(18, 309);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(482, 20);
 			this->label3->TabIndex = 2;
@@ -102,9 +103,9 @@ namespace 电工基础1本 {
 			// 
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button1->ForeColor = System::Drawing::Color::Black;
-			this->button1->Location = System::Drawing::Point(155, 5);
+			this->button1->Location = System::Drawing::Point(3, 3);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(77, 58);
+			this->button1->Size = System::Drawing::Size(108, 43);
 			this->button1->TabIndex = 11;
 			this->button1->Text = L"点我朗读";
 			this->button1->UseVisualStyleBackColor = true;
@@ -114,24 +115,28 @@ namespace 电工基础1本 {
 			// 
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->Controls->Add(this->label1);
+			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Controls->Add(this->label3);
+			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->panel1->Location = System::Drawing::Point(155, 69);
+			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(667, 397);
+			this->panel1->Size = System::Drawing::Size(1124, 755);
 			this->panel1->TabIndex = 12;
+			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &实验1实验目的::panel1_Paint);
 			// 
 			// 实验1实验目的
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
-			this->ClientSize = System::Drawing::Size(1124, 691);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->ClientSize = System::Drawing::Size(1124, 755);
 			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->button1);
 			this->Name = L"实验1实验目的";
 			this->Text = L"实验1实验目的";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &实验1实验目的::实验1实验目的_FormClosed);
@@ -153,5 +158,7 @@ namespace 电工基础1本 {
 			label2->Text + label3->Text);
 	}
 
+private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+}
 };
 }

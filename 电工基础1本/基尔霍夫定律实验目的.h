@@ -36,6 +36,7 @@ namespace 电工基础1本 {
 		~基尔霍夫定律实验目的()
 		{
 			基尔霍夫定律实验目的IsOpened = false;
+			v->Close();
 			if (components)
 			{
 				delete components;
@@ -61,6 +62,7 @@ namespace 电工基础1本 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(基尔霍夫定律实验目的::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -131,6 +133,7 @@ namespace 电工基础1本 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(771, 413);
 			this->Controls->Add(this->panel1);
 			this->Name = L"基尔霍夫定律实验目的";

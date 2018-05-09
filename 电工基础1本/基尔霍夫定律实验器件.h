@@ -217,6 +217,7 @@ namespace 电工基础1本 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1730, 940);
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->pictureBox3);
