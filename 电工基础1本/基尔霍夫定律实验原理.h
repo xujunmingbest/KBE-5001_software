@@ -56,6 +56,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::Panel^  panel1;
 	private: AxWMPLib::AxWindowsMediaPlayer^  axWindowsMediaPlayer1;
 	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
 
 
 	private:
@@ -78,6 +79,7 @@ namespace 电工基础1本 {
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->axWindowsMediaPlayer1 = (gcnew AxWMPLib::AxWindowsMediaPlayer());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->axWindowsMediaPlayer1))->BeginInit();
 			this->SuspendLayout();
@@ -117,6 +119,7 @@ namespace 电工基础1本 {
 			// panel1
 			// 
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Controls->Add(this->label3);
@@ -147,6 +150,19 @@ namespace 电工基础1本 {
 			this->axWindowsMediaPlayer1->OcxState = (cli::safe_cast<System::Windows::Forms::AxHost::State^>(resources->GetObject(L"axWindowsMediaPlayer1.OcxState")));
 			this->axWindowsMediaPlayer1->Size = System::Drawing::Size(512, 314);
 			this->axWindowsMediaPlayer1->TabIndex = 5;
+			// 
+			// button2
+			// 
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->button2->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button2->Location = System::Drawing::Point(354, 257);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(99, 35);
+			this->button2->TabIndex = 33;
+			this->button2->Text = L"停止";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验原理::button2_Click);
 			// 
 			// 基尔霍夫定律实验原理
 			// 
@@ -179,5 +195,8 @@ namespace 电工基础1本 {
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		v->Speak( label1->Text + label2->Text + label3->Text);
 	}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	v->Close();
+}
 };
 }

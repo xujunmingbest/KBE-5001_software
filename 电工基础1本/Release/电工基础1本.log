@@ -1,4 +1,6 @@
-﻿  exception.cpp
+﻿C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(2399,5): warning MSB3305: 从路径“C:\Windows\SysWow64\wmp.dll”处理 COM 引用“WMPLib.1.0.dll”。类型库导入程序遇到无有效返回类型的属性 getter“sessionPlaylistCount”(它位于类型“WMPLib.IWMPNowPlayingHelperDispatch”上)。导入程序将尝试将此属性作为方法导入。
+C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(2399,5): warning MSB3305: 从路径“C:\Windows\SysWow64\wmp.dll”处理 COM 引用“WMPLib.1.0.dll”。“IWMPGraphEventHandler.NotifyAcquireCredentials”的至少一个参数不能由运行时封送拆收器进行封送处理。因此，此类参数将作为指针进行传递，并可能需要不安全代码进行操作。
+  exception.cpp
 e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\DbgHelp.h(1544): warning C4091: “typedef ”: 没有声明变量时忽略“”的左侧
@@ -14,8 +16,8 @@ log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. 
   mainWnd.cpp
 e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
-e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(410): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(412): warning C4101: “e”: 未引用的局部变量
+e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(426): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(428): warning C4101: “e”: 未引用的局部变量
   message_Queue.h
 e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
@@ -23,8 +25,8 @@ e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': 
   resource.cpp
 e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
-e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(410): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(412): warning C4101: “e”: 未引用的局部变量
+e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(426): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(428): warning C4101: “e”: 未引用的局部变量
   seriesPort.cpp
 seriesPort.cpp(24): warning C4101: “e”: 未引用的局部变量
 seriesPort.cpp(45): warning C4267: “参数”: 从“size_t”转换到“unsigned char”，可能丢失数据

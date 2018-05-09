@@ -87,6 +87,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::Label^  label12;
 	private: System::Windows::Forms::Label^  label8;
 	private: System::Windows::Forms::Label^  label10;
+	private: System::Windows::Forms::Button^  button2;
 
 
 
@@ -147,6 +148,7 @@ namespace 电工基础1本 {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
@@ -232,6 +234,7 @@ namespace 电工基础1本 {
 			// panel1
 			// 
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->label19);
 			this->panel1->Controls->Add(this->label5);
 			this->panel1->Controls->Add(this->label4);
@@ -468,6 +471,19 @@ namespace 电工基础1本 {
 			this->label10->Size = System::Drawing::Size(28, 10);
 			this->label10->TabIndex = 26;
 			// 
+			// button2
+			// 
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->button2->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button2->Location = System::Drawing::Point(546, 288);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(99, 35);
+			this->button2->TabIndex = 32;
+			this->button2->Text = L"停止";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验内容::button2_Click);
+			// 
 			// 基尔霍夫定律实验内容
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
@@ -545,46 +561,71 @@ namespace 电工基础1本 {
 	}
 private: System::Void dataGridView1_ColumnHeaderMouseClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellMouseEventArgs^  e) {
 
+
+	textBoxI1->ForeColor = Color::Black;
+	textBoxI2->ForeColor = Color::Black;
+	textBoxI3->ForeColor = Color::Black;
+	textBoxE1->ForeColor = Color::Black;
+	textBoxE2->ForeColor = Color::Black;
+	textBoxUAF->ForeColor = Color::Black;
+	textBoxUAB->ForeColor = Color::Black;
+	textBoxUAD->ForeColor = Color::Black;
+	textBoxUCD->ForeColor = Color::Black;
+	textBoxUDE->ForeColor = Color::Black;
+
 	switch (e->ColumnIndex)
 	{
 	case 0:
 		S_PLCRecv Spr1 = global::sh->GetliKongData();
-		textBoxI1->Text = global::IntToFormatFloatString(Spr1.I); break;
+		textBoxI1->Text = global::IntToFormatFloatString(Spr1.I); 
+		textBoxI1->ForeColor = Color::Red; 
+		break;
 	case 1:
 		S_PLCRecv Spr2 = global::sh->GetliKongData();
-		textBoxI2->Text = global::IntToFormatFloatString(Spr2.I); break;
+		textBoxI2->Text = global::IntToFormatFloatString(Spr2.I);
+		textBoxI2->ForeColor = Color::Red; break;
 	case 2:
 		S_PLCRecv Spr3 = global::sh->GetliKongData();
-		textBoxI3->Text = global::IntToFormatFloatString(Spr3.I); break;
+		textBoxI3->Text = global::IntToFormatFloatString(Spr3.I); 
+		textBoxI3->ForeColor = Color::Red; break;
 	case 3:
 		S_PLCRecv Spr4 = global::sh->GetliKongData();
-		textBoxE1->Text = global::IntToFormatFloatString(Spr4.U); break;
+		textBoxE1->Text = global::IntToFormatFloatString(Spr4.U); 
+		textBoxE1->ForeColor = Color::Red; break;
 	case 4:
 		S_PLCRecv Spr5 = global::sh->GetliKongData();
-		textBoxE2->Text = global::IntToFormatFloatString(Spr5.U); break;
+		textBoxE2->Text = global::IntToFormatFloatString(Spr5.U);
+		textBoxE2->ForeColor = Color::Red; break;
 	case 5:
 		S_PLCRecv Spr6 = global::sh->GetliKongData();
-		textBoxUAF->Text = global::IntToFormatFloatString(Spr6.U); break;
+		textBoxUAF->Text = global::IntToFormatFloatString(Spr6.U); 
+		textBoxUAF->ForeColor = Color::Red; break;
 	case 6:
 		S_PLCRecv Spr7 = global::sh->GetliKongData();
-		textBoxUAB->Text = global::IntToFormatFloatString(Spr7.U); break;
+		textBoxUAB->Text = global::IntToFormatFloatString(Spr7.U);
+		textBoxUAB->ForeColor = Color::Red; break;
 	case 7:
 		S_PLCRecv Spr8 = global::sh->GetliKongData();
-		textBoxUAD->Text = global::IntToFormatFloatString(Spr8.U); break;
+		textBoxUAD->Text = global::IntToFormatFloatString(Spr8.U);
+		textBoxUAD->ForeColor = Color::Red; break;
 	case 8:
 		S_PLCRecv Spr9 = global::sh->GetliKongData();
-		textBoxUCD->Text = global::IntToFormatFloatString(Spr9.U); break;
+		textBoxUCD->Text = global::IntToFormatFloatString(Spr9.U); 
+		textBoxUCD->ForeColor = Color::Red; break;
 	case 9:
 		S_PLCRecv Spr10 = global::sh->GetliKongData();
-		textBoxUDE->Text = global::IntToFormatFloatString(Spr10.U); break;
+		textBoxUDE->Text = global::IntToFormatFloatString(Spr10.U); 
+		textBoxUDE->ForeColor = Color::Red; break;
 	default:;
 	}
-
 }
 		 Voice^ v = gcnew Voice;
 private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
 	v->Speak(label1->Text + label2->Text + label3->Text
 		+ label4->Text + label5->Text + label19->Text);
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	v->Close();
 }
 };
 }

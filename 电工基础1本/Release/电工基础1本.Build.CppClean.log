@@ -1,4 +1,5 @@
 e:\clr\电工基础1本\电工基础1本\release\vc140.pdb
+e:\clr\电工基础1本\电工基础1本\release\单元测试.obj
 e:\clr\电工基础1本\电工基础1本\release\xml.obj
 e:\clr\电工基础1本\电工基础1本\release\tinyxmlparser.obj
 e:\clr\电工基础1本\电工基础1本\release\tinyxmlerror.obj
@@ -6,7 +7,10 @@ e:\clr\电工基础1本\电工基础1本\release\tinyxml.obj
 e:\clr\电工基础1本\电工基础1本\release\tinystr.obj
 e:\clr\电工基础1本\电工基础1本\release\tool.obj
 e:\clr\电工基础1本\电工基础1本\release\threesegmenttransmissionprotocol.obj
+e:\clr\电工基础1本\电工基础1本\release\seriesport.obj
 e:\clr\电工基础1本\电工基础1本\release\resource.obj
+e:\clr\电工基础1本\电工基础1本\release\ref_global_var.obj
+e:\clr\电工基础1本\电工基础1本\release\message_queue.obj
 e:\clr\电工基础1本\电工基础1本\release\mainwnd.obj
 e:\clr\电工基础1本\电工基础1本\release\log.obj
 e:\clr\电工基础1本\电工基础1本\release\main.obj
@@ -26,6 +30,12 @@ e:\clr\电工基础1本\release\microsoft.vsa.dll
 e:\clr\电工基础1本\release\microsoft.speech.voicexml.xml
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.loginwnd.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.mainwnd.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.基尔霍夫定律.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.基尔霍夫定律实验内容.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.基尔霍夫定律实验原理.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.基尔霍夫定律实验器件.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.基尔霍夫定律实验步骤.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.基尔霍夫定律实验目的.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.实验1main.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.实验1原理说明.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.实验1原理说明视频.resources

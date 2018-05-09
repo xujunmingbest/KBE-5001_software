@@ -48,6 +48,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::Button^  button2;
 
 	private:
 		/// <summary>
@@ -68,6 +69,7 @@ namespace 电工基础1本 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -113,13 +115,14 @@ namespace 电工基础1本 {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(99, 35);
 			this->button1->TabIndex = 3;
-			this->button1->Text = L"点我朗读";
+			this->button1->Text = L"朗读";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验目的::button1_Click);
 			// 
 			// panel1
 			// 
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->label2);
@@ -128,6 +131,19 @@ namespace 电工基础1本 {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(735, 192);
 			this->panel1->TabIndex = 4;
+			// 
+			// button2
+			// 
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->button2->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button2->Location = System::Drawing::Point(477, 133);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(99, 35);
+			this->button2->TabIndex = 4;
+			this->button2->Text = L"停止";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验目的::button2_Click);
 			// 
 			// 基尔霍夫定律实验目的
 			// 
@@ -152,5 +168,8 @@ namespace 电工基础1本 {
 		v->Speak(label1->Text +
 			label2->Text + label3->Text);
 	}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	v->Close();
+}
 };
 }
