@@ -91,6 +91,7 @@ Class global: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     电工基础1本.SerialHandle sh : Public, Static
+    电工基础1本.Voice voice : Public, Static
   Methods:
     IntToFormatFloatString(Int32): PrivateScope, Public, Static, HideBySig
 Class 电工基础1本.实验1实验目的: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

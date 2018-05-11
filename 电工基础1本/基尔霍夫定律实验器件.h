@@ -67,6 +67,7 @@ namespace 电工基础1本 {
 		/// </summary>
 		~基尔霍夫定律实验器件()
 		{
+			voice->Close();
 			基尔霍夫定律实验器件IsOpened = false;
 			if (components)
 			{
@@ -82,6 +83,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::PictureBox^  pictureBox2;
 	private: System::Windows::Forms::PictureBox^  pictureBox3;
 	private: System::Windows::Forms::PictureBox^  pictureBox4;
+	private: System::Windows::Forms::Button^  button1;
 	protected:
 
 	private:
@@ -107,6 +109,7 @@ namespace 电工基础1本 {
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -213,12 +216,25 @@ namespace 电工基础1本 {
 			this->pictureBox4->TabIndex = 9;
 			this->pictureBox4->TabStop = false;
 			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"新宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button1->Location = System::Drawing::Point(0, 246);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 42);
+			this->button1->TabIndex = 10;
+			this->button1->Text = L"演示";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验器件::button1_Click);
+			// 
 			// 基尔霍夫定律实验器件
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1730, 940);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
@@ -244,5 +260,48 @@ namespace 电工基础1本 {
 	}
 	private: System::Void pictureBox3_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
+			 Thread^ t;
+			 Voice^voice = gcnew Voice;
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		if( t!= nullptr) t->Abort();
+		t = gcnew Thread(gcnew ThreadStart(this, &基尔霍夫定律实验器件::display));
+		t->Start();
+	}
+			 void display() {
+				 pictureBox1->Visible = false;
+				 label1->Visible = false;
+
+				 pictureBox3->Visible = false;
+				 label2->Visible = false;
+
+				 pictureBox2->Visible = false;
+				 label3->Visible = false;
+
+				 pictureBox4->Visible = false;
+				 label4->Visible = false;
+
+				 voice->Speak("测量仪表挂箱CL01");
+				 Sleep(5000);
+				 pictureBox1->Visible = true;
+				 label1->Visible = true;
+
+
+				 voice->Speak("可调直流稳压电源0～30V双组");
+				 Thread::Sleep(6000);
+				 pictureBox3->Visible = true;
+				 label2->Visible = true;
+
+				 voice->Speak("DG01");
+				 Thread::Sleep(3000);
+				 pictureBox2->Visible = true;
+				 label3->Visible = true;
+
+
+				 voice->Speak("电流检测线");
+				 Thread::Sleep(2000);
+				 pictureBox4->Visible = true;
+				 label4->Visible = true;
+			 }
+	};
 };
-}
+

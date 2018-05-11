@@ -231,4 +231,6 @@ public:
 		return t;
 	}
 
+	static Voice ^voice = gcnew Voice;
+
 };
