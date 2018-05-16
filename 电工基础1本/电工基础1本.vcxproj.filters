@@ -102,6 +102,9 @@
     <ClCompile Include="Ref_global_var.h">
       <Filter>tool</Filter>
     </ClCompile>
+    <ClCompile Include="waver.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainWnd.h">
@@ -206,6 +209,9 @@
     <ClInclude Include="基尔霍夫定律实验内容.h">
       <Filter>基尔霍夫定律</Filter>
     </ClInclude>
+    <ClInclude Include="基尔霍夫定理原理动画.h">
+      <Filter>基尔霍夫定律</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mainWnd.resx">
@@ -242,6 +248,24 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginWnd.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验内容.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验原理.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验器件.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验步骤.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定律实验目的.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

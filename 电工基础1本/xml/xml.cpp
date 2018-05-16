@@ -33,6 +33,12 @@ bool readXmlConfigFile(ConfigXml &configXml)
 		else if (zd == "RepeaterIp") {
 			configXml.RepeaterIp = value;
 		}
+		else if (zd == "SerialHandle") {
+			configXml.SerialHandle = value;
+		}
+		else if (zd == "SerialControlSource") {
+			configXml.SerialControlSource = value;
+		}
 	}
 	return true;
 }

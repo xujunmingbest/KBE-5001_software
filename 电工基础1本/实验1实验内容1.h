@@ -1480,12 +1480,12 @@ private: System::Void panel1_Paint(System::Object^  sender, System::Windows::For
 
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
-
+	/*
 	Waver ^w = gcnew Waver;
-	w->ArrayInit(2);
+	w->ArrayInit(2,0);
 	w->Add(label15);
 	w->Add(label31);
-	w->LabelWaver();
+	w->LabelWaver();*/
 	return;
 }
 private: System::Void chart1_Click(System::Object^  sender, System::EventArgs^  e) {

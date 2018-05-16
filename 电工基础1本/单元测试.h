@@ -9,5 +9,5 @@ void testForLog();
 void testForMessageQueue();
 void testForThreeSegmentTransmissionProtocol();
 void testForSerialControl();
-
+void testForSerialControlSource();
 #endif

@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="waver.cpp" />
     <ClCompile Include="exception.cpp" />
     <ClCompile Include="json\json_reader.cpp" />
     <ClCompile Include="json\json_value.cpp" />
@@ -190,6 +191,9 @@
     <ClInclude Include="基尔霍夫定律实验目的.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="基尔霍夫定理原理动画.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="实验1Main.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -245,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="基尔霍夫定律实验目的.resx">
       <DependentUpon>基尔霍夫定律实验目的.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定理原理动画.resx">
+      <DependentUpon>基尔霍夫定理原理动画.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="实验1Main.resx">
       <DependentUpon>实验1Main.h</DependentUpon>

@@ -2,7 +2,6 @@
 #include "tool.h"
 using namespace std;
 CControl g_c("wnd"); 
-ConfigXml g_cx;
 CControl::CControl(char *Name)
 {
 	hMutex1 = NULL;
@@ -101,4 +100,8 @@ string T_to_string(String^in)
 	return temp;
 }
 
-
+int String_to_Int(String^in)
+{
+	string temp = T_to_string(in);
+	return atoi(temp.c_str());
+}

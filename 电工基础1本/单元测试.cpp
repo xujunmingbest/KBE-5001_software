@@ -76,3 +76,20 @@ void testForSerialControl()
 	LOG_DETAIL(r.U);
 	sh->SerialHandleClose();
 }
+
+
+void testForSerialControlSource()
+{
+	SerialControlSource^ scs = global::scs;
+	scs->SerialHandleInit();
+
+	scs->CloseSource(1);
+	scs->OpenSource(1);
+
+	scs->SetDirectVoltage(9);
+	scs->SetDirectCurrent(2);
+	scs->SetAlternatingVoltage('A', 20);
+
+
+	scs->SerialHandleClose();
+}

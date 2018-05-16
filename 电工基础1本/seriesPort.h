@@ -2,7 +2,7 @@
 
 #include <iostream>
 using namespace std;
-
+#include "xml/xml.h"
 
 #define uint unsigned int
 #define uchar unsigned char
@@ -44,6 +44,7 @@ namespace 电工基础1本 {
 		void serialPortOpen(String ^ PortName);
 		void serialPort1Close();
 		bool Send(string &s);
+		bool SendNoCrc(string &s);
 		string Recv(int len);
 		bool check_crc16(string &in);
 	};
@@ -59,6 +60,21 @@ namespace 电工基础1本 {
 		uint GetMonitorTesterId(); //读设备号
 		S_PLCRecv GetliKongData(); //获取
 		void MonitorTesterId(uint TesterId); //写设备号
+	};
+
+	/******控制电源业务层*****/
+	public ref class SerialControlSource {
+	private:
+		SerialControl ^sc = gcnew SerialControl;
+	public:
+		void SerialHandleInit();
+		void SerialHandleClose();
+		/********读取设备号********/
+		void SetDirectVoltage(int Voltage);
+		void SetDirectCurrent(int Current);
+		void SetAlternatingVoltage(char Id,int Voltage);
+		void OpenSource(int Id);
+		void CloseSource(int Id);
 	};
 
 }

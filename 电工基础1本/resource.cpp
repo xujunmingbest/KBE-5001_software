@@ -36,7 +36,8 @@ bool 基尔霍夫定律实验步骤IsOpened = false;
 #include "基尔霍夫定律实验内容.h"
 bool 基尔霍夫定律实验内容IsOpened = false;
 
-
+#include "基尔霍夫定理原理动画.h"
+bool 基尔霍夫定理原理动画IsOpened = false;
 
 
 

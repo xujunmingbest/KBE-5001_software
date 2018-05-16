@@ -1,5 +1,5 @@
 #include "seriesPort.h"
-
+#include "log.h"
 #include "底部.h"
 
 using namespace 电工基础1本;
@@ -11,18 +11,18 @@ uint TwoByteTouInt(char *buff);
 void SerialControl::serialPortOpen(String ^ PortName) {
 
 	int count = 0;
-
+	serialPort1->ReadTimeout = 3000;
 	serialPort1->Close();
 	try {
 		serialPort1->PortName = PortName;
 		serialPort1->ReceivedBytesThreshold = 1;
 		serialPort1->DataBits = 8;
 		serialPort1->Parity = System::IO::Ports::Parity::None; //无奇偶校验位
-															   //serialPort1->StopBits = System::IO::Ports::StopBits::One;//设置停止位为1
+		serialPort1->ReadTimeout = 3000;											   //serialPort1->StopBits = System::IO::Ports::StopBits::One;//设置停止位为1
 		serialPort1->Open(); //串口打开
 	}
 	catch (System::Exception ^e) {
-		cout << "打开串口失败" << endl;
+		LOG_EXCEPTION( "打开串口失败");
 	}
 	return;
 }
@@ -50,6 +50,25 @@ bool SerialControl::Send(string &s) {
 		buffer[alen+1] = buffr[0];
 
 		serialPort1->Write(buffer, 0, alen+2);//发送指令0x55
+		if (alen == 0) {
+			throw"发送0字节";
+		}
+	}
+	catch (System::Exception ^e) {
+		return false;
+	}
+	return true;
+}
+
+bool SerialControl::SendNoCrc(string &s) {
+	int alen = s.length();
+	cli::array<unsigned char>^ buffer = gcnew cli::array<unsigned char>(alen);
+	for (int i = 0; i < alen; i++)
+	{
+		buffer[i] = s[i];
+	}
+	try {
+		serialPort1->Write(buffer, 0, alen);//发送指令0x55
 		if (alen == 0) {
 			throw"发送0字节";
 		}
@@ -167,7 +186,12 @@ uint crc16(uchar *buf, uchar len)			//校验函数 高位在前，低位在后
 
 void SerialHandle::SerialHandleInit()
 {
-	sc->serialPortOpen("com10");
+	sc->serialPortOpen(gcnew String(configXml.SerialHandle.c_str()) );
+}
+
+void SerialControlSource::SerialHandleInit()
+{
+	sc->serialPortOpen(gcnew String(configXml.SerialControlSource.c_str()));
 }
 
 void SerialHandle::SerialHandleClose()
@@ -175,6 +199,10 @@ void SerialHandle::SerialHandleClose()
 	sc->serialPort1Close();
 }
 
+void SerialControlSource::SerialHandleClose()
+{
+	sc->serialPort1Close();
+}
 
 uint SerialHandle::GetMonitorTesterId() {
 	char buff[6];
@@ -203,7 +231,7 @@ void SerialHandle::MonitorTesterId(uint TesterId)
 	buff[4] = TesterId >> 8;
 	buff[5] = TesterId & 0Xff;
 
-	sc->Send(string(buff, 6)).ToString();
+	sc->Send(string(buff, 6));
 	string r = sc->Recv(8);
 
 }
@@ -221,7 +249,9 @@ S_PLCRecv SerialHandle::GetliKongData()
 	buff[4] = 0x00;
 	buff[5] = 0x07;
 
-	sc->Send(string(buff, 6));
+	if (!sc->Send(string(buff, 6))) {
+		memset(&pr, 0x00, sizeof(S_PLCRecv));
+	}
 	string r = sc->Recv(19);
 	if (r.length() == 0) return pr;
 
@@ -248,4 +278,73 @@ uint TwoByteTouInt(char *buff)
 	t = t << 8;
 	t += ((uint)buff[1]) & 0xff;
 	return t;
+}
+
+
+
+void SerialControlSource::SetDirectVoltage(int Voltage)
+{
+	int _Voltage = Voltage * 100;
+	char buff[6];
+	buff[0] = 0x01;
+	buff[1] = 0x06;
+	buff[2] = 0x00;
+	buff[3] = 0x01;
+	buff[4] = (_Voltage & 0xffff) >> 8;
+	buff[5] = _Voltage & 0xff;
+
+	sc->Send(string(buff, 6));
+	string r = sc->Recv(8);
+}
+void SerialControlSource::SetDirectCurrent(int Current)
+{
+	int _Current = Current * 100;
+	char buff[6];
+	buff[0] = 0x01;
+	buff[1] = 0x06;
+	buff[2] = 0x00; 
+	buff[3] = 0x00;
+	buff[4] = (_Current & 0xffff) >> 8;
+	buff[5] = _Current & 0xff;
+
+	sc->Send(string(buff, 6));
+	string r = sc->Recv(8);
+
+}
+
+void SerialControlSource::SetAlternatingVoltage(char Id, int Voltage)
+{
+	Sleep(1000);
+	int i = Voltage % 100;
+	int _Voltage = Voltage ;
+	char buff[8];
+	snprintf(buff + 5, 3, "%02d", i);
+	buff[0] = 'A';
+	buff[1] = 'C';
+	buff[2] = '_';
+	buff[3] = Id;
+	buff[4] = 'u';
+	buff[7] = 0x0A;
+
+	sc->SendNoCrc(string(buff, 8));
+}
+
+void SerialControlSource::OpenSource(int Id)
+{
+	char buff[3];
+	buff[0] = Id + 0x80;
+	buff[1] = 0x0D;
+	buff[2] = 0x0A;
+	sc->SendNoCrc(string(buff, 3));
+	Sleep(5000);
+}
+
+void SerialControlSource::CloseSource(int Id)
+{
+	char buff[3];
+	buff[0] = Id;
+	buff[1] = 0x0D;
+	buff[2] = 0x0A;
+	sc->SendNoCrc(string(buff, 3));
+	Sleep(5000);
 }

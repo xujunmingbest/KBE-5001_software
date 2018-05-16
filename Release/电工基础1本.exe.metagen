@@ -6,6 +6,7 @@
   电工基础1本.基尔霍夫定律实验器件.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.基尔霍夫定律实验步骤.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.基尔霍夫定律实验目的.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.基尔霍夫定理原理动画.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.实验1Main.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.实验1原理说明.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.实验1原理说明视频.resources - Embedded, ContainedInManifestFile, 
@@ -56,6 +57,7 @@ Class 电工基础1本.SerialControl: AutoLayout, AnsiClass, Class, Public, Befo
     serialPortOpen(String): PrivateScope, Public, HideBySig
     serialPort1Close(): PrivateScope, Public, HideBySig
     Send(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    SendNoCrc(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
     Recv(basic_string<char\,std::char_traits<char>\,std::allocator<char> >*, Int32): PrivateScope, Public, HideBySig
     check_crc16(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
 Class 电工基础1本.SerialHandle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -66,6 +68,16 @@ Class 电工基础1本.SerialHandle: AutoLayout, AnsiClass, Class, Public, Befor
     GetMonitorTesterId(): PrivateScope, Public, HideBySig
     GetliKongData(S_PLCRecv*): PrivateScope, Public, HideBySig
     MonitorTesterId(UInt32): PrivateScope, Public, HideBySig
+Class 电工基础1本.SerialControlSource: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SerialHandleInit(): PrivateScope, Public, HideBySig
+    SerialHandleClose(): PrivateScope, Public, HideBySig
+    SetDirectVoltage(Int32): PrivateScope, Public, HideBySig
+    SetDirectCurrent(Int32): PrivateScope, Public, HideBySig
+    SetAlternatingVoltage(SByte IsSignUnspecifiedByte, Int32): PrivateScope, Public, HideBySig
+    OpenSource(Int32): PrivateScope, Public, HideBySig
+    CloseSource(Int32): PrivateScope, Public, HideBySig
 Class 电工基础1本.Voice: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
@@ -74,9 +86,11 @@ Class 电工基础1本.Voice: AutoLayout, AnsiClass, Class, Public, BeforeFieldI
 Class 电工基础1本.Waver: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
-    LabelWaver(): PrivateScope, Public, HideBySig
-    ArrayInit(Int32): PrivateScope, Public, HideBySig
-    Add(Label): PrivateScope, Public, HideBySig
+    Init(): PrivateScope, Public, HideBySig
+    Add(PictureBox): PrivateScope, Public, HideBySig
+    Add(Label, Color): PrivateScope, Public, HideBySig
+    waver(): PrivateScope, Public, HideBySig
+    twaver(): PrivateScope, Public, HideBySig
 Class 电工基础1本.VideoShowWidget: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Interfaces:
@@ -91,6 +105,7 @@ Class global: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     电工基础1本.SerialHandle sh : Public, Static
+    电工基础1本.SerialControlSource scs : Public, Static
     电工基础1本.Voice voice : Public, Static
   Methods:
     IntToFormatFloatString(Int32): PrivateScope, Public, Static, HideBySig
@@ -152,6 +167,9 @@ Class 电工基础1本.基尔霍夫定律实验步骤: AutoLayout, AnsiClass, Cl
   Methods:
     ListView1Load(): PrivateScope, Public, HideBySig
 Class 电工基础1本.基尔霍夫定律实验内容: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.基尔霍夫定理原理动画: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.基尔霍夫定律: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

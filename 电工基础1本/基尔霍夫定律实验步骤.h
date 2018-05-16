@@ -105,6 +105,7 @@ namespace 电工基础1本 {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(基尔霍夫定律实验步骤::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -127,7 +128,6 @@ namespace 电工基础1本 {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->axWindowsMediaPlayer1 = (gcnew AxWMPLib::AxWindowsMediaPlayer());
-			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -151,6 +151,19 @@ namespace 电工基础1本 {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(803, 314);
 			this->panel1->TabIndex = 6;
+			// 
+			// button2
+			// 
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->button2->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->button2->Location = System::Drawing::Point(558, 272);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(99, 35);
+			this->button2->TabIndex = 8;
+			this->button2->Text = L"停止";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验步骤::button2_Click);
 			// 
 			// label19
 			// 
@@ -355,24 +368,11 @@ namespace 电工基础1本 {
 			// axWindowsMediaPlayer1
 			// 
 			this->axWindowsMediaPlayer1->Enabled = true;
-			this->axWindowsMediaPlayer1->Location = System::Drawing::Point(821, 4);
+			this->axWindowsMediaPlayer1->Location = System::Drawing::Point(821, 40);
 			this->axWindowsMediaPlayer1->Name = L"axWindowsMediaPlayer1";
 			this->axWindowsMediaPlayer1->OcxState = (cli::safe_cast<System::Windows::Forms::AxHost::State^>(resources->GetObject(L"axWindowsMediaPlayer1.OcxState")));
 			this->axWindowsMediaPlayer1->Size = System::Drawing::Size(512, 314);
 			this->axWindowsMediaPlayer1->TabIndex = 7;
-			// 
-			// button2
-			// 
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->button2->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->button2->Location = System::Drawing::Point(558, 272);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(99, 35);
-			this->button2->TabIndex = 8;
-			this->button2->Text = L"停止";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验步骤::button2_Click);
 			// 
 			// 基尔霍夫定律实验步骤
 			// 
@@ -400,7 +400,7 @@ namespace 电工基础1本 {
 		axWindowsMediaPlayer1->Width = 900;
 		axWindowsMediaPlayer1->Height = 800;
 		t = gcnew Thread(gcnew ThreadStart(this,&基尔霍夫定律实验步骤::vedioOnPlay));
-		t->Start();
+		//t->Start();
 	}
 			 Voice ^v = gcnew Voice;
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {

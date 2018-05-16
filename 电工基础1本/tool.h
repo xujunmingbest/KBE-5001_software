@@ -13,7 +13,7 @@ using namespace 电工基础1本;
 
 void Exceptioninit();
 string T_to_string(String^in);
-
+int String_to_Int(String^in);
 
 
 class CControl
@@ -28,7 +28,6 @@ public:
 };
 
 extern CControl g_c;
-extern ConfigXml g_cx;
 extern ThreeSegmentTransmissionProtocol g_TSTP;
 void voice_speek(String^ in);
 
@@ -80,36 +79,15 @@ namespace 电工基础1本 {
 	};
 	public ref class Waver
 	{
-		cli::array<Label^>^ a;
-		int pos=0;
-		void LabelWaverT() {
-			for (int i = 0; i < 2; i++) {
-				for (int i = 0; i < a->Length; i++) {
-					a[i]->Visible = true;
-				}
-				Thread::Sleep(500);
-				for (int i = 0; i < a->Length; i++) {
-					a[i]->Visible = false;
-				}
-				Thread::Sleep(500);
-			}
-		}
-	public: void LabelWaver() {
-			Thread ^ t = gcnew Thread(gcnew ThreadStart(this,&Waver::LabelWaverT));
-			t->Start();
-		}
-	public:void ArrayInit(int count) {
-			a = gcnew cli::array<Label^>(count);
-			pos = 0;
-		}
-	public:	void Add(Label^l) {
-			if (pos < a->Length) {
-				a[pos++] = l;
-			}
-		}
+		Hashtable ^LabelHt ;
+		Hashtable ^PicboxHt ;
 
+	public:void Init();
+	public:void Add(Label^ll,Color a);
+	public:void Add(PictureBox^ pb);
+	public:void waver();
+	public:void twaver();
 	};
-
 	/**************************
 	检测视屏播放的时候 在固定秒数播放对应的
 	label 或者 pictureBox
@@ -180,6 +158,7 @@ namespace 电工基础1本 {
 
 		void AddLabel(Label^l, int showTime) {
 			ht->Add(l, showTime);
+			ht->Add(l, Color::Red);
 		}
 		void ShowLabel(int second) {
 			NowTime = second;
@@ -216,7 +195,7 @@ namespace 电工基础1本 {
 public ref class global {
 public:
 	static SerialHandle^ sh = gcnew SerialHandle;  //全局seriesPort 变量
-	
+	static SerialControlSource^ scs = gcnew SerialControlSource;
 
 	static String^ IntToFormatFloatString(int i) {
 		int xiaoshu = i % 100;
@@ -234,3 +213,5 @@ public:
 	static Voice ^voice = gcnew Voice;
 
 };
+
+

@@ -5,6 +5,7 @@
 #include "基尔霍夫定律实验器件.h"
 #include "基尔霍夫定律实验步骤.h"
 #include "基尔霍夫定律实验内容.h"
+#include "基尔霍夫定理原理动画.h"
 
 extern bool 基尔霍夫定律IsOpened;
 namespace 电工基础1本 {
@@ -56,6 +57,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::ToolStripMenuItem^  实验步骤ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  通讯协议ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  返回ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  动画展示ToolStripMenuItem;
 
 
 	private:
@@ -79,6 +81,7 @@ namespace 电工基础1本 {
 			this->实验步骤ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->通讯协议ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->返回ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->动画展示ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -91,57 +94,65 @@ namespace 电工基础1本 {
 			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"微软雅黑", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
 				this->实验目的ToolStripMenuItem,
-					this->原理原理ToolStripMenuItem, this->实验器件ToolStripMenuItem, this->实验步骤ToolStripMenuItem, this->通讯协议ToolStripMenuItem, this->返回ToolStripMenuItem
+					this->原理原理ToolStripMenuItem, this->实验器件ToolStripMenuItem, this->实验步骤ToolStripMenuItem, this->通讯协议ToolStripMenuItem, this->返回ToolStripMenuItem,
+					this->动画展示ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(110, 561);
+			this->menuStrip1->Size = System::Drawing::Size(121, 561);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// 实验目的ToolStripMenuItem
 			// 
 			this->实验目的ToolStripMenuItem->Name = L"实验目的ToolStripMenuItem";
-			this->实验目的ToolStripMenuItem->Size = System::Drawing::Size(97, 31);
+			this->实验目的ToolStripMenuItem->Size = System::Drawing::Size(108, 31);
 			this->实验目的ToolStripMenuItem->Text = L"实验目的";
 			this->实验目的ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::实验目的ToolStripMenuItem_Click);
 			// 
 			// 原理原理ToolStripMenuItem
 			// 
 			this->原理原理ToolStripMenuItem->Name = L"原理原理ToolStripMenuItem";
-			this->原理原理ToolStripMenuItem->Size = System::Drawing::Size(97, 31);
+			this->原理原理ToolStripMenuItem->Size = System::Drawing::Size(108, 31);
 			this->原理原理ToolStripMenuItem->Text = L"实验原理";
 			this->原理原理ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::原理原理ToolStripMenuItem_Click);
 			// 
 			// 实验器件ToolStripMenuItem
 			// 
 			this->实验器件ToolStripMenuItem->Name = L"实验器件ToolStripMenuItem";
-			this->实验器件ToolStripMenuItem->Size = System::Drawing::Size(97, 31);
+			this->实验器件ToolStripMenuItem->Size = System::Drawing::Size(108, 31);
 			this->实验器件ToolStripMenuItem->Text = L"实验器件";
 			this->实验器件ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::实验器件ToolStripMenuItem_Click);
 			// 
 			// 实验步骤ToolStripMenuItem
 			// 
 			this->实验步骤ToolStripMenuItem->Name = L"实验步骤ToolStripMenuItem";
-			this->实验步骤ToolStripMenuItem->Size = System::Drawing::Size(97, 31);
+			this->实验步骤ToolStripMenuItem->Size = System::Drawing::Size(108, 31);
 			this->实验步骤ToolStripMenuItem->Text = L"实验步骤";
 			this->实验步骤ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::实验步骤ToolStripMenuItem_Click);
 			// 
 			// 通讯协议ToolStripMenuItem
 			// 
 			this->通讯协议ToolStripMenuItem->Name = L"通讯协议ToolStripMenuItem";
-			this->通讯协议ToolStripMenuItem->Size = System::Drawing::Size(97, 31);
+			this->通讯协议ToolStripMenuItem->Size = System::Drawing::Size(108, 31);
 			this->通讯协议ToolStripMenuItem->Text = L"实验内容";
 			this->通讯协议ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::通讯协议ToolStripMenuItem_Click);
 			// 
 			// 返回ToolStripMenuItem
 			// 
 			this->返回ToolStripMenuItem->Name = L"返回ToolStripMenuItem";
-			this->返回ToolStripMenuItem->Size = System::Drawing::Size(97, 31);
+			this->返回ToolStripMenuItem->Size = System::Drawing::Size(108, 31);
 			this->返回ToolStripMenuItem->Text = L"返回";
 			this->返回ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::返回ToolStripMenuItem_Click);
+			// 
+			// 动画展示ToolStripMenuItem
+			// 
+			this->动画展示ToolStripMenuItem->Name = L"动画展示ToolStripMenuItem";
+			this->动画展示ToolStripMenuItem->Size = System::Drawing::Size(108, 31);
+			this->动画展示ToolStripMenuItem->Text = L"动画展示";
+			this->动画展示ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::动画展示ToolStripMenuItem_Click);
 			// 
 			// 基尔霍夫定律
 			// 
@@ -166,6 +177,7 @@ namespace 电工基础1本 {
 		基尔霍夫定律实验器件^ 基尔霍夫定律实验器件Wnd;
 		基尔霍夫定律实验步骤^ 基尔霍夫定律实验步骤Wnd;
 		基尔霍夫定律实验内容^ 基尔霍夫定律实验内容Wnd;
+		基尔霍夫定理原理动画^ 基尔霍夫定理原理动画Wnd;
 	private: System::Void 实验目的ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 		if (基尔霍夫定律实验目的IsOpened == true)
 		{
@@ -234,6 +246,18 @@ private: System::Void 通讯协议ToolStripMenuItem_Click(System::Object^  sender, S
 }
 private: System::Void 返回ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Close();
+}
+private: System::Void 动画展示ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (基尔霍夫定理原理动画IsOpened == true)
+	{
+		基尔霍夫定理原理动画Wnd->BringToFront(); //这个可以置于最前面
+		基尔霍夫定理原理动画Wnd->WindowState = FormWindowState::Maximized;
+		return;
+	}
+	基尔霍夫定理原理动画Wnd = gcnew 基尔霍夫定理原理动画;
+	基尔霍夫定理原理动画Wnd->MdiParent = this;
+	基尔霍夫定理原理动画Wnd->Show();
+	基尔霍夫定理原理动画Wnd->WindowState = FormWindowState::Maximized;
 }
 };
 }

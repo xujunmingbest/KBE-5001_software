@@ -68,6 +68,7 @@ namespace 电工基础1本 {
 		~基尔霍夫定律实验器件()
 		{
 			voice->Close();
+			if (t != nullptr) t->Abort();
 			基尔霍夫定律实验器件IsOpened = false;
 			if (components)
 			{
@@ -84,13 +85,15 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::PictureBox^  pictureBox3;
 	private: System::Windows::Forms::PictureBox^  pictureBox4;
 	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::ToolTip^  toolTip1;
+	private: System::ComponentModel::IContainer^  components;
 	protected:
 
 	private:
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -99,6 +102,7 @@ namespace 电工基础1本 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(基尔霍夫定律实验器件::typeid));
 			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -110,6 +114,7 @@ namespace 电工基础1本 {
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->toolTip1 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -129,6 +134,7 @@ namespace 电工基础1本 {
 			this->listView1->TabIndex = 1;
 			this->listView1->UseCompatibleStateImageBehavior = false;
 			this->listView1->View = System::Windows::Forms::View::Details;
+			this->listView1->SelectedIndexChanged += gcnew System::EventHandler(this, &基尔霍夫定律实验器件::listView1_SelectedIndexChanged);
 			// 
 			// label1
 			// 
@@ -183,6 +189,7 @@ namespace 电工基础1本 {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
 			this->pictureBox1->TabIndex = 6;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验器件::pictureBox1_Click);
 			// 
 			// pictureBox2
 			// 
@@ -228,6 +235,10 @@ namespace 电工基础1本 {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验器件::button1_Click);
 			// 
+			// toolTip1
+			// 
+			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &基尔霍夫定律实验器件::toolTip1_Popup);
+			// 
 			// 基尔霍夫定律实验器件
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
@@ -257,6 +268,10 @@ namespace 电工基础1本 {
 		}
 #pragma endregion
 	private: System::Void 基尔霍夫定律实验器件_Load(System::Object^  sender, System::EventArgs^  e) {
+		toolTip1->SetToolTip(pictureBox1, label1->Text);
+		toolTip1->SetToolTip(pictureBox3, label2->Text);
+		toolTip1->SetToolTip(pictureBox2, label3->Text);
+		toolTip1->SetToolTip(pictureBox4, label4->Text);
 	}
 	private: System::Void pictureBox3_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
@@ -267,6 +282,16 @@ namespace 电工基础1本 {
 		t = gcnew Thread(gcnew ThreadStart(this, &基尔霍夫定律实验器件::display));
 		t->Start();
 	}
+
+			 void ListViewChangeColor(int Itemindex) {
+				 for (int i = 0; i < 4; i++) {
+					 if (i == Itemindex) {
+						 listView1->Items[i]->BackColor = Color::Red;
+						 continue;
+					 }
+					 listView1->Items[i]->BackColor = Color::White;
+				 }
+			 }
 			 void display() {
 				 pictureBox1->Visible = false;
 				 label1->Visible = false;
@@ -280,28 +305,40 @@ namespace 电工基础1本 {
 				 pictureBox4->Visible = false;
 				 label4->Visible = false;
 
+				 ListViewChangeColor(0);
 				 voice->Speak("测量仪表挂箱CL01");
-				 Sleep(5000);
 				 pictureBox1->Visible = true;
 				 label1->Visible = true;
+				 Sleep(5000);
 
-
+				 ListViewChangeColor(1);
 				 voice->Speak("可调直流稳压电源0～30V双组");
-				 Thread::Sleep(6000);
 				 pictureBox3->Visible = true;
 				 label2->Visible = true;
+				 Thread::Sleep(6000);
 
+				 ListViewChangeColor(2);
 				 voice->Speak("DG01");
-				 Thread::Sleep(3000);
 				 pictureBox2->Visible = true;
 				 label3->Visible = true;
+				 Thread::Sleep(3000);
 
-
+				 ListViewChangeColor(3);
 				 voice->Speak("电流检测线");
-				 Thread::Sleep(2000);
 				 pictureBox4->Visible = true;
 				 label4->Visible = true;
+				 Thread::Sleep(2000);
+
+				 ListViewChangeColor(-1);
 			 }
-	};
+	private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
+
+		voice->Speak("电流检测线");
+	}
+private: System::Void toolTip1_Popup(System::Object^  sender, System::Windows::Forms::PopupEventArgs^  e) {
+}
+private: System::Void listView1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+};
 };
 
