@@ -110,9 +110,13 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::Label^  label58;
 	private: System::Windows::Forms::Label^  label56;
 	private: System::Windows::Forms::Label^  label55;
-	private: System::ComponentModel::BackgroundWorker^  backgroundWorker1;
+
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::Label^  label57;
+	private: System::Windows::Forms::Label^  label59;
+	private: System::Windows::Forms::Label^  label62;
+	private: System::Windows::Forms::Label^  label61;
+	private: System::Windows::Forms::Label^  label60;
 
 	private:
 		/// <summary>
@@ -190,11 +194,14 @@ namespace 电工基础1本 {
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label62 = (gcnew System::Windows::Forms::Label());
+			this->label61 = (gcnew System::Windows::Forms::Label());
+			this->label60 = (gcnew System::Windows::Forms::Label());
+			this->label59 = (gcnew System::Windows::Forms::Label());
 			this->label57 = (gcnew System::Windows::Forms::Label());
 			this->label58 = (gcnew System::Windows::Forms::Label());
 			this->label56 = (gcnew System::Windows::Forms::Label());
 			this->label55 = (gcnew System::Windows::Forms::Label());
-			this->backgroundWorker1 = (gcnew System::ComponentModel::BackgroundWorker());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -768,6 +775,10 @@ namespace 电工基础1本 {
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->label62);
+			this->groupBox1->Controls->Add(this->label61);
+			this->groupBox1->Controls->Add(this->label60);
+			this->groupBox1->Controls->Add(this->label59);
 			this->groupBox1->Controls->Add(this->label57);
 			this->groupBox1->Controls->Add(this->label58);
 			this->groupBox1->Controls->Add(this->label56);
@@ -782,21 +793,53 @@ namespace 电工基础1本 {
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"文字说明";
 			// 
+			// label62
+			// 
+			this->label62->Location = System::Drawing::Point(7, 490);
+			this->label62->Name = L"label62";
+			this->label62->Size = System::Drawing::Size(320, 26);
+			this->label62->TabIndex = 78;
+			this->label62->Text = L"即E1+Ucd+Uda+Uab=0。";
+			// 
+			// label61
+			// 
+			this->label61->Location = System::Drawing::Point(7, 356);
+			this->label61->Name = L"label61";
+			this->label61->Size = System::Drawing::Size(196, 26);
+			this->label61->TabIndex = 77;
+			this->label61->Text = L"即 I1+I2=I3。";
+			// 
+			// label60
+			// 
+			this->label60->Location = System::Drawing::Point(155, 180);
+			this->label60->Name = L"label60";
+			this->label60->Size = System::Drawing::Size(84, 26);
+			this->label60->TabIndex = 76;
+			this->label60->Text = L"回路I。";
+			// 
+			// label59
+			// 
+			this->label59->Location = System::Drawing::Point(129, 106);
+			this->label59->Name = L"label59";
+			this->label59->Size = System::Drawing::Size(149, 26);
+			this->label59->TabIndex = 75;
+			this->label59->Text = L"A点和D点。";
+			// 
 			// label57
 			// 
 			this->label57->Location = System::Drawing::Point(6, 408);
 			this->label57->Name = L"label57";
 			this->label57->Size = System::Drawing::Size(465, 104);
 			this->label57->TabIndex = 74;
-			this->label57->Text = L"基尔霍夫电压定律:电路中任一回路，在任一时刻，沿该回路的所有支路电压的代数和等于零。即E1+Ucd+Uda+Uab=0。";
+			this->label57->Text = L"基尔霍夫电压定律:电路中任一回路，在任一时刻，沿该回路的所有支路电压的代数和等于零。";
 			// 
 			// label58
 			// 
 			this->label58->Location = System::Drawing::Point(6, 227);
 			this->label58->Name = L"label58";
-			this->label58->Size = System::Drawing::Size(465, 141);
+			this->label58->Size = System::Drawing::Size(465, 116);
 			this->label58->TabIndex = 73;
-			this->label58->Text = L"基尔霍夫电流定律:对于电路中的任何一个节点而言，在任何一个时间，流进节点的电流等于流出节点的电流。也就是：节点电流之代数和恒等于0.即 I1+I2=I3。";
+			this->label58->Text = L"基尔霍夫电流定律:对于电路中的任何一个节点而言，在任何一个时间，流进节点的电流等于流出节点的电流。也就是：节点电流之代数和恒等于0。";
 			// 
 			// label56
 			// 
@@ -804,7 +847,7 @@ namespace 电工基础1本 {
 			this->label56->Name = L"label56";
 			this->label56->Size = System::Drawing::Size(465, 53);
 			this->label56->TabIndex = 72;
-			this->label56->Text = L"回路:电路中任意一条闭合路径都是一个回路,例如回路I。";
+			this->label56->Text = L"回路:电路中任意一条闭合路径都是一个回路,例如";
 			this->label56->Click += gcnew System::EventHandler(this, &基尔霍夫定理原理动画::label56_Click);
 			// 
 			// label55
@@ -813,7 +856,7 @@ namespace 电工基础1本 {
 			this->label55->Name = L"label55";
 			this->label55->Size = System::Drawing::Size(465, 52);
 			this->label55->TabIndex = 71;
-			this->label55->Text = L"节点:电路中三条或三条以上支路的联接点,例如A点和D点。";
+			this->label55->Text = L"节点:电路中三条或三条以上支路的联接点,例如";
 			this->label55->Click += gcnew System::EventHandler(this, &基尔霍夫定理原理动画::label55_Click);
 			// 
 			// pictureBox1
@@ -928,33 +971,40 @@ private: System::Void pictureBox1_Click(System::Object^  sender, System::EventAr
 			 void display(){
 	v->Speak(label55->Text);
 	Waver^ w = gcnew Waver;
-	w->Init();
-	w->Add(label52, label52->BackColor); w->Add(label55, label55->BackColor);
-	w->Add(label50, label50->BackColor);
-	w->waver();
 	Thread::Sleep(label55->Text->Length / 3 * 1000);
 
+	v->Speak(label59->Text);
+	w->Init();
+	w->Add(label52, label52->BackColor); w->Add(label59, label59->BackColor);
+	w->Add(label50, label50->BackColor);
+	w->waver();
+	Thread::Sleep(label59->Text->Length / 3 * 1000);
 	
 	v->Speak(label56->Text);
-	w->Init();
-	w->Add(pictureBox1); w->Add(label56, label56->BackColor);
-	w->waver();
 	Sleep(label56->Text->Length / 3 * 1000);
+	v->Speak(label60->Text);
+	w->Init();
+	w->Add(pictureBox1); w->Add(label60, label60->BackColor);
+	w->waver();
+	Thread::Sleep(label60->Text->Length / 3 * 1000);
+
 
 	v->Speak(label58->Text);
-	w->Init();
-	w->Add(pictureBox5); w->Add(pictureBox6); w->Add(pictureBox7); w->Add(label58, label58->BackColor);
-	w->waver();
 	Sleep(label58->Text->Length / 3 * 1000);
+	v->Speak(label61->Text);
+	w->Init();
+	w->Add(pictureBox5); w->Add(pictureBox6); w->Add(pictureBox7); w->Add(label61, label61->BackColor);
+	w->waver();
+	Thread::Sleep(label61->Text->Length / 3 * 1000);
 
 	v->Speak(label57->Text);
-	w->Init();
-	w->Add(label43, label43->BackColor); w->Add(label3, label3->BackColor); 
-	w->Add(label6, label6->BackColor); w->Add(label57, label57->BackColor); w->Add(pictureBox3);
-	w->waver();
 	Sleep(label57->Text->Length / 3 * 1000);
-
-	
+	v->Speak(label62->Text);
+	w->Init();
+	w->Add(label43, label43->BackColor); w->Add(label3, label3->BackColor);
+	w->Add(label6, label6->BackColor); w->Add(label62, label62->BackColor); w->Add(pictureBox3);
+	w->waver();
+	Thread::Sleep(label62->Text->Length / 3 * 1000);
 
 }
 private: System::Void label55_Click(System::Object^  sender, System::EventArgs^  e) {

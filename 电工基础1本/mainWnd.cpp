@@ -13,7 +13,7 @@ using namespace 电工基础1本;
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 //int main()  
 {     
-	Exceptioninit(); //全局异常初始化  
+	Exceptioninit(); //全局异常初始化   
 	readXmlConfigFile(configXml);    
 	LOG_DETAIL(configXml.DesMac, configXml.RepeaterIp, configXml.RepeaterPort,
 		configXml.SerialHandle, configXml.SerialControlSource);
@@ -30,18 +30,18 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 #endif 
 
 	 
-
+	 
 	try {
 		Voice ^ v = gcnew Voice;
 		v->Speak("大家好，欢迎使用中腾科教软件，本软件制作者:徐军明");
     
-		Application::EnableVisualStyles();
+		Application::EnableVisualStyles(); 
 		Application::Run(gcnew mainWnd); 
-	} 
+	}  
 	catch (System::Exception ^e) { 
 		LOG_EXCEPTION(T_to_string(e->ToString()));
-	}   
-
+	}        
+	   
 
 	global::sh->SerialHandleClose();
 	exit(0);

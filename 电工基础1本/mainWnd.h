@@ -35,6 +35,7 @@ namespace 电工基础1本 {
 			//TODO:  在此处添加构造函数代码
 			//
 		}
+
 		void ShowLoginWnd() {
 			bool Success = false;
 			LoginWnd ^ lw = gcnew LoginWnd(Success);
