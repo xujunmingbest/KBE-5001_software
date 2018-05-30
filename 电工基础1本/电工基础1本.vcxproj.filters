@@ -25,9 +25,6 @@
     <Filter Include="xml">
       <UniqueIdentifier>{95bb901f-6e54-48c7-9def-d09e8171a85e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="登入框">
-      <UniqueIdentifier>{1cbfcc64-c345-475c-a48f-e00981a847b7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="自定义弹出框">
       <UniqueIdentifier>{2695b49c-c2d2-4d91-98f1-1b7b58aaa991}</UniqueIdentifier>
     </Filter>
@@ -39,6 +36,12 @@
     </Filter>
     <Filter Include="基尔霍夫定律">
       <UniqueIdentifier>{37c8e5e4-9305-4cb6-abfa-237979f83c95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="登入框&amp;设置">
+      <UniqueIdentifier>{1cbfcc64-c345-475c-a48f-e00981a847b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="成绩上传">
+      <UniqueIdentifier>{8eedc1b8-7880-4625-8abc-eeb43f0efac6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +153,7 @@
       <Filter>自定义弹出框</Filter>
     </ClInclude>
     <ClInclude Include="LoginWnd.h">
-      <Filter>登入框</Filter>
+      <Filter>登入框&amp;设置</Filter>
     </ClInclude>
     <ClInclude Include="实验1原理说明视频.h">
       <Filter>实验1元件伏安特性的测试</Filter>
@@ -212,6 +215,24 @@
     <ClInclude Include="基尔霍夫定理原理动画.h">
       <Filter>基尔霍夫定律</Filter>
     </ClInclude>
+    <ClInclude Include="设置.h">
+      <Filter>登入框&amp;设置</Filter>
+    </ClInclude>
+    <ClInclude Include="系统日志.h">
+      <Filter>登入框&amp;设置</Filter>
+    </ClInclude>
+    <ClInclude Include="SysLog.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="首页.h">
+      <Filter>登入框&amp;设置</Filter>
+    </ClInclude>
+    <ClInclude Include="gradeSubmit.h">
+      <Filter>成绩上传</Filter>
+    </ClInclude>
+    <ClInclude Include="SynchroShortConnection.h">
+      <Filter>成绩上传</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mainWnd.resx">
@@ -268,6 +289,18 @@
     <EmbeddedResource Include="基尔霍夫定律实验目的.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="基尔霍夫定理原理动画.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统日志.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设置.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="首页.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="pz.xml">
@@ -287,5 +320,6 @@
     <None Include="json\sconscript">
       <Filter>json</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

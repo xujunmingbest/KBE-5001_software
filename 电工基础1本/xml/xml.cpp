@@ -39,6 +39,12 @@ bool readXmlConfigFile(ConfigXml &configXml)
 		else if (zd == "SerialControlSource") {
 			configXml.SerialControlSource = value;
 		}
+		else if (zd == "GradeIp") {
+			configXml.GradeIp = value;
+		}
+		else if (zd == "GradePort") {
+			configXml.GradePort = value;
+		}
 	}
 	return true;
 }

@@ -3,6 +3,7 @@
 #include <iostream>
 #include "xml/xml.h"
 #include "log.h"
+#include "SysLog.h"
 #include "ThreeSegmentTransmissionProtocol.h"
 #include "message_Queue.h"
 #include "seriesPort.h"
@@ -215,3 +216,10 @@ public:
 };
 
 
+string IsDClegal(String^in); /* string 为空返回不合法  不为空是合法*/
+int GetDcNum(string &out); /* 返回 整数的值 已经乘以了 100*/
+String^ DcNumToString(uint in, uint DcSymbol); /*返回数值 有 整数和小数*/
+
+
+
+void MsgQueueRegister();

@@ -8,7 +8,11 @@ void testForLog() {
 	LOG_DEBUG("单元测试 调试");
 	LOG_DETAIL("单元测试 详细日志");
 }
-
+void testForSysLOG()
+{
+	SYS_LOG_ERROR("单元测试系统错误");
+	SYS_LOG_INF("单元测试系统消息");
+}
 MsgQueue mq;
 //测试 消息队列
 void MQRecv() {
@@ -23,10 +27,11 @@ void testForMessageQueue() {
 	if (!mq.QueueEnable) {
 		MessageBox::Show(gcnew String("创建消息队列失败，消息线程退出"));
 	}
-	Thread^ t = gcnew Thread(gcnew ThreadStart(MQRecv));
-	t->Start();
 	mq.Publish(string("我是first"));
 	mq.Publish(string("我是second"));
+
+	Thread^ t = gcnew Thread(gcnew ThreadStart(MQRecv));
+	t->Start();
 }
 
 
@@ -69,8 +74,8 @@ void testForSerialControl()
 	LOG_DETAIL(r.Fhz);
 	LOG_DETAIL(r.U);
 	r = sh->GetliKongData();
-	LOG_DETAIL(r.Fhz);
-	LOG_DETAIL(r.U);
+	LOG_DETAIL(r.U);	LOG_DETAIL(r.Fhz);
+
 	r = sh->GetliKongData();
 	LOG_DETAIL(r.Fhz);
 	LOG_DETAIL(r.U);
@@ -86,8 +91,13 @@ void testForSerialControlSource()
 	scs->CloseSource(1);
 	scs->OpenSource(1);
 
-	scs->SetDirectVoltage(9);
-	scs->SetDirectCurrent(2);
+
+	String^ q = "15.00";
+	string o = IsDClegal(q);
+	if (o == "") LOG_FATAL("不合法");
+	LOG_DETAIL(GetDcNum(o));
+	scs->SetDirectVoltage(GetDcNum(o));
+	scs->SetDirectCurrent(200);
 	scs->SetAlternatingVoltage('A', 20);
 
 

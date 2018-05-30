@@ -201,6 +201,7 @@ namespace 电工基础1本 {
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
 			this->pictureBox2->TabIndex = 7;
 			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验器件::pictureBox2_Click);
 			// 
 			// pictureBox3
 			// 
@@ -222,6 +223,7 @@ namespace 电工基础1本 {
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
 			this->pictureBox4->TabIndex = 9;
 			this->pictureBox4->TabStop = false;
+			this->pictureBox4->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验器件::pictureBox4_Click);
 			// 
 			// button1
 			// 
@@ -274,6 +276,7 @@ namespace 电工基础1本 {
 		toolTip1->SetToolTip(pictureBox4, label4->Text);
 	}
 	private: System::Void pictureBox3_Click(System::Object^  sender, System::EventArgs^  e) {
+		voice->Speak(label2->Text);
 	}
 			 Thread^ t;
 			 Voice^voice = gcnew Voice;
@@ -333,11 +336,20 @@ namespace 电工基础1本 {
 			 }
 	private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
 
-		voice->Speak("电流检测线");
+		voice->Speak(label1->Text);
 	}
 private: System::Void toolTip1_Popup(System::Object^  sender, System::Windows::Forms::PopupEventArgs^  e) {
+
+
 }
 private: System::Void listView1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void pictureBox2_Click(System::Object^  sender, System::EventArgs^  e) {
+	voice->Speak(label3->Text);
+
+}
+private: System::Void pictureBox4_Click(System::Object^  sender, System::EventArgs^  e) {
+	voice->Speak(label4->Text);
 }
 };
 };

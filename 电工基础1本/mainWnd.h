@@ -3,6 +3,9 @@
 #include "tool.h"
 #include "LoginWnd.h"
 #include "基尔霍夫定律.h"
+#include "设置.h"
+#include "系统日志.h"
+#include "首页.h"
 namespace 电工基础1本 {
 
 	using namespace System;
@@ -48,6 +51,9 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::ToolStripMenuItem^  网络重连ToolStripMenuItem;
 	private: System::IO::Ports::SerialPort^  serialPort1;
 	private: System::Windows::Forms::ToolStripMenuItem^  基尔霍夫定律实验ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  设置ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  系统日志ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  首页ToolStripMenuItem;
 
 	public:
 
@@ -76,7 +82,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::ToolStripMenuItem^  实验ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  元件伏安特性的测试ToolStripMenuItem;
 
-	private: System::Windows::Forms::Label^  label1;
+
 	private: System::ComponentModel::IContainer^  components;
 
 
@@ -94,14 +100,15 @@ namespace 电工基础1本 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(mainWnd::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->实验ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->元件伏安特性的测试ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->基尔霍夫定律实验ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->网络重连ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->系统日志ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->serialPort1 = (gcnew System::IO::Ports::SerialPort(this->components));
+			this->首页ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -110,13 +117,13 @@ namespace 电工基础1本 {
 			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->实验ToolStripMenuItem,
-					this->网络重连ToolStripMenuItem
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+				this->首页ToolStripMenuItem,
+					this->实验ToolStripMenuItem, this->网络重连ToolStripMenuItem, this->设置ToolStripMenuItem, this->系统日志ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(772, 28);
+			this->menuStrip1->Size = System::Drawing::Size(730, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &mainWnd::menuStrip1_ItemClicked);
@@ -152,31 +159,34 @@ namespace 电工基础1本 {
 			this->网络重连ToolStripMenuItem->Text = L"网络重连";
 			this->网络重连ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::网络重连ToolStripMenuItem_Click);
 			// 
-			// label1
+			// 设置ToolStripMenuItem
 			// 
-			this->label1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label1.Image")));
-			this->label1->Location = System::Drawing::Point(0, 28);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(772, 504);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"欢迎使用中腾科教教学软件";
-			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->label1->Click += gcnew System::EventHandler(this, &mainWnd::label1_Click);
+			this->设置ToolStripMenuItem->Name = L"设置ToolStripMenuItem";
+			this->设置ToolStripMenuItem->Size = System::Drawing::Size(63, 24);
+			this->设置ToolStripMenuItem->Text = L"设置";
+			this->设置ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::设置ToolStripMenuItem_Click);
+			// 
+			// 系统日志ToolStripMenuItem
+			// 
+			this->系统日志ToolStripMenuItem->Name = L"系统日志ToolStripMenuItem";
+			this->系统日志ToolStripMenuItem->Size = System::Drawing::Size(105, 24);
+			this->系统日志ToolStripMenuItem->Text = L"系统日志";
+			this->系统日志ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::系统日志ToolStripMenuItem_Click);
+			// 
+			// 首页ToolStripMenuItem
+			// 
+			this->首页ToolStripMenuItem->Name = L"首页ToolStripMenuItem";
+			this->首页ToolStripMenuItem->Size = System::Drawing::Size(63, 24);
+			this->首页ToolStripMenuItem->Text = L"首页";
+			this->首页ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::首页ToolStripMenuItem_Click);
 			// 
 			// mainWnd
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->AutoScroll = true;
-			this->ClientSize = System::Drawing::Size(772, 532);
-			this->Controls->Add(this->label1);
+			this->ClientSize = System::Drawing::Size(730, 518);
 			this->Controls->Add(this->menuStrip1);
+			this->IsMdiContainer = true;
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"mainWnd";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -197,6 +207,8 @@ namespace 电工基础1本 {
 */
 
 		实验1Main ^ 实验1MainWnd;
+		设置 ^ 设置Wnd;
+		首页 ^ 首页Wnd;
 	private: System::Void 元件伏安特性的测试ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 		if (实验1MainIsOpened == true)
 		{
@@ -238,6 +250,7 @@ private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  
 
 
 		 基尔霍夫定律^ 基尔霍夫定律Wnd;
+		 系统日志^ 系统日志Wnd;
 private: System::Void 基尔霍夫定律实验ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (基尔霍夫定律IsOpened == true)
 	{
@@ -250,6 +263,42 @@ private: System::Void 基尔霍夫定律实验ToolStripMenuItem_Click(System::Object^  s
 	基尔霍夫定律Wnd->WindowState = FormWindowState::Maximized;
 	this->Visible = false;
 
+}
+private: System::Void 设置ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (设置IsOpened == true)
+	{
+		设置Wnd->BringToFront(); //这个可以置于最前面
+		设置Wnd->WindowState = FormWindowState::Maximized;
+		return;
+	}
+	设置Wnd = gcnew 设置;
+	设置Wnd->Show();
+	设置Wnd->MdiParent = this;
+	设置Wnd->WindowState = FormWindowState::Maximized;
+}
+private: System::Void 系统日志ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (系统日志IsOpened == true)
+	{
+		系统日志Wnd->BringToFront(); //这个可以置于最前面
+		系统日志Wnd->WindowState = FormWindowState::Maximized;
+		return;
+	}
+	系统日志Wnd = gcnew 系统日志;
+	系统日志Wnd->Show();
+	系统日志Wnd->MdiParent = this;
+	系统日志Wnd->WindowState = FormWindowState::Maximized;
+}
+private: System::Void 首页ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (首页IsOpened == true)
+	{
+		首页Wnd->BringToFront(); //这个可以置于最前面
+		首页Wnd->WindowState = FormWindowState::Maximized;
+		return;
+	}
+	首页Wnd = gcnew 首页;
+	首页Wnd->Show();
+	首页Wnd->MdiParent = this;
+	首页Wnd->WindowState = FormWindowState::Maximized;
 }
 };
 }

@@ -11,14 +11,13 @@ uint TwoByteTouInt(char *buff);
 void SerialControl::serialPortOpen(String ^ PortName) {
 
 	int count = 0;
-	serialPort1->ReadTimeout = 3000;
 	serialPort1->Close();
 	try {
 		serialPort1->PortName = PortName;
 		serialPort1->ReceivedBytesThreshold = 1;
 		serialPort1->DataBits = 8;
 		serialPort1->Parity = System::IO::Ports::Parity::None; //无奇偶校验位
-		serialPort1->ReadTimeout = 3000;											   //serialPort1->StopBits = System::IO::Ports::StopBits::One;//设置停止位为1
+		serialPort1->ReadTimeout = 1000;											   //serialPort1->StopBits = System::IO::Ports::StopBits::One;//设置停止位为1
 		serialPort1->Open(); //串口打开
 	}
 	catch (System::Exception ^e) {
@@ -93,23 +92,25 @@ string SerialControl::Recv(int len) {
 			out += string(pinp, recvlen);
 			actrecvlen += recvlen;
 			if (recvlen <= 0) {
+				MessageBox::Show("串口退出");
 				throw "串口退出";
 			}
 		}
 	}
 	catch (System::Exception ^e) {
+
+
 		return "";
 	}
 
 	//crc16检验
-
 	if (!check_crc16(out)) 
 		return "";
 	
 	return out;
 }
 
-
+//把数据包变成
 string HTOA(string &h) {
 	int a;
 	string out;
@@ -218,6 +219,7 @@ uint SerialHandle::GetMonitorTesterId() {
 	uint testerId;
 	if (r.length() == 0) return 0;
 	testerId = TwoByteTouInt(&r[3]);
+	MessageBox::Show("监控的设备号:" + testerId.ToString());
 	return testerId;
 } //写设备号
 
@@ -251,11 +253,12 @@ S_PLCRecv SerialHandle::GetliKongData()
 
 	if (!sc->Send(string(buff, 6))) {
 		memset(&pr, 0x00, sizeof(S_PLCRecv));
+		LOG_ERROR("获取力控包失败");
 	}
 	string r = sc->Recv(19);
 	if (r.length() == 0) return pr;
 
-	pr.SCMId = r[0];
+	pr.MId = r[0];
 	pr.FunCode = r[1];
 	pr.Bytes = r[2];
 
@@ -284,7 +287,7 @@ uint TwoByteTouInt(char *buff)
 
 void SerialControlSource::SetDirectVoltage(int Voltage)
 {
-	int _Voltage = Voltage * 100;
+	int _Voltage = Voltage;
 	char buff[6];
 	buff[0] = 0x01;
 	buff[1] = 0x06;
@@ -298,7 +301,7 @@ void SerialControlSource::SetDirectVoltage(int Voltage)
 }
 void SerialControlSource::SetDirectCurrent(int Current)
 {
-	int _Current = Current * 100;
+	int _Current = Current;
 	char buff[6];
 	buff[0] = 0x01;
 	buff[1] = 0x06;

@@ -3,6 +3,9 @@
     <LangDuNvPath>C:\Program Files (x86)\朗读女\朗读女.exe</LangDuNvPath> <!--朗读女路径-->
     <VoiceEngine>0</VoiceEngine>
     <DesMac>zt</DesMac> <!--设备终端mac地址 默认是zt-->
+    <SrcMac>mac1</SrcMac> 
     <RepeaterIp>47.94.219.135</RepeaterIp> <!--装发服务器ip-->
     <RepeaterPort>10001</RepeaterPort> <!--装发服务器端口-->
+    <SerialHandle>COM19</SerialHandle> <!--测试仪器力控包接收-->
+    <SerialControlSource>COM16</SerialControlSource> <!--控制电源-->
 </Info>

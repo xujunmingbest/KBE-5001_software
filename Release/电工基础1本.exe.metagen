@@ -17,6 +17,9 @@
   电工基础1本.实验1实验设备.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.实验1思考题.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.底部.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.系统日志.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.设置.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.首页.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly 电工基础1本, Version=0.0.*, Culture=固定语言(固定国家/地区): 
 	hash=SHA1, flags=PublicKey
@@ -48,6 +51,8 @@ Assembly AxInterop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/
 	hash=None, flags=None
 Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class 电工基础1本.SysLog: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.底部: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -173,6 +178,20 @@ Class 电工基础1本.基尔霍夫定理原理动画: AutoLayout, AnsiClass, Cl
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.基尔霍夫定律: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.设置: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.系统日志: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Threading.Thread t : Public
+  Methods:
+    LogRecv(): PrivateScope, Public, HideBySig
+    SysLogOutPut(Int32, String): PrivateScope, Public, HideBySig
+Class 电工基础1本.首页: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.mainWnd: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

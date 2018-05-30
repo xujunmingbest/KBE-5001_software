@@ -1,11 +1,10 @@
 ﻿  mainWnd.cpp
 e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+e:\clr\电工基础1本\电工基础1本\log.h(48): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
 e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(426): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
 e:\clr\电工基础1本\电工基础1本\基尔霍夫定律实验步骤.h(428): warning C4101: “e”: 未引用的局部变量
-  message_Queue.h
-e:\clr\电工基础1本\电工基础1本\log.h(37): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
-  正在生成代码...
+e:\clr\电工基础1本\电工基础1本\SynchroShortConnection.h(1): warning C4068: 未知的杂注
   电工基础1本.vcxproj -> E:\clr\电工基础1本\Release\电工基础1本.exe
   电工基础1本.vcxproj -> E:\clr\电工基础1本\Release\电工基础1本.pdb (Full PDB)

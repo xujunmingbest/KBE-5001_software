@@ -11,6 +11,8 @@ struct ConfigXml {
 	string RepeaterIp;
 	string SerialHandle;
 	string SerialControlSource;
+	string GradeIp;
+	string GradePort;
 };
 
 

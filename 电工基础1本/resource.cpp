@@ -4,6 +4,14 @@ Mylog Mlog;
 ThreeSegmentTransmissionProtocol g_TSTP; 
 
 
+#include "设置.h"
+bool 设置IsOpened = false;
+#include "系统日志.h"
+bool 系统日志IsOpened = false;
+#include "首页.h"
+bool 首页IsOpened = false;
+
+
 #include "实验1实验目的.h"
 bool 实验1实验目的IsOpened = false;
 #include "实验1原理说明.h"
@@ -43,9 +51,10 @@ bool 基尔霍夫定理原理动画IsOpened = false;
 
 
 MsgQueue trial1part1;
+MsgQueue SysLogQue;
 //程序启动的时候 消息队列初始化
 void MsgQueueRegister() {
 	trial1part1.QueueRegister(string("实验1第一个实验"));
-
+	SysLogQue.QueueRegister(string("系统日志"));
 }
 

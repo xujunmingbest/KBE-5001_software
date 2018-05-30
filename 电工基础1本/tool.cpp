@@ -105,3 +105,55 @@ int String_to_Int(String^in)
 	string temp = T_to_string(in);
 	return atoi(temp.c_str());
 }
+
+
+int string_Has_Num(string &in, char c);
+string IsDClegal(String^in)
+{
+	string temp = T_to_string(in);
+	if (string_Has_Num(temp, '.') != 1) return "";
+	size_t pos = temp.find('.', 0);
+	if (pos + 3 != temp.length()) return "";
+	for (int i = 0; i < temp.length(); i++) {
+		if (  (temp[i] < '0' || temp[i] > '9') && temp[i] != '.') return "";
+	}
+	return temp;
+}
+
+
+int GetDcNum(string &out) {
+	size_t pos = out.find('.', 0);
+	int zs = atoi(out.substr(0, pos).c_str());
+	int fs = atoi(out.substr(pos+1, 2).c_str());
+	int r = zs * 100 + fs;
+	return r;
+}
+
+int string_Has_Num(string &in,char c) {
+	auto occurrences = [&in, c]() {
+		size_t pos, pre = 0, count = 0;
+		while ((pos = in.find(c, pre)) != std::string::npos) {
+			++count;
+			pre = pos + 1;
+		}
+		return count;
+	};
+
+	return occurrences();
+}
+
+String^ DcNumToString(uint in ,uint DcSymbol)
+{
+	uint zs = in / 100;
+	uint xs = in % 100;
+
+	String ^s;
+	if (DcSymbol == 0) {
+		s = "";
+	}
+	else {
+		s = "-";
+	}
+
+	return  s + gcnew String(zs.ToString() + "." + xs.ToString());
+}

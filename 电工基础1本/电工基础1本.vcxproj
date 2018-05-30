@@ -151,6 +151,7 @@
     <ClCompile Include="单元测试.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="gradeSubmit.h" />
     <ClInclude Include="json\autolink.h" />
     <ClInclude Include="json\config.h" />
     <ClInclude Include="json\features.h" />
@@ -167,6 +168,8 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="seriesPort.h" />
+    <ClInclude Include="SynchroShortConnection.h" />
+    <ClInclude Include="SysLog.h" />
     <ClInclude Include="tool.h" />
     <ClInclude Include="xml\tinystr.h" />
     <ClInclude Include="xml\tinyxml.h" />
@@ -222,6 +225,15 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="底部.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="系统日志.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="设置.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="首页.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -283,6 +295,15 @@
     <EmbeddedResource Include="底部.resx">
       <DependentUpon>底部.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="系统日志.resx">
+      <DependentUpon>系统日志.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设置.resx">
+      <DependentUpon>设置.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="首页.resx">
+      <DependentUpon>首页.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="WMPLib.1.0.dll">
@@ -342,6 +363,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="json\json_internalarray.inl" />
     <None Include="json\json_internalmap.inl" />
     <None Include="json\json_valueiterator.inl" />

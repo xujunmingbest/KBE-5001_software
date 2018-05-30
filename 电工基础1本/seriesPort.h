@@ -9,13 +9,13 @@ using namespace std;
 uint crc16(uchar *buf, uchar len);
 string ATOH(string &in);
 
-
+typedef unsigned char       BYTE;
 struct S_PLCRecv {
-	uint SCMId; // 单片机编号
-	uint FunCode; //功能码
-	uint Bytes; // 字节数
-	uint REGAD; //寄存器地址
-	uint HeaderId; //寄存器地址
+	BYTE MId;		//单片机编号 01
+	BYTE FunCode;	//功能码	 03
+	BYTE Bytes;		//字节数     0E
+
+	uint HeaderId;	//表头序号  2是电压表 5是ma 电流表
 	uint U;
 	uint I;
 	uint P;
@@ -78,3 +78,4 @@ namespace 电工基础1本 {
 	};
 
 }
+

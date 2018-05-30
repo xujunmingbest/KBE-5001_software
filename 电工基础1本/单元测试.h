@@ -1,6 +1,6 @@
 #pragma once
 
-#define unit_testing
+//#define unit_testing
 
 
 #ifdef unit_testing
@@ -10,4 +10,5 @@ void testForMessageQueue();
 void testForThreeSegmentTransmissionProtocol();
 void testForSerialControl();
 void testForSerialControlSource();
+void testForSysLOG();
 #endif

@@ -52,7 +52,7 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::MenuStrip^  menuStrip1;
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^  实验目的ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  原理原理ToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^  实验器件ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  实验步骤ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  通讯协议ToolStripMenuItem;
@@ -76,12 +76,11 @@ namespace 电工基础1本 {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(基尔霍夫定律::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->实验目的ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->原理原理ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->实验器件ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->动画展示ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->实验步骤ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->通讯协议ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->返回ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->动画展示ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -94,10 +93,9 @@ namespace 电工基础1本 {
 			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"微软雅黑", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
 				this->实验目的ToolStripMenuItem,
-					this->原理原理ToolStripMenuItem, this->实验器件ToolStripMenuItem, this->实验步骤ToolStripMenuItem, this->通讯协议ToolStripMenuItem, this->动画展示ToolStripMenuItem,
-					this->返回ToolStripMenuItem
+					this->实验器件ToolStripMenuItem, this->动画展示ToolStripMenuItem, this->实验步骤ToolStripMenuItem, this->通讯协议ToolStripMenuItem, this->返回ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -112,19 +110,19 @@ namespace 电工基础1本 {
 			this->实验目的ToolStripMenuItem->Text = L"实验目的";
 			this->实验目的ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::实验目的ToolStripMenuItem_Click);
 			// 
-			// 原理原理ToolStripMenuItem
-			// 
-			this->原理原理ToolStripMenuItem->Name = L"原理原理ToolStripMenuItem";
-			this->原理原理ToolStripMenuItem->Size = System::Drawing::Size(137, 31);
-			this->原理原理ToolStripMenuItem->Text = L"实验原理";
-			this->原理原理ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::原理原理ToolStripMenuItem_Click);
-			// 
 			// 实验器件ToolStripMenuItem
 			// 
 			this->实验器件ToolStripMenuItem->Name = L"实验器件ToolStripMenuItem";
 			this->实验器件ToolStripMenuItem->Size = System::Drawing::Size(137, 31);
 			this->实验器件ToolStripMenuItem->Text = L"实验器件";
 			this->实验器件ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::实验器件ToolStripMenuItem_Click);
+			// 
+			// 动画展示ToolStripMenuItem
+			// 
+			this->动画展示ToolStripMenuItem->Name = L"动画展示ToolStripMenuItem";
+			this->动画展示ToolStripMenuItem->Size = System::Drawing::Size(137, 31);
+			this->动画展示ToolStripMenuItem->Text = L"原理动画展示";
+			this->动画展示ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::动画展示ToolStripMenuItem_Click);
 			// 
 			// 实验步骤ToolStripMenuItem
 			// 
@@ -146,13 +144,6 @@ namespace 电工基础1本 {
 			this->返回ToolStripMenuItem->Size = System::Drawing::Size(137, 31);
 			this->返回ToolStripMenuItem->Text = L"返回";
 			this->返回ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::返回ToolStripMenuItem_Click);
-			// 
-			// 动画展示ToolStripMenuItem
-			// 
-			this->动画展示ToolStripMenuItem->Name = L"动画展示ToolStripMenuItem";
-			this->动画展示ToolStripMenuItem->Size = System::Drawing::Size(137, 31);
-			this->动画展示ToolStripMenuItem->Text = L"原理动画展示";
-			this->动画展示ToolStripMenuItem->Click += gcnew System::EventHandler(this, &基尔霍夫定律::动画展示ToolStripMenuItem_Click);
 			// 
 			// 基尔霍夫定律
 			// 

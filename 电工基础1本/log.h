@@ -27,10 +27,10 @@ using namespace std;
 //启用开关  
 #define LOG_ENABLE  
 class Mylog {
-private:
+public:
 
 	//获取本地时间，格式如"[2011-11-11 11:11:11] ";   
-	static string GetSystemTime()
+	static string _GetSystemTime()
 	{
 		time_t tNowTime;
 		time(&tNowTime);
@@ -41,6 +41,17 @@ private:
 		return strTime;
 	}
 
+	static string _GetNowTime()
+	{
+		time_t tNowTime;
+		time(&tNowTime);
+		tm* tLocalTime = localtime(&tNowTime);
+		char szTime[30] = { '\0' };
+		strftime(szTime, 30, "%Y%m%d-%H%M%S", tLocalTime);
+		string strTime = szTime;
+		return strTime;
+	}
+private:
 	ofstream fout;
 
 	template <class T>
@@ -64,12 +75,28 @@ public:
 		fout.open(LOGPATH, ios::app);
 		string fn(file);
 		fn = string(fn, fn.find_last_of('\\') + 1, fn.length());
-		fout << GetSystemTime() << "[" << fn << ":" << func << ":" << line <<
+		fout << _GetSystemTime() << "[" << fn << ":" << func << ":" << line <<
 			"] [" << MODEL << "]: ";
 		int arr[] = { (WriteArg(args), 0)... };
 		fout << ";" << endl;
 		fout.close();
 		LogUnLock();
+	}
+
+	template <class ...Args>
+	void Fatal(const char* file, const char* func, int line, string MODEL, Args... args)
+	{
+		LogLock();
+		fout.open(LOGPATH, ios::app);
+		string fn(file);
+		fn = string(fn, fn.find_last_of('\\') + 1, fn.length());
+		fout << _GetSystemTime() << "[" << fn << ":" << func << ":" << line <<
+			"] [" << MODEL << "]: ";
+		int arr[] = { (WriteArg(args), 0)... };
+		fout << ";" << endl;
+		fout.close();
+		LogUnLock();
+		exit(-1);
 	}
 
 	void WriteLogBOE(string eb)
@@ -82,10 +109,10 @@ public:
 		ofstream fout(LOGPATH, ios::app);
 		fout.seekp(ios::end);
 		if (eb == "BEGIN") {
-			fout << "--------------------" << GetSystemTime() << "[" << exeName << "]" << "  [Begin]--------------------" << endl;
+			fout << "--------------------" << _GetSystemTime() << "[" << exeName << "]" << "  [Begin]--------------------" << endl;
 		}
 		else if (eb == "END") {
-			fout << "--------------------" << GetSystemTime() << "[" << exeName << "]" << "  [End]  --------------------" << endl;
+			fout << "--------------------" << _GetSystemTime() << "[" << exeName << "]" << "  [End]  --------------------" << endl;
 		}
 		fout.close();
 		LogUnLock();
@@ -99,8 +126,10 @@ extern Mylog Mlog;
 #define LOG_ERROR(...)   Mlog.WriteDetail(__FILE__,__FUNCTION__,__LINE__,"ERROR",__VA_ARGS__)
 #define LOG_EXCEPTION(...)   Mlog.WriteDetail(__FILE__,__FUNCTION__,__LINE__,"EXCEPTION",__VA_ARGS__)
 #define LOG_WARN(...)    Mlog.WriteDetail(__FILE__,__FUNCTION__,__LINE__,"WARN",__VA_ARGS__)
+#define LOG_FATAL(...)    Mlog.Fatal(__FILE__,__FUNCTION__,__LINE__,"FATAL",__VA_ARGS__)
 #define LOG_END          Mlog.WriteLogBOE("END")
 
 
 
 #endif
+
