@@ -21,7 +21,6 @@
 using namespace std;
 
 
-
 #define LOGPATH  "log.txt"
 
 //ÆôÓÃ¿ª¹Ø  

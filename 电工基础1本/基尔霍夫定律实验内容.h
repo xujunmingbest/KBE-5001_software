@@ -45,17 +45,9 @@ namespace 电工基础1本 {
 				delete components;
 			}
 		}
-
-
-
-
-
-
-
-
-
-
-
+		Voice^v = gcnew Voice;
+		Thread ^ t;
+		S_PLCRecv *spr = new S_PLCRecv;
 	private: System::Windows::Forms::Panel^  panel1;
 	private: System::Windows::Forms::Label^  label19;
 	private: System::Windows::Forms::Label^  label5;
@@ -64,67 +56,11 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::PictureBox^  pictureBox1;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	private: System::Windows::Forms::Label^  label18;
-	private: System::Windows::Forms::Label^  label14;
-	private: System::Windows::Forms::Label^  label16;
-	private: System::Windows::Forms::Label^  label12;
-	private: System::Windows::Forms::Label^  label8;
-	private: System::Windows::Forms::Label^  label10;
 	private: System::Windows::Forms::Button^  button2;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 private: System::Windows::Forms::Panel^  panel2;
-private: System::Windows::Forms::TextBox^  textBox2;
-private: System::Windows::Forms::TextBox^  textBox1;
-private: System::Windows::Forms::PictureBox^  pictureBox3;
-private: System::Windows::Forms::PictureBox^  pictureBox2;
 
-private: System::Windows::Forms::Label^  label6;
 private: System::Windows::Forms::GroupBox^  groupBox1;
 private: System::Windows::Forms::Label^  label9;
 private: System::Windows::Forms::Label^  label24;
@@ -214,13 +150,13 @@ private: System::Windows::Forms::ComboBox^  comboBox10;
 private: System::Windows::Forms::ComboBox^  comboBox6;
 private: System::Windows::Forms::ComboBox^  comboBox9;
 private: System::Windows::Forms::ComboBox^  comboBox5;
-private: System::Windows::Forms::Label^  label7;
-private: System::Windows::Forms::TextBox^  textBox7;
-private: System::Windows::Forms::PictureBox^  pictureBox5;
-private: System::Windows::Forms::Label^  label40;
-private: System::Windows::Forms::TextBox^  textBox6;
-private: System::Windows::Forms::Label^  label39;
-private: System::Windows::Forms::PictureBox^  pictureBox4;
+
+
+
+
+
+
+
 private: System::Windows::Forms::TextBox^  textBox5;
 private: System::Windows::Forms::TextBox^  textBox3;
 private: System::Windows::Forms::Label^  label34;
@@ -231,6 +167,45 @@ private: System::Windows::Forms::Label^  label34;
 
 
 private: System::Windows::Forms::Button^  button16;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private: ::LedWatch::LedWatch^  ledWatch4;
+private: ::LedWatch::LedWatch^  ledWatch3;
+private: ::LedWatch::LedWatch^  ledWatch2;
+private: ::LedWatch::LedWatch^  ledWatch1;
+
+
+
+
+
 	private: System::ComponentModel::IContainer^  components;
 
 
@@ -276,26 +251,11 @@ private: System::Windows::Forms::Button^  button16;
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->label16 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label40 = (gcnew System::Windows::Forms::Label());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->ledWatch4 = (gcnew ::LedWatch::LedWatch());
+			this->ledWatch3 = (gcnew ::LedWatch::LedWatch());
+			this->ledWatch2 = (gcnew ::LedWatch::LedWatch());
+			this->ledWatch1 = (gcnew ::LedWatch::LedWatch());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->button16 = (gcnew System::Windows::Forms::Button());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
@@ -363,12 +323,7 @@ private: System::Windows::Forms::Button^  button16;
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -385,9 +340,9 @@ private: System::Windows::Forms::Button^  button16;
 			this->panel1->Controls->Add(this->label3);
 			this->panel1->Font = (gcnew System::Drawing::Font(L"楷体", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->panel1->Location = System::Drawing::Point(814, 12);
+			this->panel1->Location = System::Drawing::Point(0, 359);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(803, 320);
+			this->panel1->Size = System::Drawing::Size(1230, 320);
 			this->panel1->TabIndex = 7;
 			// 
 			// button2
@@ -395,13 +350,12 @@ private: System::Windows::Forms::Button^  button16;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button2->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button2->Location = System::Drawing::Point(440, 283);
+			this->button2->Location = System::Drawing::Point(1004, 278);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(99, 35);
 			this->button2->TabIndex = 32;
 			this->button2->Text = L"停止";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &基尔霍夫定律实验内容::button2_Click);
 			// 
 			// label19
 			// 
@@ -409,7 +363,7 @@ private: System::Windows::Forms::Button^  button16;
 				static_cast<System::Byte>(134)));
 			this->label19->Location = System::Drawing::Point(3, 245);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(747, 23);
+			this->label19->Size = System::Drawing::Size(1096, 23);
 			this->label19->TabIndex = 7;
 			this->label19->Text = L"5．用万用表分别测量两路电源及电阻元件上的电压值，并记录。";
 			// 
@@ -419,7 +373,7 @@ private: System::Windows::Forms::Button^  button16;
 				static_cast<System::Byte>(134)));
 			this->label5->Location = System::Drawing::Point(3, 194);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(777, 51);
+			this->label5->Size = System::Drawing::Size(1112, 51);
 			this->label5->TabIndex = 5;
 			this->label5->Text = L"4．将电流插头分别插入三条支路的三个电流插座中，读出并记录电流值。";
 			// 
@@ -429,7 +383,7 @@ private: System::Windows::Forms::Button^  button16;
 				static_cast<System::Byte>(134)));
 			this->label4->Location = System::Drawing::Point(3, 142);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(793, 52);
+			this->label4->Size = System::Drawing::Size(1144, 52);
 			this->label4->TabIndex = 4;
 			this->label4->Text = L"3．熟悉电流插头的结构，将电流插头的两端接至万用表的“＋、－”两端。";
 			// 
@@ -449,7 +403,7 @@ private: System::Windows::Forms::Button^  button16;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button1->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button1->Location = System::Drawing::Point(545, 283);
+			this->button1->Location = System::Drawing::Point(1109, 278);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(99, 35);
 			this->button1->TabIndex = 3;
@@ -463,7 +417,7 @@ private: System::Windows::Forms::Button^  button16;
 				static_cast<System::Byte>(134)));
 			this->label2->Location = System::Drawing::Point(3, 40);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(793, 54);
+			this->label2->Size = System::Drawing::Size(1144, 54);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"1．实验前先任意设定三条支路的电流参考方向，如图中的I1、I2、I3所示，并熟悉线路结构，掌握各开关的操作使用方法。";
 			// 
@@ -473,210 +427,49 @@ private: System::Windows::Forms::Button^  button16;
 				static_cast<System::Byte>(134)));
 			this->label3->Location = System::Drawing::Point(3, 94);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(793, 48);
+			this->label3->Size = System::Drawing::Size(1144, 48);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"2．将开关向上拔，即电阻接入电路中。分别将两路直流稳压源接入电路，令E1＝12V，E2＝6V。";
 			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(12, 27);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(796, 647);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox1->TabIndex = 9;
-			this->pictureBox1->TabStop = false;
-			// 
-			// label18
-			// 
-			this->label18->BackColor = System::Drawing::Color::White;
-			this->label18->Location = System::Drawing::Point(595, 505);
-			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(28, 10);
-			this->label18->TabIndex = 31;
-			// 
-			// label14
-			// 
-			this->label14->BackColor = System::Drawing::Color::White;
-			this->label14->Location = System::Drawing::Point(183, 505);
-			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(28, 10);
-			this->label14->TabIndex = 28;
-			// 
-			// label16
-			// 
-			this->label16->BackColor = System::Drawing::Color::White;
-			this->label16->Location = System::Drawing::Point(595, 322);
-			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(28, 10);
-			this->label16->TabIndex = 29;
-			// 
-			// label12
-			// 
-			this->label12->BackColor = System::Drawing::Color::White;
-			this->label12->Location = System::Drawing::Point(183, 322);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(28, 10);
-			this->label12->TabIndex = 30;
-			// 
-			// label8
-			// 
-			this->label8->BackColor = System::Drawing::Color::White;
-			this->label8->Location = System::Drawing::Point(183, 187);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(28, 10);
-			this->label8->TabIndex = 27;
-			// 
-			// label10
-			// 
-			this->label10->BackColor = System::Drawing::Color::White;
-			this->label10->Location = System::Drawing::Point(183, 99);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(28, 10);
-			this->label10->TabIndex = 26;
-			// 
 			// panel2
 			// 
-			this->panel2->Controls->Add(this->label7);
-			this->panel2->Controls->Add(this->label40);
-			this->panel2->Controls->Add(this->textBox6);
-			this->panel2->Controls->Add(this->textBox7);
-			this->panel2->Controls->Add(this->textBox1);
-			this->panel2->Controls->Add(this->pictureBox3);
-			this->panel2->Controls->Add(this->pictureBox5);
-			this->panel2->Controls->Add(this->pictureBox2);
-			this->panel2->Controls->Add(this->label6);
-			this->panel2->Controls->Add(this->pictureBox4);
-			this->panel2->Controls->Add(this->textBox2);
-			this->panel2->Controls->Add(this->label39);
-			this->panel2->Location = System::Drawing::Point(814, 338);
+			this->panel2->Controls->Add(this->ledWatch4);
+			this->panel2->Controls->Add(this->ledWatch3);
+			this->panel2->Controls->Add(this->ledWatch2);
+			this->panel2->Controls->Add(this->ledWatch1);
+			this->panel2->Location = System::Drawing::Point(1, 1);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(803, 625);
+			this->panel2->Size = System::Drawing::Size(1229, 355);
 			this->panel2->TabIndex = 33;
+			this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &基尔霍夫定律实验内容::panel2_Paint);
 			// 
-			// label7
+			// ledWatch4
 			// 
-			this->label7->BackColor = System::Drawing::Color::White;
-			this->label7->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label7->Location = System::Drawing::Point(520, 528);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(218, 23);
-			this->label7->TabIndex = 12;
-			this->label7->Text = L"交流电流表2:V";
-			this->label7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->ledWatch4->Location = System::Drawing::Point(543, 189);
+			this->ledWatch4->Name = L"ledWatch4";
+			this->ledWatch4->Size = System::Drawing::Size(413, 139);
+			this->ledWatch4->TabIndex = 3;
 			// 
-			// label40
+			// ledWatch3
 			// 
-			this->label40->BackColor = System::Drawing::Color::White;
-			this->label40->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label40->Location = System::Drawing::Point(275, 224);
-			this->label40->Name = L"label40";
-			this->label40->Size = System::Drawing::Size(232, 23);
-			this->label40->TabIndex = 9;
-			this->label40->Text = L"交流电压表2:V";
-			this->label40->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->ledWatch3->Location = System::Drawing::Point(29, 189);
+			this->ledWatch3->Name = L"ledWatch3";
+			this->ledWatch3->Size = System::Drawing::Size(413, 139);
+			this->ledWatch3->TabIndex = 2;
 			// 
-			// textBox6
+			// ledWatch2
 			// 
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"宋体", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->textBox6->Location = System::Drawing::Point(274, 247);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(233, 57);
-			this->textBox6->TabIndex = 8;
+			this->ledWatch2->Location = System::Drawing::Point(541, 11);
+			this->ledWatch2->Name = L"ledWatch2";
+			this->ledWatch2->Size = System::Drawing::Size(413, 139);
+			this->ledWatch2->TabIndex = 1;
 			// 
-			// textBox7
+			// ledWatch1
 			// 
-			this->textBox7->Font = (gcnew System::Drawing::Font(L"宋体", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->textBox7->Location = System::Drawing::Point(519, 551);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(219, 57);
-			this->textBox7->TabIndex = 11;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"宋体", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->textBox1->Location = System::Drawing::Point(3, 250);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(262, 57);
-			this->textBox1->TabIndex = 2;
-			// 
-			// pictureBox3
-			// 
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(272, 3);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(221, 189);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox3->TabIndex = 1;
-			this->pictureBox3->TabStop = false;
-			// 
-			// pictureBox5
-			// 
-			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(523, 320);
-			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(215, 201);
-			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox5->TabIndex = 10;
-			this->pictureBox5->TabStop = false;
-			// 
-			// pictureBox2
-			// 
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(0, 0);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(264, 224);
-			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox2->TabIndex = 0;
-			this->pictureBox2->TabStop = false;
-			// 
-			// label6
-			// 
-			this->label6->BackColor = System::Drawing::Color::White;
-			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label6->Location = System::Drawing::Point(0, 224);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(264, 23);
-			this->label6->TabIndex = 4;
-			this->label6->Text = L"直流电压表1:V";
-			this->label6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// pictureBox4
-			// 
-			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(518, 0);
-			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(252, 221);
-			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox4->TabIndex = 6;
-			this->pictureBox4->TabStop = false;
-			// 
-			// textBox2
-			// 
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"宋体", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->textBox2->Location = System::Drawing::Point(513, 247);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(269, 57);
-			this->textBox2->TabIndex = 3;
-			// 
-			// label39
-			// 
-			this->label39->BackColor = System::Drawing::Color::White;
-			this->label39->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label39->Location = System::Drawing::Point(513, 227);
-			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(269, 23);
-			this->label39->TabIndex = 7;
-			this->label39->Text = L"直流电流表1:V";
-			this->label39->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->ledWatch1->Location = System::Drawing::Point(29, 11);
+			this->ledWatch1->Name = L"ledWatch1";
+			this->ledWatch1->Size = System::Drawing::Size(413, 139);
+			this->ledWatch1->TabIndex = 0;
 			// 
 			// groupBox1
 			// 
@@ -747,9 +540,9 @@ private: System::Windows::Forms::Button^  button16;
 			this->groupBox1->Controls->Add(this->label9);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox1->Location = System::Drawing::Point(12, 683);
+			this->groupBox1->Location = System::Drawing::Point(-1, 688);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(1319, 280);
+			this->groupBox1->Size = System::Drawing::Size(1231, 280);
 			this->groupBox1->TabIndex = 34;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"实验数据";
@@ -757,9 +550,9 @@ private: System::Windows::Forms::Button^  button16;
 			// 
 			// button16
 			// 
-			this->button16->Location = System::Drawing::Point(1201, 17);
+			this->button16->Location = System::Drawing::Point(1100, 250);
 			this->button16->Name = L"button16";
-			this->button16->Size = System::Drawing::Size(94, 51);
+			this->button16->Size = System::Drawing::Size(72, 30);
 			this->button16->TabIndex = 88;
 			this->button16->Text = L"上传";
 			this->button16->UseVisualStyleBackColor = true;
@@ -1318,30 +1111,16 @@ private: System::Windows::Forms::Button^  button16;
 			this->ClientSize = System::Drawing::Size(1655, 976);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->label18);
-			this->Controls->Add(this->label14);
-			this->Controls->Add(this->label16);
-			this->Controls->Add(this->label12);
-			this->Controls->Add(this->label8);
-			this->Controls->Add(this->label10);
-			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->panel1);
 			this->Name = L"基尔霍夫定律实验内容";
 			this->Text = L"基尔霍夫定律实验内容";
 			this->Load += gcnew System::EventHandler(this, &基尔霍夫定律实验内容::基尔霍夫定律实验内容_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel2->ResumeLayout(false);
-			this->panel2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -1354,97 +1133,19 @@ private: System::Windows::Forms::Button^  button16;
 		comboBox7->SelectedIndex = 0;
 		comboBox9->SelectedIndex = 0;
 		comboBox10->SelectedIndex = 0;
-		t = gcnew Thread(gcnew ThreadStart(this, &基尔霍夫定律实验内容::Recv));
-		t->Start();
+
 	}
+
+
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		
 	}
-			 
-			 void dataGridView1Load() {
-				 /*
-				 dataGridView1->Rows->Add();
-				 dataGridView1->Rows[0]->HeaderCell->Value = "被测量";
-				 dataGridView1->Rows[0]->Cells[0]->Value = "I1（mA）";
-				 dataGridView1->Rows[0]->Cells[1]->Value = "I2（mA）";
-				 dataGridView1->Rows[0]->Cells[2]->Value = "I3（mA）";
-				 dataGridView1->Rows[0]->Cells[3]->Value = "E1（v）";
-				 dataGridView1->Rows[0]->Cells[4]->Value = "E2（v）";
-				 dataGridView1->Rows[0]->Cells[5]->Value = "UFA（v）";
-				 dataGridView1->Rows[0]->Cells[6]->Value = "UAB（v）";
-				 dataGridView1->Rows[0]->Cells[7]->Value = "UAD（v）";
-				 dataGridView1->Rows[0]->Cells[8]->Value = "UCD（v）";
-				 dataGridView1->Rows[0]->Cells[9]->Value = "UDE（v）";
-
-				 dataGridView1->Rows->Add();
-				 dataGridView1->Rows[1]->HeaderCell->Value = "计算值";
-
-				 dataGridView1->Rows->Add();
-				 dataGridView1->Rows[2]->HeaderCell->Value = "测量值";
-				 
-				 
-				 dataGridView1->Rows[3]->HeaderCell->Value = "相对误差";
-
-				 dataGridView1->RowHeadersWidth = 200;
-				 */
-
-			 }
+			
 	private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 	}
 
 private: System::Void dataGridView1_ColumnHeaderMouseClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellMouseEventArgs^  e) {
-
-
-	/*
-	int index = e->ColumnIndex;
-	//列Header的背景色为黄色
-	dataGridView1->EnableHeadersVisualStyles = false;
-	for each (DataGridViewColumn^ var in dataGridView1->Columns)
-	{
-		var->HeaderCell->Style->ForeColor = Color::Black;
-	}
-
-	dataGridView1->Columns[index]->HeaderCell->Style->ForeColor = Color::Red;
-	String ^VolumnHeadtext = dataGridView1->Columns[index]->HeaderText;
-	if (VolumnHeadtext == "获取") {
-		S_PLCRecv spr;
-		spr = global::sh->GetliKongData();
-		switch (e->ColumnIndex) {
-		case 0: 
-		case 1: 
-		case 2:textBox2->Text = spr.I.ToString(); break;
-		case 3:;
-		case 4:;
-		case 5:;
-		case 6:;
-		case 7:textBox1->Text = spr.U.ToString(); break;
-		}
-	}
-	else if (VolumnHeadtext == "设置") {
-
-		switch (e->ColumnIndex) {
-		case 0:
-		case 1:
-		case 2:break;
-		//case 3:global::scs->SetDirectVoltage(String_to_Int(dataGridView1->Rows[2]->Cells[index]->Value->ToString())); break;
-		case 3:	global::scs->SetDirectVoltage(10);
-			MessageBox::Show("123");
-			break;
-		//case 4:global::scs->SetDirectVoltage(String_to_Int(dataGridView1->Rows[2]->Cells[index]->Value->ToString())); break;
-		case 5:;
-		case 6:;
-		case 7:;
-		}
-	
-	
-	}
-	else {
-	
-		return;
-	}
-	*/
 }
-		 Voice^ v = gcnew Voice;
 private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
 	v->Speak(label1->Text + label2->Text + label3->Text
 		+ label4->Text + label5->Text + label19->Text);
@@ -1508,21 +1209,19 @@ private: System::Void button12_Click(System::Object^  sender, System::EventArgs^
 private: System::Void button11_Click(System::Object^  sender, System::EventArgs^  e) {
 	label38->Text = DcNumToString(spr->U, spr->DCsymbol);
 }
-		 Thread ^ t;
 
-		 S_PLCRecv *spr ;
 
 		 void Recv() {
 			 spr = new S_PLCRecv;
 			 memset(spr, 0x00, sizeof(S_PLCRecv));
 			 while (1) {
 				 Thread::Sleep(1000);
-				 *spr = global::sh->GetliKongData();
+				 global::sh->GetliKongData(spr);
 				 if (spr->HeaderId == 6) {
-				     textBox1->Text = DcNumToString(spr->U, spr->DCsymbol) + " V";
+				     //textBox1->Text = DcNumToString(spr->U, spr->DCsymbol) + " V";
 				 }
 				 else if (spr->HeaderId == 5) {
-					 textBox2->Text = DcNumToString(spr->I, spr->DCsymbol) + " mA";
+					 //textBox2->Text = DcNumToString(spr->I, spr->DCsymbol) + " mA";
 				 }
 			 }
 		 }
@@ -1568,7 +1267,7 @@ private: System::Void button16_Click(System::Object^  sender, System::EventArgs^
 			 g.Ude_c_v = 100;
 			 g.Ufa_c_v = 900;
 
-			 string text = T_to_string(textBox1->Text);
+			 string text ;
 			 memcpy(g.StuName, text.c_str(), 50);
 			 g.StuName[text.length()] = 0x00;
 			 g.XueHao = String_to_Int(textBox3->Text);
@@ -1595,5 +1294,9 @@ private: System::Void button16_Click(System::Object^  sender, System::EventArgs^
 			 button16->Enabled = true;
 			 ssc.Destroy();
 		 }
+
+
+		 private: System::Void panel2_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
 };
-}
+};

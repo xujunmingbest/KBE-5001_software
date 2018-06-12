@@ -1,6 +1,11 @@
+
+
 #include <iostream>
+
 #include "tool.h"
+
 using namespace std;
+
 CControl g_c("wnd"); 
 CControl::CControl(char *Name)
 {
@@ -121,10 +126,10 @@ string IsDClegal(String^in)
 }
 
 
-int GetDcNum(string &out) {
-	size_t pos = out.find('.', 0);
-	int zs = atoi(out.substr(0, pos).c_str());
-	int fs = atoi(out.substr(pos+1, 2).c_str());
+int GetDcNum(string &in) {
+	size_t pos = in.find('.', 0);
+	int zs = atoi(in.substr(0, pos).c_str());
+	int fs = atoi(in.substr(pos+1, 2).c_str());
 	int r = zs * 100 + fs;
 	return r;
 }
@@ -154,6 +159,95 @@ String^ DcNumToString(uint in ,uint DcSymbol)
 	else {
 		s = "-";
 	}
+	String ^temp;
+	if (xs < 10) temp = "0" + xs.ToString();
+	else   temp =xs.ToString();
+	return  s + gcnew String(zs.ToString() + "." + temp);
+}
 
-	return  s + gcnew String(zs.ToString() + "." + xs.ToString());
+#define BMPLENGTH 387072
+void global::SystemStart()
+{
+	Exceptioninit(); //全局异常初始化
+	PLCRecv = new S_PLCRecv;
+	//消息队列初始化 
+	MsgQueueRegister();
+
+	//配置文件初始化
+	readXmlConfigFile(configXml);
+	LOG_DETAIL(configXml.DesMac, configXml.RepeaterIp, configXml.RepeaterPort,
+		"力控串口", configXml.SerialHandle, "电源控制", configXml.SerialControlSource,
+		configXml.GradeIp, configXml.GradePort);
+
+
+	//力控模块初始化
+	global::sh->SerialHandleInit();
+	global::sh->MonitorTesterId(9);
+	t = gcnew Thread(gcnew ThreadStart(LiKongMonter));
+	t->Start();
+	//电源控制模块初始化
+	if (!global::scs->SerialHandleInit()) {
+		SYS_LOG_ERROR("控制电源模块串口初始化失败");
+	}
+	oscillographOpen();
+}
+
+
+
+
+
+void global::SystemShortDown()
+{
+	t->Abort();
+	global::scs->SerialHandleClose();
+	global::sh->SerialHandleClose();
+	delete PLCRecv;
+	exit(0);
+}
+
+void global::LiKongMonter()
+{
+	while (1) {
+		memset(PLCRecv, 0x00, sizeof(S_PLCRecv));
+		Thread::Sleep(1000);
+		if (!sh->GetliKongData(PLCRecv))
+		{
+			if (!sh->SerialHandleInit()) {
+				SYS_LOG_ERROR("获取力控数据失败,请检串口连接是不是正常");
+				Thread::Sleep(60000);
+			}
+			continue;
+		}
+		/*
+		try {
+			switch (PLCRecv->HeaderId) {
+			case 1:	break;
+			case 2:break;
+			case 3:break;
+			case 4:break;
+			case 5:break;
+
+			}
+
+		}
+		catch (System::Exception ^E) {
+			
+		}*/
+	}
+}
+
+
+void global::SetDV(String^t)
+{
+	string r = IsDClegal(t);
+	if (r.length() == 0) {
+		MessageBox::Show("输入数据不合法");
+		return;
+	}
+	int DVNum = GetDcNum(r);
+	if (!scs->SetDirectVoltage(DVNum)) {
+		MessageBox::Show("设置失败");
+		return;
+	}
+	MessageBox::Show("设置成功");
 }

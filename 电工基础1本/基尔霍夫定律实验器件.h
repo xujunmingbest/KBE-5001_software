@@ -123,14 +123,15 @@ namespace 电工基础1本 {
 			// 
 			// listView1
 			// 
-			this->listView1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->listView1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->listView1->Font = (gcnew System::Drawing::Font(L"楷体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->listView1->FullRowSelect = true;
 			this->listView1->GridLines = true;
-			this->listView1->Location = System::Drawing::Point(0, 0);
+			this->listView1->Location = System::Drawing::Point(12, 22);
 			this->listView1->Name = L"listView1";
-			this->listView1->Size = System::Drawing::Size(1730, 247);
+			this->listView1->Size = System::Drawing::Size(1285, 247);
 			this->listView1->TabIndex = 1;
 			this->listView1->UseCompatibleStateImageBehavior = false;
 			this->listView1->View = System::Windows::Forms::View::Details;
@@ -141,7 +142,7 @@ namespace 电工基础1本 {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"楷体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label1->Location = System::Drawing::Point(196, 851);
+			this->label1->Location = System::Drawing::Point(94, 879);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(212, 24);
 			this->label1->TabIndex = 2;
@@ -152,7 +153,7 @@ namespace 电工基础1本 {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"楷体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label2->Location = System::Drawing::Point(618, 851);
+			this->label2->Location = System::Drawing::Point(516, 879);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(210, 24);
 			this->label2->TabIndex = 3;
@@ -163,7 +164,7 @@ namespace 电工基础1本 {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"楷体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label3->Location = System::Drawing::Point(1068, 851);
+			this->label3->Location = System::Drawing::Point(966, 879);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(49, 24);
 			this->label3->TabIndex = 4;
@@ -174,7 +175,7 @@ namespace 电工基础1本 {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"楷体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label4->Location = System::Drawing::Point(1489, 851);
+			this->label4->Location = System::Drawing::Point(1387, 879);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(135, 24);
 			this->label4->TabIndex = 5;
@@ -183,7 +184,7 @@ namespace 电工基础1本 {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(114, 310);
+			this->pictureBox1->Location = System::Drawing::Point(12, 338);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(390, 520);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
@@ -195,7 +196,7 @@ namespace 电工基础1本 {
 			// 
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(911, 362);
+			this->pictureBox2->Location = System::Drawing::Point(809, 390);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(351, 468);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
@@ -206,7 +207,7 @@ namespace 电工基础1本 {
 			// pictureBox3
 			// 
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(530, 362);
+			this->pictureBox3->Location = System::Drawing::Point(428, 390);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(351, 468);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
@@ -217,7 +218,7 @@ namespace 电工基础1本 {
 			// pictureBox4
 			// 
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(1298, 538);
+			this->pictureBox4->Location = System::Drawing::Point(1196, 566);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(390, 292);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
@@ -229,7 +230,7 @@ namespace 电工基础1本 {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"新宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button1->Location = System::Drawing::Point(0, 246);
+			this->button1->Location = System::Drawing::Point(12, 275);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 42);
 			this->button1->TabIndex = 10;

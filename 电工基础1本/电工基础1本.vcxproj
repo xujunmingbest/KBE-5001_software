@@ -149,6 +149,7 @@
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
     </ClCompile>
     <ClCompile Include="单元测试.cpp" />
+    <ClCompile Include="oscillograph.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gradeSubmit.h" />
@@ -171,11 +172,40 @@
     <ClInclude Include="SynchroShortConnection.h" />
     <ClInclude Include="SysLog.h" />
     <ClInclude Include="tool.h" />
+    <ClInclude Include="uci\CMD_COMVer2.h" />
+    <ClInclude Include="uci\comApiDef.h" />
+    <ClInclude Include="uci\dso_base.h" />
+    <ClInclude Include="uci\ItemCode_COMVer2.h" />
+    <ClInclude Include="uci\uci.h" />
+    <ClInclude Include="uci\ucidef.h" />
+    <ClInclude Include="uci\uci_cpp.h" />
+    <ClInclude Include="uci\unit.h" />
+    <ClInclude Include="uci\UPO.h" />
+    <ClInclude Include="uci\UTG2025Def.h" />
+    <ClInclude Include="uci\UTG4162.h" />
     <ClInclude Include="xml\tinystr.h" />
     <ClInclude Include="xml\tinyxml.h" />
     <ClInclude Include="xml\xml.h" />
     <ClInclude Include="_Mutex.h" />
     <ClInclude Include="单元测试.h" />
+    <ClInclude Include="叠加原理.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验内容.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验原理.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验器件.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验步骤.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验目的.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="基尔霍夫定律.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -227,6 +257,9 @@
     <ClInclude Include="底部.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="示波器.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="系统日志.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -243,6 +276,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mainWnd.resx">
       <DependentUpon>mainWnd.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理.resx">
+      <DependentUpon>叠加原理.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验内容.resx">
+      <DependentUpon>叠加原理实验内容.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验原理.resx">
+      <DependentUpon>叠加原理实验原理.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验器件.resx">
+      <DependentUpon>叠加原理实验器件.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验步骤.resx">
+      <DependentUpon>叠加原理实验步骤.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验目的.resx">
+      <DependentUpon>叠加原理实验目的.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="基尔霍夫定律.resx">
       <DependentUpon>基尔霍夫定律.h</DependentUpon>
@@ -295,6 +346,9 @@
     <EmbeddedResource Include="底部.resx">
       <DependentUpon>底部.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="示波器.resx">
+      <DependentUpon>示波器.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="系统日志.resx">
       <DependentUpon>系统日志.h</DependentUpon>
     </EmbeddedResource>
@@ -345,11 +399,20 @@
     </Xml>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="LedWatch">
+      <HintPath>..\..\..\csharp\LedWatch\LedWatch\bin\Debug\LedWatch.dll</HintPath>
+    </Reference>
+    <Reference Include="LogBox">
+      <HintPath>..\..\..\c++\LogBox\LogBox\bin\Debug\LogBox.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Speech">
       <HintPath>C:\Program Files\Microsoft Speech Platform SDK\Assembly\Microsoft.Speech.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Speech.VoiceXml">
       <HintPath>C:\Program Files\Microsoft Speech Platform SDK\Assembly\Microsoft.Speech.VoiceXml.dll</HintPath>
+    </Reference>
+    <Reference Include="smallmenu">
+      <HintPath>..\..\..\csharp\smallmenu\smallmenu\bin\Debug\smallmenu.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -360,6 +423,12 @@
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.XML">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="UserLedTest">
+      <HintPath>..\..\..\360Downloads\UserLedTest\UserLedTest\UserLedTest\obj\x86\Debug\UserLedTest.exe</HintPath>
+    </Reference>
+    <Reference Include="日志控件">
+      <HintPath>..\..\..\csharp\日志控件\日志控件\bin\Debug\日志控件.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

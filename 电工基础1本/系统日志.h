@@ -29,31 +29,24 @@ namespace 电工基础1本 {
 			t = gcnew Thread(gcnew ThreadStart(this, &系统日志::LogRecv));
 			t->Start();
 		}
+	private: _LogBox::LogBox^  logBox1;
+	public:
 		Thread ^ t;
 		void LogRecv() {
 			Thread::Sleep(500);
 			while (1) {
 				string o = SysLogQue.Consume();
-				SysLogOutPut(o.c_str()[0], gcnew String(o.c_str() + 1));
+
+				String^ temp = gcnew String(o.c_str() + 1);
+				switch (o.c_str()[0]) {
+				case _SYS_ERROR: logBox1->LogErr(temp); break;
+				case _SYS_INFO: logBox1->LogInfo(temp); break;
+				case _SYS_WARN: logBox1->LogWarn(temp); break;
+				}
 			}
 		}
 
-		void SysLogOutPut(int log_type,String ^c) {
-			//MessageBox::Show("1111111");
-			richTextBox1->AppendText(c + "\n");
-			richTextBox1->SelectionStart = richTextBox1->TextLength - c->Length - 1;
-			richTextBox1->SelectionLength = c->Length;
-			switch (log_type) {
-			case _SYS_ERROR:richTextBox1->SelectionColor = Color::Red;  break;
-			case _SYS_INFO:richTextBox1->SelectionColor = Color::Green; break;
-			default:
-				return;
-			}
-			richTextBox1->SelectionStart = richTextBox1->Text->Length;
-			richTextBox1->SelectionLength = 0;
-			richTextBox1->Focus();
-		
-		}
+
 	protected:
 		/// <summary>
 		/// 清理所有正在使用的资源。
@@ -67,7 +60,7 @@ namespace 电工基础1本 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::RichTextBox^  richTextBox1;
+
 	protected:
 
 	private:
@@ -83,19 +76,17 @@ namespace 电工基础1本 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
+			this->logBox1 = (gcnew _LogBox::LogBox());
 			this->SuspendLayout();
 			// 
-			// richTextBox1
+			// logBox1
 			// 
-			this->richTextBox1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"楷体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->richTextBox1->Location = System::Drawing::Point(0, 0);
-			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(1042, 624);
-			this->richTextBox1->TabIndex = 0;
-			this->richTextBox1->Text = L"";
+			this->logBox1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->logBox1->Location = System::Drawing::Point(0, 0);
+			this->logBox1->Name = L"logBox1";
+			this->logBox1->Size = System::Drawing::Size(1042, 624);
+			this->logBox1->TabIndex = 1;
+			this->logBox1->Load += gcnew System::EventHandler(this, &系统日志::logBox1_Load);
 			// 
 			// 系统日志
 			// 
@@ -103,7 +94,7 @@ namespace 电工基础1本 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1042, 624);
 			this->ControlBox = false;
-			this->Controls->Add(this->richTextBox1);
+			this->Controls->Add(this->logBox1);
 			this->Name = L"系统日志";
 			this->Text = L"系统日志";
 			this->Load += gcnew System::EventHandler(this, &系统日志::系统日志_Load);
@@ -112,6 +103,10 @@ namespace 电工基础1本 {
 		}
 #pragma endregion
 	private: System::Void 系统日志_Load(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void logBox1_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 	};
 }

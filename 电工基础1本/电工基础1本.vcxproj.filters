@@ -43,6 +43,12 @@
     <Filter Include="成绩上传">
       <UniqueIdentifier>{8eedc1b8-7880-4625-8abc-eeb43f0efac6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="叠加原理">
+      <UniqueIdentifier>{34258ac1-344d-4a40-9db6-163eac41d2de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uci优利德示波器">
+      <UniqueIdentifier>{81ffff57-af4b-4716-a2fa-62b522e07428}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainWnd.cpp">
@@ -106,6 +112,9 @@
       <Filter>tool</Filter>
     </ClCompile>
     <ClCompile Include="waver.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="oscillograph.cpp">
       <Filter>tool</Filter>
     </ClCompile>
   </ItemGroup>
@@ -233,6 +242,60 @@
     <ClInclude Include="SynchroShortConnection.h">
       <Filter>成绩上传</Filter>
     </ClInclude>
+    <ClInclude Include="叠加原理.h">
+      <Filter>叠加原理</Filter>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验目的.h">
+      <Filter>叠加原理</Filter>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验器件.h">
+      <Filter>叠加原理</Filter>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验原理.h">
+      <Filter>叠加原理</Filter>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验步骤.h">
+      <Filter>叠加原理</Filter>
+    </ClInclude>
+    <ClInclude Include="叠加原理实验内容.h">
+      <Filter>叠加原理</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\CMD_COMVer2.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\comApiDef.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\dso_base.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\ItemCode_COMVer2.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\uci.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\uci_cpp.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\ucidef.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\unit.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\UPO.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\UTG2025Def.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="uci\UTG4162.h">
+      <Filter>uci优利德示波器</Filter>
+    </ClInclude>
+    <ClInclude Include="示波器.h">
+      <Filter>登入框&amp;设置</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mainWnd.resx">
@@ -299,6 +362,24 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="首页.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验原理.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验器件.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验步骤.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验目的.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="叠加原理实验内容.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

@@ -3,6 +3,8 @@
 #include <iostream>
 using namespace std;
 #include "xml/xml.h"
+#include "底部.h"
+string T_to_string(System::String^in);
 
 #define uint unsigned int
 #define uchar unsigned char
@@ -41,7 +43,7 @@ namespace 电工基础1本 {
 	private:
 		SerialPort^  serialPort1 = gcnew SerialPort;
 	public:
-		void serialPortOpen(String ^ PortName);
+		bool serialPortOpen(String ^ PortName);
 		void serialPort1Close();
 		bool Send(string &s);
 		bool SendNoCrc(string &s);
@@ -54,11 +56,11 @@ namespace 电工基础1本 {
 	private:
 		SerialControl ^sc = gcnew SerialControl;
 	public:
-		void SerialHandleInit();
+		bool SerialHandleInit();
 		void SerialHandleClose();
 		/********读取设备号********/
 		uint GetMonitorTesterId(); //读设备号
-		S_PLCRecv GetliKongData(); //获取
+		bool GetliKongData(S_PLCRecv *pr); //获取
 		void MonitorTesterId(uint TesterId); //写设备号
 	};
 
@@ -67,14 +69,14 @@ namespace 电工基础1本 {
 	private:
 		SerialControl ^sc = gcnew SerialControl;
 	public:
-		void SerialHandleInit();
+		bool SerialHandleInit();
 		void SerialHandleClose();
-		/********读取设备号********/
-		void SetDirectVoltage(int Voltage);
-		void SetDirectCurrent(int Current);
-		void SetAlternatingVoltage(char Id,int Voltage);
-		void OpenSource(int Id);
-		void CloseSource(int Id);
+		/********设置电源********/
+		bool SetDirectVoltage(int Voltage);
+		bool SetDirectCurrent(int Current);
+		bool SetAlternatingVoltage(char Id,int Voltage);
+		bool OpenSource(int Id);
+		bool CloseSource(int Id);
 	};
 
 }

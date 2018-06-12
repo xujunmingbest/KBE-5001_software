@@ -1,14 +1,14 @@
 #include "seriesPort.h"
 #include "log.h"
 #include "底部.h"
-
+#include "SysLog.h"
 using namespace 电工基础1本;
 
 
 
 uint TwoByteTouInt(char *buff);
 
-void SerialControl::serialPortOpen(String ^ PortName) {
+bool SerialControl::serialPortOpen(String ^ PortName) {
 
 	int count = 0;
 	serialPort1->Close();
@@ -21,9 +21,11 @@ void SerialControl::serialPortOpen(String ^ PortName) {
 		serialPort1->Open(); //串口打开
 	}
 	catch (System::Exception ^e) {
-		LOG_EXCEPTION( "打开串口失败");
+		SYS_LOG_ERROR("打开串口失败", T_to_string(PortName));
+		return false;
 	}
-	return;
+	SYS_LOG_INF("打开串口成功", T_to_string(PortName));
+	return true;
 }
 
 void SerialControl::serialPort1Close() {
@@ -185,14 +187,14 @@ uint crc16(uchar *buf, uchar len)			//校验函数 高位在前，低位在后
 
 
 
-void SerialHandle::SerialHandleInit()
+bool SerialHandle::SerialHandleInit()
 {
-	sc->serialPortOpen(gcnew String(configXml.SerialHandle.c_str()) );
+	return sc->serialPortOpen(gcnew String(configXml.SerialHandle.c_str()) );
 }
 
-void SerialControlSource::SerialHandleInit()
+bool SerialControlSource::SerialHandleInit()
 {
-	sc->serialPortOpen(gcnew String(configXml.SerialControlSource.c_str()));
+	return sc->serialPortOpen(gcnew String(configXml.SerialControlSource.c_str()));
 }
 
 void SerialHandle::SerialHandleClose()
@@ -239,10 +241,8 @@ void SerialHandle::MonitorTesterId(uint TesterId)
 }
 
 
-S_PLCRecv SerialHandle::GetliKongData()
+bool SerialHandle::GetliKongData(S_PLCRecv *pr)
 {
-	S_PLCRecv pr;
-
 	char buff[6];
 	buff[0] = 0x01;
 	buff[1] = 0x03;
@@ -252,23 +252,23 @@ S_PLCRecv SerialHandle::GetliKongData()
 	buff[5] = 0x07;
 
 	if (!sc->Send(string(buff, 6))) {
-		memset(&pr, 0x00, sizeof(S_PLCRecv));
+		return false;
 		LOG_ERROR("获取力控包失败");
 	}
 	string r = sc->Recv(19);
 	if (r.length() == 0) return pr;
 
-	pr.MId = r[0];
-	pr.FunCode = r[1];
-	pr.Bytes = r[2];
+	pr->MId = r[0];
+	pr->FunCode = r[1];
+	pr->Bytes = r[2];
 
-	pr.HeaderId = TwoByteTouInt(&r[3]);
-	pr.U = TwoByteTouInt(&r[5]);
-	pr.I = TwoByteTouInt(&r[7]);
-	pr.P = TwoByteTouInt(&r[9]);
-	pr.COS = TwoByteTouInt(&r[11]);
-	pr.Fhz = TwoByteTouInt(&r[13]);
-	pr.DCsymbol = TwoByteTouInt(&r[15]);
+	pr->HeaderId = TwoByteTouInt(&r[3]);
+	pr->U = TwoByteTouInt(&r[5]);
+	pr->I = TwoByteTouInt(&r[7]);
+	pr->P = TwoByteTouInt(&r[9]);
+	pr->COS = TwoByteTouInt(&r[11]);
+	pr->Fhz = TwoByteTouInt(&r[13]);
+	pr->DCsymbol = TwoByteTouInt(&r[15]);
 	return pr;
 }//获取
 
@@ -285,7 +285,7 @@ uint TwoByteTouInt(char *buff)
 
 
 
-void SerialControlSource::SetDirectVoltage(int Voltage)
+bool SerialControlSource::SetDirectVoltage(int Voltage)
 {
 	int _Voltage = Voltage;
 	char buff[6];
@@ -296,10 +296,14 @@ void SerialControlSource::SetDirectVoltage(int Voltage)
 	buff[4] = (_Voltage & 0xffff) >> 8;
 	buff[5] = _Voltage & 0xff;
 
-	sc->Send(string(buff, 6));
-	string r = sc->Recv(8);
+	if( !sc->Send(string(buff, 6)) ){
+		SYS_LOG_ERROR("控制电源设置直流电压失败");
+		return false;
+	}
+	return true;
+	//string r = sc->Recv(8);
 }
-void SerialControlSource::SetDirectCurrent(int Current)
+bool SerialControlSource::SetDirectCurrent(int Current)
 {
 	int _Current = Current;
 	char buff[6];
@@ -310,12 +314,15 @@ void SerialControlSource::SetDirectCurrent(int Current)
 	buff[4] = (_Current & 0xffff) >> 8;
 	buff[5] = _Current & 0xff;
 
-	sc->Send(string(buff, 6));
-	string r = sc->Recv(8);
-
+	if( !sc->Send(string(buff, 6)) ) {
+		SYS_LOG_ERROR("控制电源设置直流电流失败");
+		return false;
+	}
+	return true;
+	//string r = sc->Recv(8);
 }
 
-void SerialControlSource::SetAlternatingVoltage(char Id, int Voltage)
+bool SerialControlSource::SetAlternatingVoltage(char Id, int Voltage)
 {
 	Sleep(1000);
 	int i = Voltage % 100;
@@ -329,25 +336,37 @@ void SerialControlSource::SetAlternatingVoltage(char Id, int Voltage)
 	buff[4] = 'u';
 	buff[7] = 0x0A;
 
-	sc->SendNoCrc(string(buff, 8));
+	if( !sc->SendNoCrc(string(buff, 8))) {
+		SYS_LOG_ERROR("控制电源设置交流电压失败");
+		return false;
+	}
+	return true;
 }
 
-void SerialControlSource::OpenSource(int Id)
+bool SerialControlSource::OpenSource(int Id)
 {
 	char buff[3];
 	buff[0] = Id + 0x80;
 	buff[1] = 0x0D;
 	buff[2] = 0x0A;
-	sc->SendNoCrc(string(buff, 3));
+	if( !sc->SendNoCrc(string(buff, 3)) ){
+		SYS_LOG_ERROR("控制电源打开电源失败");
+		return false;
+	}
 	Sleep(5000);
+	return true;
 }
 
-void SerialControlSource::CloseSource(int Id)
+bool SerialControlSource::CloseSource(int Id)
 {
 	char buff[3];
 	buff[0] = Id;
 	buff[1] = 0x0D;
 	buff[2] = 0x0A;
-	sc->SendNoCrc(string(buff, 3));
+	if (!sc->SendNoCrc(string(buff, 3))) {
+		SYS_LOG_ERROR("控制电源关闭串口失败");
+		return false;
+	}
 	Sleep(5000);
+	return true;
 }

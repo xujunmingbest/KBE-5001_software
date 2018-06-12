@@ -9,14 +9,22 @@ using namespace std;
 
 /*****实验编号****/
 
-
-struct GradeSubmit {
-	map<int, string> Grades = {
-		{ 1,"元件伏安特性测试" },
-		{ 2,"基尔霍夫定理" },
-	};
+ static map<int, string> Grades = {
+	{ 1,"元件伏安特性测试" },
+	{ 2,"基尔霍夫定理" },
+	{ 3,"叠加原理" },
 };
 
+/*
+string GetTrialNameById(int i) {
+	static map<int, string> Grades = {
+	   { 1,"元件伏安特性测试" },
+	   { 2,"基尔霍夫定理" },
+	   { 3,"叠加原理" },
+	};
+
+	return Grades[i];
+}*/
 #pragma pack(push,1)
 
 struct FileHead

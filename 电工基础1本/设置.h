@@ -1,4 +1,5 @@
 #pragma once
+#include "tool.h"
 extern bool 设置IsOpened;
 namespace 电工基础1本 {
 
@@ -44,12 +45,19 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::GroupBox^  groupBox2;
-	private: System::Windows::Forms::TextBox^  textBox2;
+
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::TextBox^  textBox1;
-	private: System::Windows::Forms::RichTextBox^  richTextBox1;
-	private: System::Windows::Forms::GroupBox^  groupBox3;
+
+
+
+	private: System::Windows::Forms::ComboBox^  comboBox2;
+	private: System::Windows::Forms::ComboBox^  comboBox1;
+
+
+	private: System::Windows::Forms::Button^  button4;
+	private: System::Windows::Forms::Button^  button3;
+	private: System::Windows::Forms::Button^  button5;
 	protected:
 
 	private:
@@ -71,25 +79,27 @@ namespace 电工基础1本 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->trackBar2 = (gcnew System::Windows::Forms::TrackBar());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
-			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar1))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar2))->BeginInit();
 			this->groupBox2->SuspendLayout();
-			this->groupBox3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// trackBar1
 			// 
 			this->trackBar1->Location = System::Drawing::Point(137, 33);
+			this->trackBar1->Maximum = 100;
 			this->trackBar1->Name = L"trackBar1";
 			this->trackBar1->Size = System::Drawing::Size(573, 56);
 			this->trackBar1->TabIndex = 0;
+			this->trackBar1->Scroll += gcnew System::EventHandler(this, &设置::trackBar1_Scroll);
 			// 
 			// groupBox1
 			// 
@@ -129,33 +139,67 @@ namespace 电工基础1本 {
 			// trackBar2
 			// 
 			this->trackBar2->Location = System::Drawing::Point(137, 113);
+			this->trackBar2->Minimum = -10;
 			this->trackBar2->Name = L"trackBar2";
 			this->trackBar2->Size = System::Drawing::Size(573, 56);
 			this->trackBar2->TabIndex = 1;
+			this->trackBar2->Scroll += gcnew System::EventHandler(this, &设置::trackBar2_Scroll);
 			// 
 			// groupBox2
 			// 
 			this->groupBox2->BackColor = System::Drawing::SystemColors::Control;
-			this->groupBox2->Controls->Add(this->textBox2);
+			this->groupBox2->Controls->Add(this->button5);
+			this->groupBox2->Controls->Add(this->button4);
+			this->groupBox2->Controls->Add(this->button3);
+			this->groupBox2->Controls->Add(this->comboBox2);
+			this->groupBox2->Controls->Add(this->comboBox1);
 			this->groupBox2->Controls->Add(this->button2);
 			this->groupBox2->Controls->Add(this->button1);
-			this->groupBox2->Controls->Add(this->textBox1);
 			this->groupBox2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->groupBox2->Location = System::Drawing::Point(22, 249);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(783, 187);
+			this->groupBox2->Size = System::Drawing::Size(783, 251);
 			this->groupBox2->TabIndex = 4;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"串口连接(仅开发维护人员使用)";
 			// 
-			// textBox2
+			// button4
 			// 
-			this->textBox2->Location = System::Drawing::Point(222, 118);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(240, 34);
-			this->textBox2->TabIndex = 7;
+			this->button4->Location = System::Drawing::Point(378, 115);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(121, 35);
+			this->button4->TabIndex = 11;
+			this->button4->Text = L"串口重置";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &设置::button4_Click);
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(378, 36);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(121, 35);
+			this->button3->TabIndex = 10;
+			this->button3->Text = L"串口重置";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &设置::button3_Click);
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Location = System::Drawing::Point(227, 118);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(121, 31);
+			this->comboBox2->TabIndex = 9;
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Location = System::Drawing::Point(227, 41);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(121, 31);
+			this->comboBox1->TabIndex = 8;
 			// 
 			// button2
 			// 
@@ -175,35 +219,14 @@ namespace 电工基础1本 {
 			this->button1->Text = L"电源控制模块";
 			this->button1->UseVisualStyleBackColor = true;
 			// 
-			// textBox1
+			// button5
 			// 
-			this->textBox1->Location = System::Drawing::Point(222, 41);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(240, 34);
-			this->textBox1->TabIndex = 4;
-			// 
-			// richTextBox1
-			// 
-			this->richTextBox1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->richTextBox1->Location = System::Drawing::Point(3, 26);
-			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(901, 201);
-			this->richTextBox1->TabIndex = 5;
-			this->richTextBox1->Text = L"";
-			// 
-			// groupBox3
-			// 
-			this->groupBox3->Controls->Add(this->richTextBox1);
-			this->groupBox3->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->groupBox3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->groupBox3->Location = System::Drawing::Point(0, 474);
-			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(907, 230);
-			this->groupBox3->TabIndex = 6;
-			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"日志";
-			this->groupBox3->Enter += gcnew System::EventHandler(this, &设置::groupBox3_Enter);
+			this->button5->Location = System::Drawing::Point(15, 191);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(227, 35);
+			this->button5->TabIndex = 12;
+			this->button5->Text = L"示波器连接重置";
+			this->button5->UseVisualStyleBackColor = true;
 			// 
 			// 设置
 			// 
@@ -211,8 +234,7 @@ namespace 电工基础1本 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(907, 704);
-			this->Controls->Add(this->groupBox3);
+			this->ClientSize = System::Drawing::Size(869, 616);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Name = L"设置";
@@ -223,15 +245,46 @@ namespace 电工基础1本 {
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar2))->EndInit();
 			this->groupBox2->ResumeLayout(false);
-			this->groupBox2->PerformLayout();
-			this->groupBox3->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void 设置_Load(System::Object^  sender, System::EventArgs^  e) {
+		for (int i = 1; i < 100; i++) {
+			comboBox1->Items->Add("COM"+i.ToString());
+			comboBox2->Items->Add("COM" + i.ToString());
+		}
+		comboBox1->SelectedText = gcnew String(configXml.SerialControlSource.c_str());
+		comboBox2->SelectedText = gcnew String(configXml.SerialHandle.c_str());
 	}
 private: System::Void groupBox3_Enter(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void trackBar1_Scroll(System::Object^  sender, System::EventArgs^  e) {
+	global::voice->SetVolume(trackBar1->Value);
+	global::voice->Speak("钉");
+}
+private: System::Void trackBar2_Scroll(System::Object^  sender, System::EventArgs^  e) {
+	global::voice->SetRate(trackBar2->Value);
+}
+private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+	configXml.SerialControlSource = T_to_string(comboBox1->Text);
+	global::scs->SerialHandleClose();
+	if (!global::scs->SerialHandleInit()) {
+		MessageBox::Show("串口重置失败");
+	}
+	else {
+		MessageBox::Show("串口重置成功");
+	}
+}
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+	configXml.SerialHandle = T_to_string(comboBox2->Text);
+	global::sh->SerialHandleClose();
+	if (!global::sh->SerialHandleInit()) {
+		MessageBox::Show("串口重置失败");
+	}
+	else {
+		MessageBox::Show("串口重置成功");
+	}
 }
 };
 }

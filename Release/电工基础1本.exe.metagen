@@ -1,5 +1,11 @@
   电工基础1本.LoginWnd.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.mainWnd.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.叠加原理.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.叠加原理实验内容.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.叠加原理实验原理.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.叠加原理实验器件.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.叠加原理实验步骤.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.叠加原理实验目的.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.基尔霍夫定律.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.基尔霍夫定律实验内容.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.基尔霍夫定律实验原理.resources - Embedded, ContainedInManifestFile, 
@@ -17,6 +23,7 @@
   电工基础1本.实验1实验设备.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.实验1思考题.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.底部.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.示波器.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.系统日志.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.设置.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.首页.resources - Embedded, ContainedInManifestFile, 
@@ -25,9 +32,15 @@ Assembly 电工基础1本, Version=0.0.*, Culture=固定语言(固定国家/地�
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Assembly LedWatch, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly LogBox, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
 Assembly Microsoft.Speech, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
 	hash=None, flags=None
 Assembly Microsoft.Speech.VoiceXml, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly smallmenu, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=None, flags=None
 Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -41,6 +54,8 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Assembly 日志控件, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
 Assembly Interop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=None, flags=None
 Assembly Interop.ShockwaveFlashObjects.1.0, Version=1.0.*, Culture=固定语言(固定国家/地区): 
@@ -51,8 +66,6 @@ Assembly AxInterop.WMPLib.1.0, Version=1.0.*, Culture=固定语言(固定国家/
 	hash=None, flags=None
 Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class 电工基础1本.SysLog: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.底部: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -87,6 +100,8 @@ Class 电工基础1本.Voice: AutoLayout, AnsiClass, Class, Public, BeforeFieldI
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     Close(): PrivateScope, Public, HideBySig
+    SetVolume(Int32): PrivateScope, Public, HideBySig
+    SetRate(Int32): PrivateScope, Public, HideBySig
     Speak(String): PrivateScope, Public, HideBySig
 Class 电工基础1本.Waver: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -109,11 +124,20 @@ Class 电工基础1本.VideoShowWidget: AutoLayout, AnsiClass, Class, Public, Be
 Class global: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
+    System.Threading.Thread t : Public, Static
+    S_PLCRecv* PLCRecv : Public, Static
     电工基础1本.SerialHandle sh : Public, Static
     电工基础1本.SerialControlSource scs : Public, Static
     电工基础1本.Voice voice : Public, Static
   Methods:
-    IntToFormatFloatString(Int32): PrivateScope, Public, Static, HideBySig
+    SystemStart(): PrivateScope, Public, Static, HideBySig
+    SystemShortDown(): PrivateScope, Public, Static, HideBySig
+    LiKongMonter(): PrivateScope, Public, Static, HideBySig
+    SetDV(String): PrivateScope, Public, Static, HideBySig
+    oscillographOpen(): PrivateScope, Public, Static, HideBySig
+    GetOscilloscopePrtScnBmp(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, Static, HideBySig
+    oscillographClose(): PrivateScope, Public, Static, HideBySig
+    GetoscillographParam(oscillographParam*): PrivateScope, Public, Static, HideBySig
 Class 电工基础1本.实验1实验目的: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -190,8 +214,30 @@ Class 电工基础1本.系统日志: AutoLayout, AnsiClass, Class, Public, Befor
     System.Threading.Thread t : Public
   Methods:
     LogRecv(): PrivateScope, Public, HideBySig
-    SysLogOutPut(Int32, String): PrivateScope, Public, HideBySig
 Class 电工基础1本.首页: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.叠加原理实验目的: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.叠加原理实验器件: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    listView1Load(): PrivateScope, Public, HideBySig
+Class 电工基础1本.叠加原理实验内容: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.叠加原理实验原理: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.叠加原理实验步骤: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.叠加原理: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.示波器: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.mainWnd: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

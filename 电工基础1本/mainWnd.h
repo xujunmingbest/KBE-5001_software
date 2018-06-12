@@ -6,6 +6,8 @@
 #include "设置.h"
 #include "系统日志.h"
 #include "首页.h"
+#include "叠加原理.h"
+#include "示波器.h"
 namespace 电工基础1本 {
 
 	using namespace System;
@@ -48,12 +50,19 @@ namespace 电工基础1本 {
 				exit(-1);
 			}
 		}
-	private: System::Windows::Forms::ToolStripMenuItem^  网络重连ToolStripMenuItem;
+
 	private: System::IO::Ports::SerialPort^  serialPort1;
 	private: System::Windows::Forms::ToolStripMenuItem^  基尔霍夫定律实验ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  设置ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  系统日志ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  首页ToolStripMenuItem;
+
+	private: System::Windows::Forms::ToolStripMenuItem^  叠加原理ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  示波器调试ToolStripMenuItem;
+
+
+
+
 
 	public:
 
@@ -101,14 +110,15 @@ namespace 电工基础1本 {
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->首页ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->实验ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->元件伏安特性的测试ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->基尔霍夫定律实验ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->网络重连ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->叠加原理ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->系统日志ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->serialPort1 = (gcnew System::IO::Ports::SerialPort(this->components));
-			this->首页ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->示波器调试ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -119,20 +129,28 @@ namespace 电工基础1本 {
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->首页ToolStripMenuItem,
-					this->实验ToolStripMenuItem, this->网络重连ToolStripMenuItem, this->设置ToolStripMenuItem, this->系统日志ToolStripMenuItem
+					this->实验ToolStripMenuItem, this->设置ToolStripMenuItem, this->系统日志ToolStripMenuItem, this->示波器调试ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->MdiWindowListItem = this->实验ToolStripMenuItem;
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Size = System::Drawing::Size(730, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &mainWnd::menuStrip1_ItemClicked);
 			// 
+			// 首页ToolStripMenuItem
+			// 
+			this->首页ToolStripMenuItem->Name = L"首页ToolStripMenuItem";
+			this->首页ToolStripMenuItem->Size = System::Drawing::Size(63, 24);
+			this->首页ToolStripMenuItem->Text = L"首页";
+			this->首页ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::首页ToolStripMenuItem_Click);
+			// 
 			// 实验ToolStripMenuItem
 			// 
-			this->实验ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+			this->实验ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->元件伏安特性的测试ToolStripMenuItem,
-					this->基尔霍夫定律实验ToolStripMenuItem
+					this->基尔霍夫定律实验ToolStripMenuItem, this->叠加原理ToolStripMenuItem
 			});
 			this->实验ToolStripMenuItem->Name = L"实验ToolStripMenuItem";
 			this->实验ToolStripMenuItem->Size = System::Drawing::Size(63, 24);
@@ -152,12 +170,12 @@ namespace 电工基础1本 {
 			this->基尔霍夫定律实验ToolStripMenuItem->Text = L"基尔霍夫定律实验";
 			this->基尔霍夫定律实验ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::基尔霍夫定律实验ToolStripMenuItem_Click);
 			// 
-			// 网络重连ToolStripMenuItem
+			// 叠加原理ToolStripMenuItem
 			// 
-			this->网络重连ToolStripMenuItem->Name = L"网络重连ToolStripMenuItem";
-			this->网络重连ToolStripMenuItem->Size = System::Drawing::Size(105, 24);
-			this->网络重连ToolStripMenuItem->Text = L"网络重连";
-			this->网络重连ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::网络重连ToolStripMenuItem_Click);
+			this->叠加原理ToolStripMenuItem->Name = L"叠加原理ToolStripMenuItem";
+			this->叠加原理ToolStripMenuItem->Size = System::Drawing::Size(273, 26);
+			this->叠加原理ToolStripMenuItem->Text = L"叠加原理";
+			this->叠加原理ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::叠加原理ToolStripMenuItem_Click);
 			// 
 			// 设置ToolStripMenuItem
 			// 
@@ -173,12 +191,12 @@ namespace 电工基础1本 {
 			this->系统日志ToolStripMenuItem->Text = L"系统日志";
 			this->系统日志ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::系统日志ToolStripMenuItem_Click);
 			// 
-			// 首页ToolStripMenuItem
+			// 示波器调试ToolStripMenuItem
 			// 
-			this->首页ToolStripMenuItem->Name = L"首页ToolStripMenuItem";
-			this->首页ToolStripMenuItem->Size = System::Drawing::Size(63, 24);
-			this->首页ToolStripMenuItem->Text = L"首页";
-			this->首页ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::首页ToolStripMenuItem_Click);
+			this->示波器调试ToolStripMenuItem->Name = L"示波器调试ToolStripMenuItem";
+			this->示波器调试ToolStripMenuItem->Size = System::Drawing::Size(126, 24);
+			this->示波器调试ToolStripMenuItem->Text = L"示波器调试";
+			this->示波器调试ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::示波器调试ToolStripMenuItem_Click);
 			// 
 			// mainWnd
 			// 
@@ -259,10 +277,9 @@ private: System::Void 基尔霍夫定律实验ToolStripMenuItem_Click(System::Object^  s
 		return;
 	}
 	基尔霍夫定律Wnd = gcnew 基尔霍夫定律;
-	基尔霍夫定律Wnd->Show();
 	基尔霍夫定律Wnd->WindowState = FormWindowState::Maximized;
 	this->Visible = false;
-
+	基尔霍夫定律Wnd->Show();
 }
 private: System::Void 设置ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (设置IsOpened == true)
@@ -272,9 +289,9 @@ private: System::Void 设置ToolStripMenuItem_Click(System::Object^  sender, Syste
 		return;
 	}
 	设置Wnd = gcnew 设置;
-	设置Wnd->Show();
 	设置Wnd->MdiParent = this;
 	设置Wnd->WindowState = FormWindowState::Maximized;
+	设置Wnd->Show();
 }
 private: System::Void 系统日志ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (系统日志IsOpened == true)
@@ -284,9 +301,9 @@ private: System::Void 系统日志ToolStripMenuItem_Click(System::Object^  sender, S
 		return;
 	}
 	系统日志Wnd = gcnew 系统日志;
-	系统日志Wnd->Show();
 	系统日志Wnd->MdiParent = this;
 	系统日志Wnd->WindowState = FormWindowState::Maximized;
+	系统日志Wnd->Show();
 }
 private: System::Void 首页ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (首页IsOpened == true)
@@ -296,9 +313,47 @@ private: System::Void 首页ToolStripMenuItem_Click(System::Object^  sender, Syste
 		return;
 	}
 	首页Wnd = gcnew 首页;
-	首页Wnd->Show();
 	首页Wnd->MdiParent = this;
 	首页Wnd->WindowState = FormWindowState::Maximized;
+	//showActiveMdiChild();
+	首页Wnd->Show();
 }
+
+
+private: System::Void 叠加原理ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	叠加原理 ^ f = gcnew 叠加原理();
+	f->Show();
+	this->Visible = false;
+}
+
+private: System::Void 示波器调试ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	Form ^f = GetWindowsChild("示波器");
+
+	if (f == nullptr) {
+		示波器^ f = gcnew 示波器;
+		f->MdiParent = this;
+		f->Name = "示波器";
+		f->WindowState = FormWindowState::Maximized;
+		f->Show();
+	}
+	else {
+		f->BringToFront();
+	}
+
+}
+
+
+
+		 Form^ GetWindowsChild(String ^FormName) {
+			 for each(Form^ f in MdiChildren)
+			 {
+				 if (f->Name == FormName)
+				 {
+					 return f;
+				 }
+			 }
+			 return nullptr;
+		 }
+
 };
 }

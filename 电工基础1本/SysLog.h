@@ -16,8 +16,9 @@ inline void WriteArg(T t, string &s)
 
 extern MsgQueue SysLogQue;
 
-#define _SYS_ERROR 1
-#define _SYS_INFO 2 
+#define _SYS_ERROR 0x00
+#define _SYS_INFO 0x01
+#define _SYS_WARN 0x02
 
 template <class ...Args>
 static void SYSLOG(string &Type, Args... args) {
@@ -25,14 +26,13 @@ static void SYSLOG(string &Type, Args... args) {
 	string t;
 
 	if (Type == "ERROR") {
-		t += _SYS_ERROR; 
-		t += Mylog::_GetSystemTime();
-		t += ":ERROR:";
+		t += char(_SYS_ERROR); 
 	}
 	else if (Type == "INFO") {
-		t += _SYS_INFO; 
-		t += Mylog::_GetSystemTime();
-		t += ":INFO:";
+		t += char(_SYS_INFO);
+	}
+	else if (Type == "WARN") {
+		t += char(_SYS_WARN);
 	}
 	int arr[] = { (WriteArg(args,t), 0)... };
 	SysLogQue.Publish(t);
@@ -40,26 +40,7 @@ static void SYSLOG(string &Type, Args... args) {
 
 #define SYS_LOG_ERROR(...)  SYSLOG(string("ERROR"),__VA_ARGS__)
 #define SYS_LOG_INF(...)    SYSLOG(string("INFO"),__VA_ARGS__)
+#define SYS_LOG_WARN(...)    SYSLOG(string("WARN"),__VA_ARGS__)
 
-
-
-
-
-namespace 电工基础1本 {
-	using namespace System::IO::Ports;
-	using namespace System::Threading;
-	using namespace System::IO;
-	using namespace System;
-	using namespace System::Threading;
-
-	public ref class SysLog {
-
-
-
-	};
-
-
-
-}
 
 #endif

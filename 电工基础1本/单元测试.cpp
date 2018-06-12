@@ -70,13 +70,14 @@ void testForSerialControl()
 
 	LOG_DETAIL( sh->GetMonitorTesterId());
 
-	S_PLCRecv r =   sh->GetliKongData();
+	S_PLCRecv r;
+    sh->GetliKongData(&r);
 	LOG_DETAIL(r.Fhz);
 	LOG_DETAIL(r.U);
-	r = sh->GetliKongData();
+	sh->GetliKongData(&r);
 	LOG_DETAIL(r.U);	LOG_DETAIL(r.Fhz);
 
-	r = sh->GetliKongData();
+	sh->GetliKongData(&r);
 	LOG_DETAIL(r.Fhz);
 	LOG_DETAIL(r.U);
 	sh->SerialHandleClose();
