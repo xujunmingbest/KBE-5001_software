@@ -134,10 +134,6 @@ Class global: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     SystemShortDown(): PrivateScope, Public, Static, HideBySig
     LiKongMonter(): PrivateScope, Public, Static, HideBySig
     SetDV(String): PrivateScope, Public, Static, HideBySig
-    oscillographOpen(): PrivateScope, Public, Static, HideBySig
-    GetOscilloscopePrtScnBmp(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, Static, HideBySig
-    oscillographClose(): PrivateScope, Public, Static, HideBySig
-    GetoscillographParam(oscillographParam*): PrivateScope, Public, Static, HideBySig
 Class 电工基础1本.实验1实验目的: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

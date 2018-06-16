@@ -117,6 +117,28 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Button^  button1;
+private: System::Windows::Forms::GroupBox^  groupBox3;
+private: System::Windows::Forms::Button^  button2;
+
+private: System::Windows::Forms::ComboBox^  comboBox1;
+
+
+private: System::Windows::Forms::ComboBox^  comboBox5;
+private: System::Windows::Forms::Button^  button11;
+private: System::Windows::Forms::ComboBox^  comboBox6;
+private: System::Windows::Forms::Button^  button12;
+
+private: System::Windows::Forms::Button^  button9;
+
+private: System::Windows::Forms::Button^  button8;
+private: System::Windows::Forms::TextBox^  textBox37;
+private: System::Windows::Forms::Label^  label37;
+private: System::Windows::Forms::Label^  label36;
+private: System::Windows::Forms::TextBox^  textBox36;
+private: System::Windows::Forms::ComboBox^  comboBox7;
+private: System::Windows::Forms::ComboBox^  comboBox4;
+private: System::Windows::Forms::ComboBox^  comboBox3;
+private: System::Windows::Forms::ComboBox^  comboBox2;
 
 	private:
 		/// <summary>
@@ -211,9 +233,27 @@ namespace 电工基础1本 {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox7 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->textBox37 = (gcnew System::Windows::Forms::TextBox());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->textBox36 = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
+			this->button11 = (gcnew System::Windows::Forms::Button());
+			this->comboBox6 = (gcnew System::Windows::Forms::ComboBox());
+			this->button12 = (gcnew System::Windows::Forms::Button());
+			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->groupBox2->SuspendLayout();
+			this->groupBox3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// groupBox1
@@ -265,7 +305,7 @@ namespace 电工基础1本 {
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->Location = System::Drawing::Point(170, 6);
+			this->pictureBox1->Location = System::Drawing::Point(170, 15);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(800, 480);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
@@ -373,6 +413,7 @@ namespace 电工基础1本 {
 			this->groupBox2->TabIndex = 10;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"示波器参数获取";
+			this->groupBox2->Enter += gcnew System::EventHandler(this, &示波器::groupBox2_Enter);
 			// 
 			// textBox31
 			// 
@@ -1050,11 +1091,192 @@ namespace 电工基础1本 {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &示波器::button1_Click);
 			// 
+			// groupBox3
+			// 
+			this->groupBox3->Controls->Add(this->comboBox7);
+			this->groupBox3->Controls->Add(this->comboBox4);
+			this->groupBox3->Controls->Add(this->comboBox3);
+			this->groupBox3->Controls->Add(this->comboBox2);
+			this->groupBox3->Controls->Add(this->textBox37);
+			this->groupBox3->Controls->Add(this->label37);
+			this->groupBox3->Controls->Add(this->label36);
+			this->groupBox3->Controls->Add(this->textBox36);
+			this->groupBox3->Controls->Add(this->comboBox5);
+			this->groupBox3->Controls->Add(this->button11);
+			this->groupBox3->Controls->Add(this->comboBox6);
+			this->groupBox3->Controls->Add(this->button12);
+			this->groupBox3->Controls->Add(this->button9);
+			this->groupBox3->Controls->Add(this->button8);
+			this->groupBox3->Controls->Add(this->comboBox1);
+			this->groupBox3->Controls->Add(this->button2);
+			this->groupBox3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->groupBox3->Location = System::Drawing::Point(1047, 27);
+			this->groupBox3->Name = L"groupBox3";
+			this->groupBox3->Size = System::Drawing::Size(576, 495);
+			this->groupBox3->TabIndex = 11;
+			this->groupBox3->TabStop = false;
+			this->groupBox3->Text = L"示波器参数设置";
+			// 
+			// comboBox7
+			// 
+			this->comboBox7->FormattingEnabled = true;
+			this->comboBox7->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"CH1", L"CH2" });
+			this->comboBox7->Location = System::Drawing::Point(248, 262);
+			this->comboBox7->Name = L"comboBox7";
+			this->comboBox7->Size = System::Drawing::Size(121, 28);
+			this->comboBox7->TabIndex = 19;
+			// 
+			// comboBox4
+			// 
+			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"CH1", L"CH2" });
+			this->comboBox4->Location = System::Drawing::Point(248, 206);
+			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Size = System::Drawing::Size(121, 28);
+			this->comboBox4->TabIndex = 18;
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"CH1", L"CH2" });
+			this->comboBox3->Location = System::Drawing::Point(248, 151);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(121, 28);
+			this->comboBox3->TabIndex = 17;
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"CH1", L"CH2" });
+			this->comboBox2->Location = System::Drawing::Point(248, 91);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(121, 28);
+			this->comboBox2->TabIndex = 16;
+			// 
+			// textBox37
+			// 
+			this->textBox37->Location = System::Drawing::Point(121, 151);
+			this->textBox37->Name = L"textBox37";
+			this->textBox37->Size = System::Drawing::Size(121, 30);
+			this->textBox37->TabIndex = 15;
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->Location = System::Drawing::Point(375, 154);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(200, 20);
+			this->label37->TabIndex = 14;
+			this->label37->Text = L"中间值350,支持小数";
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Location = System::Drawing::Point(375, 94);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(200, 20);
+			this->label36->TabIndex = 13;
+			this->label36->Text = L"中间值128,支持小数";
+			// 
+			// textBox36
+			// 
+			this->textBox36->Location = System::Drawing::Point(121, 91);
+			this->textBox36->Name = L"textBox36";
+			this->textBox36->Size = System::Drawing::Size(121, 30);
+			this->textBox36->TabIndex = 12;
+			this->textBox36->TextChanged += gcnew System::EventHandler(this, &示波器::textBox36_TextChanged);
+			// 
+			// comboBox5
+			// 
+			this->comboBox5->FormattingEnabled = true;
+			this->comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(14) {
+				L"1mV", L"2mV", L"5mV", L"10mV", L"20mV", L"50mV",
+					L"100mV", L"200mV", L"500mV", L"1V", L"2V", L"5V", L"10V", L"20V"
+			});
+			this->comboBox5->Location = System::Drawing::Point(121, 261);
+			this->comboBox5->Name = L"comboBox5";
+			this->comboBox5->Size = System::Drawing::Size(121, 28);
+			this->comboBox5->TabIndex = 9;
+			// 
+			// button11
+			// 
+			this->button11->Location = System::Drawing::Point(17, 256);
+			this->button11->Name = L"button11";
+			this->button11->Size = System::Drawing::Size(89, 39);
+			this->button11->TabIndex = 8;
+			this->button11->Text = L"VB";
+			this->button11->UseVisualStyleBackColor = true;
+			this->button11->Click += gcnew System::EventHandler(this, &示波器::button11_Click);
+			// 
+			// comboBox6
+			// 
+			this->comboBox6->FormattingEnabled = true;
+			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(32) {
+				L"2ns", L"5ns", L"10ns", L"20ns", L"50ns", L"100ns",
+					L"200ns", L"500ns", L"1us", L"2us", L"5us", L"10us", L"20us", L"50us", L"100us", L"200us", L"500us", L"1ms", L"2ms", L"5ms",
+					L"10ms", L"20ms", L"50ms", L"100ms", L"200ms", L"500ms", L"1s", L"2s", L"5s", L"10s", L"20s", L"50s"
+			});
+			this->comboBox6->Location = System::Drawing::Point(121, 206);
+			this->comboBox6->Name = L"comboBox6";
+			this->comboBox6->Size = System::Drawing::Size(121, 28);
+			this->comboBox6->TabIndex = 7;
+			// 
+			// button12
+			// 
+			this->button12->Location = System::Drawing::Point(17, 201);
+			this->button12->Name = L"button12";
+			this->button12->Size = System::Drawing::Size(89, 39);
+			this->button12->TabIndex = 6;
+			this->button12->Text = L"TB";
+			this->button12->UseVisualStyleBackColor = true;
+			this->button12->Click += gcnew System::EventHandler(this, &示波器::button12_Click);
+			// 
+			// button9
+			// 
+			this->button9->Location = System::Drawing::Point(17, 142);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(89, 39);
+			this->button9->TabIndex = 4;
+			this->button9->Text = L"HP";
+			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &示波器::button9_Click);
+			// 
+			// button8
+			// 
+			this->button8->Location = System::Drawing::Point(17, 85);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(89, 39);
+			this->button8->TabIndex = 2;
+			this->button8->Text = L"VP";
+			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &示波器::button8_Click);
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"CH1", L"CH2" });
+			this->comboBox1->Location = System::Drawing::Point(121, 35);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(121, 28);
+			this->comboBox1->TabIndex = 1;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(17, 30);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(89, 39);
+			this->button2->TabIndex = 0;
+			this->button2->Text = L"SEL";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &示波器::button2_Click);
+			// 
 			// 示波器
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1657, 987);
+			this->Controls->Add(this->groupBox3);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Name = L"示波器";
@@ -1065,18 +1287,21 @@ namespace 电工基础1本 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
+			this->groupBox3->ResumeLayout(false);
+			this->groupBox3->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void 示波器_Load(System::Object^  sender, System::EventArgs^  e) {
+
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 	int a = ::WinExec("cmd /k \"C:\\Users\\Administrator.SKY-20180103XGL\\Desktop\\仪器管家.lnk\"", SW_HIDE);
 	if (a <31) MessageBox::Show("仪器管家调用失败");
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-	if (global::GetOscilloscopePrtScnBmp(Grades[3])) {
+	if (oscillograph::GetOscilloscopePrtScnBmp(Grades[3])) {
 		MessageBox::Show("截图成功");
 	}
 	else {
@@ -1088,10 +1313,10 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 	pictureBox1->ImageLocation = "bmp/" + gcnew String(Grades[3].c_str()) + ".bmp";
 }
 private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
-	global::oscillographOpen();
+	oscillograph::oscillographOpen();
 }
 private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
-	global::oscillographClose();
+	oscillograph::oscillographClose();
 }
 		 Thread ^t;
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1107,7 +1332,7 @@ private: System::Void textBox15_TextChanged(System::Object^  sender, System::Eve
 		 void Show() {
 			 while (1) {
 				 Thread::Sleep(500);
-				 oscillographParam t = global::GetoscillographParam();
+				 oscillographParam t = oscillograph::GetoscillographParam();
 				 textBox1->Text = gcnew String(t.MP_MAX.c_str());
 				 textBox2->Text = gcnew String(t.MP_MIN.c_str());
 				 textBox3->Text = gcnew String(t.MP_HIGH.c_str());
@@ -1155,5 +1380,85 @@ private: System::Void textBox15_TextChanged(System::Object^  sender, System::Eve
 				 textBox31->Text = gcnew String(t.MP_BURST_WIDTH.c_str());
 			 }
 		 }
+private: System::Void groupBox2_Enter(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	bool s = false; 
+	switch (comboBox1->SelectedIndex) {
+	case 0: s = oscillograph::SetParam(string("CH:0@SEL;")); break;
+	case 1: s = oscillograph::SetParam(string("CH:1@SEL;")); break;
+	default:
+		MessageBox::Show("请选择通道");
+		return;
+	}
+	if (s) MessageBox::Show("设置成功");
+	else MessageBox::Show("设置失败");
+}
+private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (String::IsNullOrEmpty(textBox36->Text->Trim())) {
+		MessageBox::Show("不能为空");
+		return;
+	}
+	string value = T_to_string(textBox36->Text);
+	string ch;
+	switch (comboBox2->SelectedIndex) {
+	case 0: ch = "0"; break;
+	case 1: ch = "1"; break;
+	default:
+		MessageBox::Show("请选择通道");
+		return;
+	}
+	oscillograph::SetVP(ch, value);
+}
+private: System::Void textBox36_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (String::IsNullOrEmpty(textBox37->Text->Trim())) {
+		MessageBox::Show("不能为空");
+		return;
+	}
+	string value = T_to_string(textBox37->Text);
+	string ch;
+	switch (comboBox3->SelectedIndex) {
+	case 0: ch = "0"; break;
+	case 1: ch = "1"; break;
+	default:
+		MessageBox::Show("请选择通道");
+		return;
+	}
+	oscillograph::SetHP(ch, value);
+}
+private: System::Void button12_Click(System::Object^  sender, System::EventArgs^  e) {
+	string ch;
+	switch (comboBox4->SelectedIndex) {
+	case 0: ch = "0"; break;
+	case 1: ch = "1"; break;
+	default:
+		MessageBox::Show("请选择通道");
+		return;
+	}
+	if (comboBox6->SelectedItem == nullptr) {
+		MessageBox::Show("请选择时间间隔");
+		return;
+	}
+	string value = T_to_string(comboBox6->Text);
+	oscillograph::SetTB(ch, value);
+}
+private: System::Void button11_Click(System::Object^  sender, System::EventArgs^  e) {
+	string ch;
+	switch (comboBox7->SelectedIndex) {
+	case 0: ch = "0"; break;
+	case 1: ch = "1"; break;
+	default:
+		MessageBox::Show("请选择通道");
+		return;
+	}
+	if (comboBox5->SelectedItem == nullptr) {
+		MessageBox::Show("请选择时间间隔");
+		return;
+	}
+	string value = T_to_string(comboBox5->Text);
+	oscillograph::SetVB(ch, value);
+}
 };
 }

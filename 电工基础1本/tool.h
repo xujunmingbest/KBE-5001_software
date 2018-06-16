@@ -260,6 +260,25 @@ struct oscillographParam {
 	string MP_BURST_WIDTH; //Í»·¢Âö³å
 };
 
+#include "uci/uci.h"
+class oscillograph {
+public:
+	static bool SetParam(string &CMD);
+	static bool SetVP(string &CH,string &value);
+	static bool SetHP(string &CH, string &value);
+	static bool SetTB(string &CH, string &value);
+	static bool SetVB(string &CH, string &value);
+	static oscillographParam GetoscillographParam();
+	static bool oscillographOpen();
+	static bool GetOscilloscopePrtScnBmp(string &bmpName);
+	static bool oscillographClose();
+};
+
+
+
+
+
+
 public ref class global {
 public:
 	static Thread ^ t;
@@ -282,11 +301,6 @@ public:
 	*/
 	static void LiKongMonter();
 	static void SetDV(String^t);
-
-	static bool oscillographOpen();
-	static bool GetOscilloscopePrtScnBmp(string &bmpName);
-	static bool oscillographClose();
-	static oscillographParam GetoscillographParam();
 };
 
 

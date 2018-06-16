@@ -19,9 +19,6 @@
     <Filter Include="实验1元件伏安特性的测试">
       <UniqueIdentifier>{27775686-c21d-423c-b3e4-140c22e2b11c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="tool">
-      <UniqueIdentifier>{37ac6ce1-0321-4fc6-91a6-530dbb86f25b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="xml">
       <UniqueIdentifier>{95bb901f-6e54-48c7-9def-d09e8171a85e}</UniqueIdentifier>
     </Filter>
@@ -49,13 +46,16 @@
     <Filter Include="uci优利德示波器">
       <UniqueIdentifier>{81ffff57-af4b-4716-a2fa-62b522e07428}</UniqueIdentifier>
     </Filter>
+    <Filter Include="tool工具">
+      <UniqueIdentifier>{37ac6ce1-0321-4fc6-91a6-530dbb86f25b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainWnd.cpp">
       <Filter>主窗体</Filter>
     </ClCompile>
     <ClCompile Include="tool.cpp">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="xml\tinystr.cpp">
       <Filter>xml</Filter>
@@ -73,13 +73,13 @@
       <Filter>xml</Filter>
     </ClCompile>
     <ClCompile Include="exception.cpp">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="_Mutex.cpp">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="log.h">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="resource.cpp">
       <Filter>主窗体</Filter>
@@ -97,25 +97,25 @@
       <Filter>json</Filter>
     </ClCompile>
     <ClCompile Include="ThreeSegmentTransmissionProtocol.h">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="message_Queue.h">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="单元测试.cpp">
       <Filter>单元测试</Filter>
     </ClCompile>
     <ClCompile Include="seriesPort.cpp">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="Ref_global_var.h">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="waver.cpp">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="oscillograph.cpp">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -138,7 +138,7 @@
       <Filter>实验1元件伏安特性的测试</Filter>
     </ClInclude>
     <ClInclude Include="tool.h">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClInclude>
     <ClInclude Include="实验1实验注意事项.h">
       <Filter>实验1元件伏安特性的测试</Filter>
@@ -168,7 +168,7 @@
       <Filter>实验1元件伏安特性的测试</Filter>
     </ClInclude>
     <ClInclude Include="_Mutex.h">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClInclude>
     <ClInclude Include="json\autolink.h">
       <Filter>json</Filter>
@@ -201,7 +201,7 @@
       <Filter>单元测试</Filter>
     </ClInclude>
     <ClInclude Include="seriesPort.h">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClInclude>
     <ClInclude Include="基尔霍夫定律.h">
       <Filter>基尔霍夫定律</Filter>
@@ -231,7 +231,7 @@
       <Filter>登入框&amp;设置</Filter>
     </ClInclude>
     <ClInclude Include="SysLog.h">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </ClInclude>
     <ClInclude Include="首页.h">
       <Filter>登入框&amp;设置</Filter>
@@ -382,10 +382,13 @@
     <EmbeddedResource Include="叠加原理实验内容.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="示波器.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="pz.xml">
-      <Filter>tool</Filter>
+      <Filter>tool工具</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>

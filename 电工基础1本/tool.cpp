@@ -189,7 +189,7 @@ void global::SystemStart()
 	if (!global::scs->SerialHandleInit()) {
 		SYS_LOG_ERROR("控制电源模块串口初始化失败");
 	}
-	oscillographOpen();
+	oscillograph::oscillographOpen();
 }
 
 

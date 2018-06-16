@@ -20,7 +20,7 @@ using namespace std;
 #include "tool.h"
 u_session g_curSession = -1;
 #define BMPLENGTH 387072
-bool global::oscillographOpen() {
+bool oscillograph::oscillographOpen() {
 	CString msg = "[C:DSO][D:DSO-X][T:USB][PID:0x5537][VID:0x4348][EI:0x82][EO:0x2][CFG:1][I:0]";
 	auto r = uci::uci_Open(msg, &g_curSession, 2000);
 	if (r == 0) {
@@ -33,7 +33,7 @@ bool global::oscillographOpen() {
 	}
 }
 
-bool global::GetOscilloscopePrtScnBmp(string &bmpName) {
+bool oscillograph::GetOscilloscopePrtScnBmp(string &bmpName) {
 	unsigned char data[BMPLENGTH];
 	memset(data, 0x00, BMPLENGTH);
 	
@@ -60,7 +60,7 @@ bool global::GetOscilloscopePrtScnBmp(string &bmpName) {
 	return true;
 }
 
-bool global::oscillographClose() {
+bool oscillograph::oscillographClose() {
 
 	if (uci::uci_Close(g_curSession) == 0) {
 		SYS_LOG_INF("示波器会话关闭成功");
@@ -75,12 +75,12 @@ bool global::oscillographClose() {
 string PrintMeaParam(const comAPICommon::MeaValue& _p);
 namespace cb = comAPICommon;
 
+ 
 
 
 
 
-
-oscillographParam global::GetoscillographParam() {
+oscillographParam oscillograph::GetoscillographParam() {
 	oscillographParam op;
 	memset(&op, 0x00, sizeof(oscillographParam));
 
@@ -184,4 +184,45 @@ string PrintMeaParam(const comAPICommon::MeaValue& _p) {
 	}
 
 	return string(buff);
+}
+#define  _timeOut 2000
+bool oscillograph::SetParam(string &CMD) {
+
+	uci::WParams wp;
+	ZeroMemory(&wp, sizeof(wp));
+	//也可以使用uci_WriteX的非封装版本，请查看头文件uci.h。
+	auto r = uci_Write(g_curSession, uci_CreateWParams(wp, CMD.c_str(), _timeOut), nullptr, 0);
+
+	if (r >= 0) {
+		return true;
+	}
+	return false;
+}
+
+bool oscillograph::SetVP(string &CH, string &value)
+{
+	string cmd = "CH:" + CH + "@VP:";
+	cmd += value + ";";
+	return SetParam(cmd);
+}
+
+bool oscillograph::SetHP(string &CH, string &value)
+{
+	string cmd = "CH:" + CH + "@HP:";
+	cmd += value + ";";
+	return SetParam(cmd);
+}
+
+bool oscillograph::SetTB(string &CH, string &value)
+{
+	string cmd = "CH:" + CH + "@TB:";
+	cmd += value + ";";
+	return SetParam(cmd);
+}
+
+bool oscillograph::SetVB(string &CH, string &value)
+{
+	string cmd = "CH:" + CH + "@VB:";
+	cmd += value + ";";
+	return SetParam(cmd);
 }
