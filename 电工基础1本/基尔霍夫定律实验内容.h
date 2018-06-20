@@ -550,7 +550,7 @@ private: ::LedWatch::LedWatch^  ledWatch1;
 			// 
 			// button16
 			// 
-			this->button16->Location = System::Drawing::Point(1100, 250);
+			this->button16->Location = System::Drawing::Point(1100, 246);
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(72, 30);
 			this->button16->TabIndex = 88;

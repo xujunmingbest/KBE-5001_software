@@ -41,7 +41,7 @@ namespace 电工基础1本 {
 	protected:
 	private: System::Windows::Forms::Button^  button7;
 	private: System::Windows::Forms::Button^  button6;
-	private: System::Windows::Forms::Button^  button5;
+
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::Button^  button4;
@@ -157,7 +157,6 @@ private: System::Windows::Forms::ComboBox^  comboBox2;
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -258,9 +257,9 @@ private: System::Windows::Forms::ComboBox^  comboBox2;
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->groupBox1->Controls->Add(this->button7);
 			this->groupBox1->Controls->Add(this->button6);
-			this->groupBox1->Controls->Add(this->button5);
 			this->groupBox1->Controls->Add(this->pictureBox1);
 			this->groupBox1->Controls->Add(this->button3);
 			this->groupBox1->Controls->Add(this->button4);
@@ -275,7 +274,7 @@ private: System::Windows::Forms::ComboBox^  comboBox2;
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(11, 282);
+			this->button7->Location = System::Drawing::Point(11, 201);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(114, 67);
 			this->button7->TabIndex = 11;
@@ -285,23 +284,13 @@ private: System::Windows::Forms::ComboBox^  comboBox2;
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(11, 372);
+			this->button6->Location = System::Drawing::Point(11, 293);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(114, 67);
 			this->button6->TabIndex = 10;
 			this->button6->Text = L"关闭示波器usb连接";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &示波器::button6_Click);
-			// 
-			// button5
-			// 
-			this->button5->Location = System::Drawing::Point(11, 188);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(114, 67);
-			this->button5->TabIndex = 9;
-			this->button5->Text = L"打开截图";
-			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &示波器::button5_Click);
 			// 
 			// pictureBox1
 			// 
@@ -311,6 +300,7 @@ private: System::Windows::Forms::ComboBox^  comboBox2;
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
 			this->pictureBox1->TabIndex = 8;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &示波器::pictureBox1_Click);
 			// 
 			// button3
 			// 
@@ -334,6 +324,7 @@ private: System::Windows::Forms::ComboBox^  comboBox2;
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->BackColor = System::Drawing::Color::Black;
 			this->groupBox2->Controls->Add(this->textBox31);
 			this->groupBox2->Controls->Add(this->label31);
 			this->groupBox2->Controls->Add(this->textBox32);
@@ -1093,6 +1084,7 @@ private: System::Windows::Forms::ComboBox^  comboBox2;
 			// 
 			// groupBox3
 			// 
+			this->groupBox3->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->groupBox3->Controls->Add(this->comboBox7);
 			this->groupBox3->Controls->Add(this->comboBox4);
 			this->groupBox3->Controls->Add(this->comboBox3);
@@ -1275,6 +1267,7 @@ private: System::Windows::Forms::ComboBox^  comboBox2;
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScroll = true;
 			this->ClientSize = System::Drawing::Size(1657, 987);
 			this->Controls->Add(this->groupBox3);
 			this->Controls->Add(this->groupBox2);
@@ -1301,16 +1294,16 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 	if (a <31) MessageBox::Show("仪器管家调用失败");
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-	if (oscillograph::GetOscilloscopePrtScnBmp(Grades[3])) {
-		MessageBox::Show("截图成功");
+	String ^FileName = gcnew String(Grades[3].c_str()) + "-" + global::userName + ".bmp";
+	if (oscillograph::GetOscilloscopePrtScnBmp(T_to_string(FileName))) {
+		pictureBox1->ImageLocation = "bmp/" + FileName;
 	}
 	else {
-
 		MessageBox::Show("截图失败");
 	}
 }
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
-	pictureBox1->ImageLocation = "bmp/" + gcnew String(Grades[3].c_str()) + ".bmp";
+
 }
 private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
 	oscillograph::oscillographOpen();
@@ -1459,6 +1452,8 @@ private: System::Void button11_Click(System::Object^  sender, System::EventArgs^
 	}
 	string value = T_to_string(comboBox5->Text);
 	oscillograph::SetVB(ch, value);
+}
+private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

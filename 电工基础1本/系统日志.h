@@ -81,6 +81,7 @@ namespace 电工基础1本 {
 			// 
 			// logBox1
 			// 
+			this->logBox1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->logBox1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->logBox1->Location = System::Drawing::Point(0, 0);
 			this->logBox1->Name = L"logBox1";

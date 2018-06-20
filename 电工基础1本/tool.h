@@ -277,18 +277,17 @@ public:
 
 
 
-
+#define LOGINNORMAL 1;
+#define LOGINYOUKE 2;
 
 public ref class global {
 public:
+	static String ^userName;
+
 	static Thread ^ t;
 
 	static void SystemStart();
 	static void SystemShortDown();
-	//static LedWatch::LedWatch dlb1;
-	//static LedWatch::LedWatch dlb2;
-	//static LedWatch::LedWatch dyb1;
-	//static LedWatch::LedWatch dyb2;
 
 	static S_PLCRecv *PLCRecv ;
 	static SerialHandle^ sh = gcnew SerialHandle;  //全局seriesPort 变量
@@ -303,7 +302,7 @@ public:
 	static void SetDV(String^t);
 };
 
-
-
+void CloseAllMidchild(Form ^Parent);
+Form^ GetWindowsChild(String ^FormName, Form ^Parent);
 
 void MsgQueueRegister();

@@ -1,5 +1,11 @@
   电工基础1本.LoginWnd.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.mainWnd.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.一阶电路的响应测试.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.一阶电路的响应测试实验内容.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.一阶电路的响应测试实验原理.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.一阶电路的响应测试实验器件.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.一阶电路的响应测试实验步骤.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.一阶电路的响应测试实验目的.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.叠加原理.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.叠加原理实验内容.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.叠加原理实验原理.resources - Embedded, ContainedInManifestFile, 
@@ -124,6 +130,7 @@ Class 电工基础1本.VideoShowWidget: AutoLayout, AnsiClass, Class, Public, Be
 Class global: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
+    System.String userName : Public, Static
     System.Threading.Thread t : Public, Static
     S_PLCRecv* PLCRecv : Public, Static
     电工基础1本.SerialHandle sh : Public, Static
@@ -172,7 +179,9 @@ Class 电工基础1本.实验1Main: AutoLayout, AnsiClass, Class, Public, Before
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.LoginWnd: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(Boolean*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32* Type : Public
 Class 电工基础1本.基尔霍夫定律实验目的: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -236,11 +245,28 @@ Class 电工基础1本.叠加原理: AutoLayout, AnsiClass, Class, Public, Befor
 Class 电工基础1本.示波器: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.一阶电路的响应测试实验目的: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.一阶电路的响应测试实验器件: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.一阶电路的响应测试实验内容: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.一阶电路的响应测试实验原理: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.一阶电路的响应测试实验步骤: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.一阶电路的响应测试: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.mainWnd: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Threading.Thread c : Public
   Methods:
-    ShowLoginWnd(): PrivateScope, Public, HideBySig
     C(): PrivateScope, Public, HideBySig

@@ -49,6 +49,9 @@
     <Filter Include="tool工具">
       <UniqueIdentifier>{37ac6ce1-0321-4fc6-91a6-530dbb86f25b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="一阶电路的响应测试">
+      <UniqueIdentifier>{bffc5d79-d6a3-4bb5-85d3-c078195cae71}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainWnd.cpp">
@@ -115,6 +118,9 @@
       <Filter>tool工具</Filter>
     </ClCompile>
     <ClCompile Include="oscillograph.cpp">
+      <Filter>tool工具</Filter>
+    </ClCompile>
+    <ClCompile Include="MdiFormControl.cpp">
       <Filter>tool工具</Filter>
     </ClCompile>
   </ItemGroup>
@@ -296,6 +302,24 @@
     <ClInclude Include="示波器.h">
       <Filter>登入框&amp;设置</Filter>
     </ClInclude>
+    <ClInclude Include="一阶电路的响应测试.h">
+      <Filter>一阶电路的响应测试</Filter>
+    </ClInclude>
+    <ClInclude Include="一阶电路的响应测试实验目的.h">
+      <Filter>一阶电路的响应测试</Filter>
+    </ClInclude>
+    <ClInclude Include="一阶电路的响应测试实验原理.h">
+      <Filter>一阶电路的响应测试</Filter>
+    </ClInclude>
+    <ClInclude Include="一阶电路的响应测试实验器件.h">
+      <Filter>一阶电路的响应测试</Filter>
+    </ClInclude>
+    <ClInclude Include="一阶电路的响应测试实验步骤.h">
+      <Filter>一阶电路的响应测试</Filter>
+    </ClInclude>
+    <ClInclude Include="一阶电路的响应测试实验内容.h">
+      <Filter>一阶电路的响应测试</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mainWnd.resx">
@@ -383,6 +407,9 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="示波器.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一阶电路的响应测试.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

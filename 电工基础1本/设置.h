@@ -79,13 +79,13 @@ namespace 电工基础1本 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->trackBar2 = (gcnew System::Windows::Forms::TrackBar());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar1))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar2))->BeginInit();
@@ -103,7 +103,8 @@ namespace 电工基础1本 {
 			// 
 			// groupBox1
 			// 
-			this->groupBox1->BackColor = System::Drawing::SystemColors::Control;
+			this->groupBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->groupBox1->Controls->Add(this->label2);
 			this->groupBox1->Controls->Add(this->label1);
 			this->groupBox1->Controls->Add(this->trackBar2);
@@ -111,6 +112,8 @@ namespace 电工基础1本 {
 			this->groupBox1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
+			this->groupBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->groupBox1->Location = System::Drawing::Point(22, 12);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(783, 187);
@@ -147,7 +150,8 @@ namespace 电工基础1本 {
 			// 
 			// groupBox2
 			// 
-			this->groupBox2->BackColor = System::Drawing::SystemColors::Control;
+			this->groupBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->groupBox2->Controls->Add(this->button5);
 			this->groupBox2->Controls->Add(this->button4);
 			this->groupBox2->Controls->Add(this->button3);
@@ -158,12 +162,23 @@ namespace 电工基础1本 {
 			this->groupBox2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox2->Location = System::Drawing::Point(22, 249);
+			this->groupBox2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->groupBox2->Location = System::Drawing::Point(22, 223);
 			this->groupBox2->Name = L"groupBox2";
 			this->groupBox2->Size = System::Drawing::Size(783, 251);
 			this->groupBox2->TabIndex = 4;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"串口连接(仅开发维护人员使用)";
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(15, 191);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(227, 35);
+			this->button5->TabIndex = 12;
+			this->button5->Text = L"示波器连接重置";
+			this->button5->UseVisualStyleBackColor = true;
 			// 
 			// button4
 			// 
@@ -219,22 +234,13 @@ namespace 电工基础1本 {
 			this->button1->Text = L"电源控制模块";
 			this->button1->UseVisualStyleBackColor = true;
 			// 
-			// button5
-			// 
-			this->button5->Location = System::Drawing::Point(15, 191);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(227, 35);
-			this->button5->TabIndex = 12;
-			this->button5->Text = L"示波器连接重置";
-			this->button5->UseVisualStyleBackColor = true;
-			// 
 			// 设置
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
-			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(869, 616);
+			this->BackColor = System::Drawing::Color::Black;
+			this->ClientSize = System::Drawing::Size(844, 509);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Name = L"设置";
