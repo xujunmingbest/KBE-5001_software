@@ -1,0 +1,19 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly com开发, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Components.Component1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Id   'get ' : 
+    System.String name 'get set' : 
+    System.DateTime CreateDateTime 'set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    get_name(): PrivateScope, Public, HideBySig, SpecialName
+    set_name(String): PrivateScope, Public, HideBySig, SpecialName
+    set_CreateDateTime(DateTime): PrivateScope, Public, HideBySig, SpecialName

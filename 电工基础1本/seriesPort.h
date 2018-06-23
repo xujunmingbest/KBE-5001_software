@@ -48,6 +48,7 @@ namespace 电工基础1本 {
 		bool Send(string &s);
 		bool SendNoCrc(string &s);
 		string Recv(int len);
+		string RecvNoCrc(int len);
 		bool check_crc16(string &in);
 	};
 
@@ -64,6 +65,9 @@ namespace 电工基础1本 {
 		void MonitorTesterId(uint TesterId); //写设备号
 	};
 
+#define SINWAVE 0
+#define TRIANGULARWAVE 1
+#define SQUAREWAVE 2
 	/******控制电源业务层*****/
 	public ref class SerialControlSource {
 	private:
@@ -77,6 +81,10 @@ namespace 电工基础1本 {
 		bool SetAlternatingVoltage(char Id,int Voltage);
 		bool OpenSource(int Id);
 		bool CloseSource(int Id);
+		/********波形控制********/
+		bool SetWaveForm(int WaveType);
+		bool SetFrequency(int f);
+
 	};
 
 }

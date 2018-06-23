@@ -1,6 +1,4 @@
 e:\clr\电工基础1本\电工基础1本\release\vc140.pdb
-e:\clr\电工基础1本\电工基础1本\release\单元测试.obj
-e:\clr\电工基础1本\电工基础1本\release\xml.obj
 e:\clr\电工基础1本\电工基础1本\release\tinyxmlparser.obj
 e:\clr\电工基础1本\电工基础1本\release\tinyxmlerror.obj
 e:\clr\电工基础1本\电工基础1本\release\tinyxml.obj
@@ -8,10 +6,8 @@ e:\clr\电工基础1本\电工基础1本\release\tinystr.obj
 e:\clr\电工基础1本\电工基础1本\release\tool.obj
 e:\clr\电工基础1本\电工基础1本\release\threesegmenttransmissionprotocol.obj
 e:\clr\电工基础1本\电工基础1本\release\seriesport.obj
-e:\clr\电工基础1本\电工基础1本\release\resource.obj
 e:\clr\电工基础1本\电工基础1本\release\ref_global_var.obj
 e:\clr\电工基础1本\电工基础1本\release\message_queue.obj
-e:\clr\电工基础1本\电工基础1本\release\mainwnd.obj
 e:\clr\电工基础1本\电工基础1本\release\log.obj
 e:\clr\电工基础1本\电工基础1本\release\main.obj
 e:\clr\电工基础1本\电工基础1本\release\json_writer.obj
@@ -19,10 +15,19 @@ e:\clr\电工基础1本\电工基础1本\release\json_value.obj
 e:\clr\电工基础1本\电工基础1本\release\json_reader.obj
 e:\clr\电工基础1本\电工基础1本\release\exception.obj
 e:\clr\电工基础1本\电工基础1本\release\waver.obj
+e:\clr\电工基础1本\电工基础1本\release\synchroshortconnection.obj
+e:\clr\电工基础1本\电工基础1本\release\mdiformcontrol.obj
+e:\clr\电工基础1本\电工基础1本\release\oscillograph.obj
+e:\clr\电工基础1本\电工基础1本\release\单元测试.obj
+e:\clr\电工基础1本\电工基础1本\release\xml.obj
+e:\clr\电工基础1本\电工基础1本\release\resource.obj
+e:\clr\电工基础1本\电工基础1本\release\mainwnd.obj
 e:\clr\电工基础1本\电工基础1本\release\_mutex.obj
 e:\clr\电工基础1本\电工基础1本\release\.netframework,version=v4.5.2.assemblyattributes.obj
 e:\clr\电工基础1本\电工基础1本\release\.netframework,version=v4.5.2.assemblyattributes.asm
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\metagen.write.1.tlog
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.res
+e:\clr\电工基础1本\release\com开发.dll
 e:\clr\电工基础1本\release\ledwatch.dll
 e:\clr\电工基础1本\release\logbox.dll
 e:\clr\电工基础1本\release\microsoft.speech.dll
@@ -31,6 +36,7 @@ e:\clr\电工基础1本\release\smallmenu.dll
 e:\clr\电工基础1本\release\日志控件.dll
 e:\clr\电工基础1本\release\ledctl.dll
 e:\clr\电工基础1本\release\microsoft.vsa.dll
+e:\clr\电工基础1本\release\com开发.pdb
 e:\clr\电工基础1本\release\ledwatch.pdb
 e:\clr\电工基础1本\release\logbox.pdb
 e:\clr\电工基础1本\release\microsoft.speech.voicexml.xml
@@ -39,6 +45,13 @@ e:\clr\电工基础1本\release\日志控件.pdb
 e:\clr\电工基础1本\release\ledctl.pdb
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.loginwnd.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.mainwnd.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.一阶电路的响应测试.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.一阶电路的响应测试实验内容.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.一阶电路的响应测试实验原理.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.一阶电路的响应测试实验器件.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.一阶电路的响应测试实验步骤.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.一阶电路的响应测试实验目的.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.串口控制模块.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.叠加原理.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.叠加原理实验内容.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.叠加原理实验原理.resources
@@ -62,6 +75,8 @@ e:\clr\电工基础1本\电工基础1本\release\电工基础1本.实验1实验�
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.实验1实验设备.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.实验1思考题.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.底部.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.成绩传输.resources
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.示波器.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.系统日志.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.设置.resources
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.首页.resources
@@ -80,9 +95,13 @@ e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\link.comm
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\link.read.1.tlog
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\link.write.1.tlog
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\metagen.read.1.tlog
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\rc.command.1.tlog
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\rc.read.1.tlog
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\rc.write.1.tlog
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\电工基础1本.write.1u.tlog
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\axinterop.shockwaveflashobjects.1.0.dll.metagen
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\axinterop.wmplib.1.0.dll.metagen
+e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\com开发.dll.metagen
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\interop.shockwaveflashobjects.1.0.dll.metagen
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\interop.wmplib.1.0.dll.metagen
 e:\clr\电工基础1本\电工基础1本\release\电工基础1本.tlog\ledwatch.dll.metagen

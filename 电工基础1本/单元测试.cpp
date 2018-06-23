@@ -99,6 +99,7 @@ void testForSerialControlSource()
 	LOG_DETAIL(GetDcNum(o));
 	scs->SetDirectVoltage(GetDcNum(o));
 	scs->SetDirectCurrent(200);
+	Sleep(1000);
 	scs->SetAlternatingVoltage('A', 20);
 
 

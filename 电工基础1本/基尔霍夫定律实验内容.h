@@ -1268,13 +1268,14 @@ private: System::Void button16_Click(System::Object^  sender, System::EventArgs^
 			 g.Ufa_c_v = 900;
 
 			 string text ;
-			 memcpy(g.StuName, text.c_str(), 50);
-			 g.StuName[text.length()] = 0x00;
-			 g.XueHao = String_to_Int(textBox3->Text);
-			 string t = Mylog::_GetNowTime();
-			 memcpy(g.DateTime, Mylog::_GetNowTime().c_str(), t.length());
+
+			 //memcpy(g.StuName, text.c_str(), 50);
+			 //g.StuName[text.length()] = 0x00;
+			 //g.XueHao = String_to_Int(textBox3->Text);
+			 //string t = Mylog::_GetNowTime();
+			// memcpy(g.DateTime, Mylog::_GetNowTime().c_str(), t.length());
 			 Head H; memset(&H, 0x00, sizeof(H));
-			 memcpy(H.DateTime, Mylog::_GetNowTime().c_str(), t.length());
+			// memcpy(H.DateTime, Mylog::_GetNowTime().c_str(), t.length());
 			 H.TrialCode = 2;
 			 memcpy(H.TrialName, "基尔霍夫定理", sizeof("基尔霍夫定理"));
 

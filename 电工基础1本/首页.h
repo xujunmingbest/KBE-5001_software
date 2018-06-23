@@ -22,7 +22,7 @@ namespace 电工基础1本 {
 			首页IsOpened = true;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Font = gcnew System::Drawing::Font("宋体", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
-			toolStripLabel1->Text = "你好," + global::userName;
+			toolStripLabel1->Text = "你好," + global::Pupilage;
 			//
 			//TODO:  在此处添加构造函数代码
 			//
@@ -158,7 +158,7 @@ namespace 电工基础1本 {
 private: System::Void toolStripButton1_Click(System::Object^  sender, System::EventArgs^  e) {
 	int LoginType;
 	(gcnew LoginWnd(&LoginType))->ShowDialog();
-	toolStripLabel1->Text = "你好," + global::userName;
+	toolStripLabel1->Text = "你好," + global::Pupilage;
 }
 };
 }

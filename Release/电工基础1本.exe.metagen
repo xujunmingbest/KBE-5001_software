@@ -6,6 +6,7 @@
   电工基础1本.一阶电路的响应测试实验器件.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.一阶电路的响应测试实验步骤.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.一阶电路的响应测试实验目的.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.串口控制模块.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.叠加原理.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.叠加原理实验内容.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.叠加原理实验原理.resources - Embedded, ContainedInManifestFile, 
@@ -29,6 +30,7 @@
   电工基础1本.实验1实验设备.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.实验1思考题.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.底部.resources - Embedded, ContainedInManifestFile, 
+  电工基础1本.成绩传输.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.示波器.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.系统日志.resources - Embedded, ContainedInManifestFile, 
   电工基础1本.设置.resources - Embedded, ContainedInManifestFile, 
@@ -37,6 +39,8 @@ ImageRuntimeVersion: v4.0.30319
 Assembly 电工基础1本, Version=0.0.*, Culture=固定语言(固定国家/地区): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly com开发, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=None, flags=None
 Assembly LedWatch, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=None, flags=None
@@ -83,6 +87,7 @@ Class 电工基础1本.SerialControl: AutoLayout, AnsiClass, Class, Public, Befo
     Send(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
     SendNoCrc(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
     Recv(basic_string<char\,std::char_traits<char>\,std::allocator<char> >*, Int32): PrivateScope, Public, HideBySig
+    RecvNoCrc(basic_string<char\,std::char_traits<char>\,std::allocator<char> >*, Int32): PrivateScope, Public, HideBySig
     check_crc16(basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
 Class 电工基础1本.SerialHandle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -102,6 +107,8 @@ Class 电工基础1本.SerialControlSource: AutoLayout, AnsiClass, Class, Public
     SetAlternatingVoltage(SByte IsSignUnspecifiedByte, Int32): PrivateScope, Public, HideBySig
     OpenSource(Int32): PrivateScope, Public, HideBySig
     CloseSource(Int32): PrivateScope, Public, HideBySig
+    SetWaveForm(Int32): PrivateScope, Public, HideBySig
+    SetFrequency(Int32): PrivateScope, Public, HideBySig
 Class 电工基础1本.Voice: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
@@ -130,7 +137,7 @@ Class 电工基础1本.VideoShowWidget: AutoLayout, AnsiClass, Class, Public, Be
 Class global: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    System.String userName : Public, Static
+    System.String Pupilage : Public, Static
     System.Threading.Thread t : Public, Static
     S_PLCRecv* PLCRecv : Public, Static
     电工基础1本.SerialHandle sh : Public, Static
@@ -261,6 +268,12 @@ Class 电工基础1本.一阶电路的响应测试实验步骤: AutoLayout, Ansi
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.一阶电路的响应测试: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.串口控制模块: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class 电工基础1本.成绩传输: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class 电工基础1本.mainWnd: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

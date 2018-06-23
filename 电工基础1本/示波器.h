@@ -1294,7 +1294,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 	if (a <31) MessageBox::Show("仪器管家调用失败");
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-	String ^FileName = gcnew String(Grades[3].c_str()) + "-" + global::userName + ".bmp";
+	String ^FileName = gcnew String(Grades[3].c_str()) + "-" + global::Pupilage + ".bmp";
 	if (oscillograph::GetOscilloscopePrtScnBmp(T_to_string(FileName))) {
 		pictureBox1->ImageLocation = "bmp/" + FileName;
 	}

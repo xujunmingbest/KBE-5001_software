@@ -110,7 +110,12 @@ int String_to_Int(String^in)
 	string temp = T_to_string(in);
 	return atoi(temp.c_str());
 }
-
+string Int_to_string(int in)
+{
+	char buff[11];
+	snprintf(buff, 11, "%d", in);
+	return string(buff);
+}
 
 int string_Has_Num(string &in, char c);
 string IsDClegal(String^in)

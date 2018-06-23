@@ -18,6 +18,9 @@ namespace 电工基础1本 {
 		一阶电路的响应测试实验步骤(void)
 		{
 			InitializeComponent();
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->Font = gcnew System::Drawing::Font("宋体", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
+
 			//
 			//TODO:  在此处添加构造函数代码
 			//
@@ -223,6 +226,7 @@ namespace 电工基础1本 {
 			this->Controls->Add(this->panel1);
 			this->Name = L"一阶电路的响应测试实验步骤";
 			this->Text = L"一阶电路的响应测试实验步骤";
+			this->Load += gcnew System::EventHandler(this, &一阶电路的响应测试实验步骤::一阶电路的响应测试实验步骤_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel1->ResumeLayout(false);
@@ -238,6 +242,8 @@ namespace 电工基础1本 {
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 	global::voice->Close();
+}
+private: System::Void 一阶电路的响应测试实验步骤_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

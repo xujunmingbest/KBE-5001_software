@@ -170,6 +170,7 @@ namespace 电工基础1本 {
 			this->groupBox2->TabIndex = 4;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"串口连接(仅开发维护人员使用)";
+			this->groupBox2->Enter += gcnew System::EventHandler(this, &设置::groupBox2_Enter);
 			// 
 			// button5
 			// 
@@ -291,6 +292,8 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 	else {
 		MessageBox::Show("串口重置成功");
 	}
+}
+private: System::Void groupBox2_Enter(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

@@ -18,6 +18,9 @@ namespace 电工基础1本 {
 		一阶电路的响应测试实验原理(void)
 		{
 			InitializeComponent();
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->Font = gcnew System::Drawing::Font("宋体", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Pixel, ((byte)(134)));
+
 			//
 			//TODO:  在此处添加构造函数代码
 			//
@@ -64,6 +67,8 @@ namespace 电工基础1本 {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(一阶电路的响应测试实验原理::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -73,12 +78,10 @@ namespace 电工基础1本 {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -102,6 +105,25 @@ namespace 电工基础1本 {
 			this->panel1->Size = System::Drawing::Size(811, 839);
 			this->panel1->TabIndex = 7;
 			// 
+			// label6
+			// 
+			this->label6->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label6->Location = System::Drawing::Point(19, 421);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(554, 87);
+			this->label6->TabIndex = 11;
+			this->label6->Text = L"当t＝τ时，UC ( τ )＝0.368E \r\n此时所对应的时间就等于τ\r\n亦可用零状态响应波形增长到0.632E所对应的时间测得，如图6－1（C）所示。\r\n";
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(23, 370);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(235, 35);
+			this->pictureBox3->TabIndex = 10;
+			this->pictureBox3->TabStop = false;
+			// 
 			// label5
 			// 
 			this->label5->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -118,9 +140,9 @@ namespace 电工基础1本 {
 			// 
 			this->label4->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label4->Location = System::Drawing::Point(19, 319);
+			this->label4->Location = System::Drawing::Point(19, 287);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(554, 61);
+			this->label4->Size = System::Drawing::Size(554, 80);
 			this->label4->TabIndex = 8;
 			this->label4->Text = L"3.时间常数τ的测定方法：\r\n用示波器测得零输入响应的波形如图6-1（a）所示。\r\n根据一阶微分方程的求解得知    \r\n";
 			// 
@@ -128,7 +150,7 @@ namespace 电工基础1本 {
 			// 
 			this->label3->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label3->Location = System::Drawing::Point(19, 239);
+			this->label3->Location = System::Drawing::Point(19, 221);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(747, 48);
 			this->label3->TabIndex = 7;
@@ -181,7 +203,7 @@ namespace 电工基础1本 {
 				static_cast<System::Byte>(134)));
 			this->label2->Location = System::Drawing::Point(19, 41);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(763, 164);
+			this->label2->Size = System::Drawing::Size(763, 154);
 			this->label2->TabIndex = 1;
 			this->label2->Text = resources->GetString(L"label2.Text");
 			// 
@@ -204,25 +226,6 @@ namespace 电工基础1本 {
 			this->pictureBox2->TabIndex = 9;
 			this->pictureBox2->TabStop = false;
 			// 
-			// pictureBox3
-			// 
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(23, 383);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(235, 35);
-			this->pictureBox3->TabIndex = 10;
-			this->pictureBox3->TabStop = false;
-			// 
-			// label6
-			// 
-			this->label6->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->label6->Location = System::Drawing::Point(19, 421);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(554, 87);
-			this->label6->TabIndex = 11;
-			this->label6->Text = L"当t＝τ时，UC ( τ )＝0.368E \r\n此时所对应的时间就等于τ\r\n亦可用零状态响应波形增长到0.632E所对应的时间测得，如图6－1（C）所示。\r\n";
-			// 
 			// 一阶电路的响应测试实验原理
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
@@ -235,11 +238,12 @@ namespace 电工基础1本 {
 			this->Controls->Add(this->panel1);
 			this->Name = L"一阶电路的响应测试实验原理";
 			this->Text = L"一阶电路的响应测试实验原理";
+			this->Load += gcnew System::EventHandler(this, &一阶电路的响应测试实验原理::一阶电路的响应测试实验原理_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -252,6 +256,8 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 	global::voice->Close();
+}
+private: System::Void 一阶电路的响应测试实验原理_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

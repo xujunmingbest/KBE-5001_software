@@ -9,6 +9,10 @@
 #include "叠加原理.h"
 #include "示波器.h"
 #include "一阶电路的响应测试.h"
+#include "串口控制模块.h"
+#include "成绩传输.h"
+
+
 namespace 电工基础1本 {
 
 	using namespace System;
@@ -51,6 +55,8 @@ namespace 电工基础1本 {
 	private: System::Windows::Forms::ToolStripMenuItem^  叠加原理ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  示波器调试ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  一阶电路的响应测试ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  电源控制模块调试ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  成绩传输调试ToolStripMenuItem;
 
 
 
@@ -101,6 +107,7 @@ namespace 电工基础1本 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(mainWnd::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->首页ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->实验ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -111,7 +118,9 @@ namespace 电工基础1本 {
 			this->设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->系统日志ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->示波器调试ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->电源控制模块调试ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->serialPort1 = (gcnew System::IO::Ports::SerialPort(this->components));
+			this->成绩传输调试ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -122,14 +131,15 @@ namespace 电工基础1本 {
 			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"楷体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
 				this->首页ToolStripMenuItem,
-					this->实验ToolStripMenuItem, this->设置ToolStripMenuItem, this->系统日志ToolStripMenuItem, this->示波器调试ToolStripMenuItem
+					this->实验ToolStripMenuItem, this->设置ToolStripMenuItem, this->系统日志ToolStripMenuItem, this->示波器调试ToolStripMenuItem, this->电源控制模块调试ToolStripMenuItem,
+					this->成绩传输调试ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->MdiWindowListItem = this->实验ToolStripMenuItem;
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(730, 28);
+			this->menuStrip1->Size = System::Drawing::Size(1039, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &mainWnd::menuStrip1_ItemClicked);
@@ -153,6 +163,7 @@ namespace 电工基础1本 {
 			// 
 			// 元件伏安特性的测试ToolStripMenuItem
 			// 
+			this->元件伏安特性的测试ToolStripMenuItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"元件伏安特性的测试ToolStripMenuItem.Image")));
 			this->元件伏安特性的测试ToolStripMenuItem->Name = L"元件伏安特性的测试ToolStripMenuItem";
 			this->元件伏安特性的测试ToolStripMenuItem->Size = System::Drawing::Size(273, 26);
 			this->元件伏安特性的测试ToolStripMenuItem->Text = L"元件伏安特性的测试";
@@ -160,6 +171,7 @@ namespace 电工基础1本 {
 			// 
 			// 基尔霍夫定律实验ToolStripMenuItem
 			// 
+			this->基尔霍夫定律实验ToolStripMenuItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"基尔霍夫定律实验ToolStripMenuItem.Image")));
 			this->基尔霍夫定律实验ToolStripMenuItem->Name = L"基尔霍夫定律实验ToolStripMenuItem";
 			this->基尔霍夫定律实验ToolStripMenuItem->Size = System::Drawing::Size(273, 26);
 			this->基尔霍夫定律实验ToolStripMenuItem->Text = L"基尔霍夫定律实验";
@@ -167,6 +179,7 @@ namespace 电工基础1本 {
 			// 
 			// 叠加原理ToolStripMenuItem
 			// 
+			this->叠加原理ToolStripMenuItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"叠加原理ToolStripMenuItem.Image")));
 			this->叠加原理ToolStripMenuItem->Name = L"叠加原理ToolStripMenuItem";
 			this->叠加原理ToolStripMenuItem->Size = System::Drawing::Size(273, 26);
 			this->叠加原理ToolStripMenuItem->Text = L"叠加原理";
@@ -174,6 +187,7 @@ namespace 电工基础1本 {
 			// 
 			// 一阶电路的响应测试ToolStripMenuItem
 			// 
+			this->一阶电路的响应测试ToolStripMenuItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"一阶电路的响应测试ToolStripMenuItem.Image")));
 			this->一阶电路的响应测试ToolStripMenuItem->Name = L"一阶电路的响应测试ToolStripMenuItem";
 			this->一阶电路的响应测试ToolStripMenuItem->Size = System::Drawing::Size(273, 26);
 			this->一阶电路的响应测试ToolStripMenuItem->Text = L"一阶电路的响应测试";
@@ -200,12 +214,27 @@ namespace 电工基础1本 {
 			this->示波器调试ToolStripMenuItem->Text = L"示波器调试";
 			this->示波器调试ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::示波器调试ToolStripMenuItem_Click);
 			// 
+			// 电源控制模块调试ToolStripMenuItem
+			// 
+			this->电源控制模块调试ToolStripMenuItem->Name = L"电源控制模块调试ToolStripMenuItem";
+			this->电源控制模块调试ToolStripMenuItem->Size = System::Drawing::Size(189, 24);
+			this->电源控制模块调试ToolStripMenuItem->Text = L"电源控制模块调试";
+			this->电源控制模块调试ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::电源控制模块调试ToolStripMenuItem_Click);
+			// 
+			// 成绩传输调试ToolStripMenuItem
+			// 
+			this->成绩传输调试ToolStripMenuItem->Name = L"成绩传输调试ToolStripMenuItem";
+			this->成绩传输调试ToolStripMenuItem->Size = System::Drawing::Size(147, 24);
+			this->成绩传输调试ToolStripMenuItem->Text = L"成绩传输调试";
+			this->成绩传输调试ToolStripMenuItem->Click += gcnew System::EventHandler(this, &mainWnd::成绩传输调试ToolStripMenuItem_Click);
+			// 
 			// mainWnd
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(730, 518);
+			this->ClientSize = System::Drawing::Size(1039, 518);
 			this->Controls->Add(this->menuStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->IsMdiContainer = true;
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"mainWnd";
@@ -373,6 +402,35 @@ private: System::Void 一阶电路的响应测试ToolStripMenuItem_Click(System::Object^ 
 	一阶电路的响应测试 ^ f = gcnew 一阶电路的响应测试();
 	f->Show();
 	this->Visible = false;
+}
+private: System::Void 电源控制模块调试ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	Form ^f = GetWindowsChild("串口控制模块");
+
+	if (f == nullptr) {
+		串口控制模块^ f = gcnew 串口控制模块;
+		f->MdiParent = this;
+		f->Name = "串口控制模块";
+		f->WindowState = FormWindowState::Maximized;
+		f->Show();
+	}
+	else {
+		f->BringToFront();
+	}
+
+}
+private: System::Void 成绩传输调试ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	Form ^f = GetWindowsChild("成绩传输");
+
+	if (f == nullptr) {
+		成绩传输^ f = gcnew 成绩传输;
+		f->MdiParent = this;
+		f->Name = "成绩传输";
+		f->WindowState = FormWindowState::Maximized;
+		f->Show();
+	}
+	else {
+		f->BringToFront();
+	}
 }
 };
 }

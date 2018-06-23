@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MdiFormControl.cpp" />
+    <ClCompile Include="SynchroShortConnection.cpp" />
     <ClCompile Include="waver.cpp" />
     <ClCompile Include="exception.cpp" />
     <ClCompile Include="json\json_reader.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="mainWnd.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="seriesPort.h" />
     <ClInclude Include="SynchroShortConnection.h" />
     <ClInclude Include="SysLog.h" />
@@ -204,6 +206,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="一阶电路的响应测试实验目的.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="串口控制模块.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="单元测试.h" />
@@ -276,6 +281,9 @@
     <ClInclude Include="底部.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="成绩传输.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="示波器.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -313,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="一阶电路的响应测试实验目的.resx">
       <DependentUpon>一阶电路的响应测试实验目的.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="串口控制模块.resx">
+      <DependentUpon>串口控制模块.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="叠加原理.resx">
       <DependentUpon>叠加原理.h</DependentUpon>
@@ -383,6 +394,9 @@
     <EmbeddedResource Include="底部.resx">
       <DependentUpon>底部.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="成绩传输.resx">
+      <DependentUpon>成绩传输.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="示波器.resx">
       <DependentUpon>示波器.h</DependentUpon>
     </EmbeddedResource>
@@ -436,6 +450,9 @@
     </Xml>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="com开发">
+      <HintPath>..\..\..\csharp\com开发\com开发\bin\Debug\com开发.dll</HintPath>
+    </Reference>
     <Reference Include="LedWatch">
       <HintPath>..\..\..\csharp\LedWatch\LedWatch\bin\Debug\LedWatch.dll</HintPath>
     </Reference>
@@ -474,6 +491,12 @@
     <None Include="json\json_internalmap.inl" />
     <None Include="json\json_valueiterator.inl" />
     <None Include="json\sconscript" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="电工基础1本.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\图片\公司.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

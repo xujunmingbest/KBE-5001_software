@@ -53,7 +53,7 @@ bool 基尔霍夫定理原理动画IsOpened = false;
 MsgQueue SysLogQue;
 //程序启动的时候 消息队列初始化
 void MsgQueueRegister() {
-	SysLogQue.QueueRegister(string("系统日志"));
+	SysLogQue.QueueRegister(string("电工基础1本系统日志"));
 }
 
  

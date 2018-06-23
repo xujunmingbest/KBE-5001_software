@@ -123,6 +123,9 @@
     <ClCompile Include="MdiFormControl.cpp">
       <Filter>tool工具</Filter>
     </ClCompile>
+    <ClCompile Include="SynchroShortConnection.cpp">
+      <Filter>成绩上传</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainWnd.h">
@@ -320,6 +323,15 @@
     <ClInclude Include="一阶电路的响应测试实验内容.h">
       <Filter>一阶电路的响应测试</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="串口控制模块.h">
+      <Filter>登入框&amp;设置</Filter>
+    </ClInclude>
+    <ClInclude Include="成绩传输.h">
+      <Filter>登入框&amp;设置</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mainWnd.resx">
@@ -412,6 +424,27 @@
     <EmbeddedResource Include="一阶电路的响应测试.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="一阶电路的响应测试实验内容.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一阶电路的响应测试实验原理.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一阶电路的响应测试实验器件.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一阶电路的响应测试实验步骤.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一阶电路的响应测试实验目的.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="串口控制模块.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="成绩传输.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="pz.xml">
@@ -432,5 +465,15 @@
       <Filter>json</Filter>
     </None>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="电工基础1本.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\图片\公司.ico">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

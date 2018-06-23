@@ -14,7 +14,7 @@ using namespace 电工基础1本;
 
 void Exceptioninit();
 int String_to_Int(String^in);
-
+string Int_to_string(int in);
 
 class CControl
 {
@@ -282,7 +282,7 @@ public:
 
 public ref class global {
 public:
-	static String ^userName;
+	static String ^Pupilage;
 
 	static Thread ^ t;
 
@@ -306,3 +306,6 @@ void CloseAllMidchild(Form ^Parent);
 Form^ GetWindowsChild(String ^FormName, Form ^Parent);
 
 void MsgQueueRegister();
+
+
+#define DATATEMP "datatemp/"

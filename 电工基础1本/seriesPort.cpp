@@ -17,7 +17,7 @@ bool SerialControl::serialPortOpen(String ^ PortName) {
 		serialPort1->ReceivedBytesThreshold = 1;
 		serialPort1->DataBits = 8;
 		serialPort1->Parity = System::IO::Ports::Parity::None; //无奇偶校验位
-		serialPort1->ReadTimeout = 1000;											   //serialPort1->StopBits = System::IO::Ports::StopBits::One;//设置停止位为1
+		serialPort1->ReadTimeout = 100;											   //serialPort1->StopBits = System::IO::Ports::StopBits::One;//设置停止位为1
 		serialPort1->Open(); //串口打开
 	}
 	catch (System::Exception ^e) {
@@ -111,7 +111,34 @@ string SerialControl::Recv(int len) {
 	
 	return out;
 }
+string SerialControl::RecvNoCrc(int len)
+{
+	string out;
+	cli::array<unsigned char>^ rbuff = gcnew cli::array<unsigned char>(len);
+	try {
+		int actrecvlen = 0;
+		cli::array<unsigned char>^ buff = gcnew cli::array<unsigned char>(100);
+		while (actrecvlen < len) {
+			int recvlen = serialPort1->Read(buff, 0, len - actrecvlen);// 估计是可以返回 字符串的 读取个数
+			Array::Copy(buff, 0, rbuff, actrecvlen, recvlen);
+			cli::pin_ptr<unsigned char> c = &rbuff[actrecvlen];
+			char *pinp = (char *)c;
+			out += string(pinp, recvlen);
+			actrecvlen += recvlen;
+			if (recvlen <= 0) {
+				MessageBox::Show("串口退出");
+				throw "串口退出";
+			}
+		}
+	}
+	catch (System::Exception ^e) {
 
+		cout << "串口退出" << endl;
+		return "";
+	}
+
+	return out;
+}
 //把数据包变成
 string HTOA(string &h) {
 	int a;
@@ -295,14 +322,21 @@ bool SerialControlSource::SetDirectVoltage(int Voltage)
 	buff[3] = 0x01;
 	buff[4] = (_Voltage & 0xffff) >> 8;
 	buff[5] = _Voltage & 0xff;
-
-	if( !sc->Send(string(buff, 6)) ){
-		SYS_LOG_ERROR("控制电源设置直流电压失败");
-		return false;
+	
+	for (int i = 0; i < 50;i++) {
+		if (!sc->Send(string(buff, 6))) {
+			SYS_LOG_ERROR("控制电源设置直流电压失败");
+			return false;
+		}
+		string r = sc->Recv(8);
+		if (r.length() == 8) {
+			SYS_LOG_ERROR("控制电源设置直流电压失败");
+			return true; 
+		}
 	}
-	return true;
-	//string r = sc->Recv(8);
+	return false;
 }
+
 bool SerialControlSource::SetDirectCurrent(int Current)
 {
 	int _Current = Current;
@@ -324,7 +358,7 @@ bool SerialControlSource::SetDirectCurrent(int Current)
 
 bool SerialControlSource::SetAlternatingVoltage(char Id, int Voltage)
 {
-	Sleep(1000);
+	
 	int i = Voltage % 100;
 	int _Voltage = Voltage ;
 	char buff[8];
@@ -369,4 +403,29 @@ bool SerialControlSource::CloseSource(int Id)
 	}
 	Sleep(5000);
 	return true;
+}
+
+
+/*******函数无返回值*******/
+bool SerialControlSource::SetWaveForm(int WaveType) {
+	char buff[4];
+	buff[0] = 'b';
+	buff[1] = 'w';
+	buff[3] = 0x0a;
+	switch (WaveType) {
+	case SINWAVE:
+		buff[2] = '0'; break;
+	case TRIANGULARWAVE:
+		buff[2] = '1'; break;
+	case SQUAREWAVE:
+		buff[2] = '2'; break;
+	}
+	return sc->SendNoCrc(string(buff,4));
+}
+
+bool SerialControlSource::SetFrequency(int f) {
+	char buff[10];
+	snprintf(buff, 10,"%09d", f);
+	
+	return sc->SendNoCrc(string("bf")+ buff + "\r");
 }

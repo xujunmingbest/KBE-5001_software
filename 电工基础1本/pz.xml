@@ -7,7 +7,7 @@
     <RepeaterIp>47.94.219.135</RepeaterIp> <!--装发服务器ip-->
     <RepeaterPort>10001</RepeaterPort> <!--装发服务器端口-->
     <SerialHandle>COM19</SerialHandle> <!--测试仪器力控包接收-->
-    <SerialControlSource>COM16</SerialControlSource> <!--控制电源-->
+    <SerialControlSource>COM10</SerialControlSource> <!--控制电源-->
     <GradeIp>127.0.0.1</GradeIp> <!--成绩上传IP-->
     <GradePort>10009</GradePort> <!--成绩上传端口-->
 </Info>

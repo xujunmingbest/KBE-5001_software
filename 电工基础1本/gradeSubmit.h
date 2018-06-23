@@ -4,6 +4,7 @@
 #include<map>
 using namespace std;
 
+
 #define uint unsigned int 
 
 
@@ -16,16 +17,7 @@ using namespace std;
 	{ 6,"一阶电路的响应测试"},
 };
 
-/*
-string GetTrialNameById(int i) {
-	static map<int, string> Grades = {
-	   { 1,"元件伏安特性测试" },
-	   { 2,"基尔霍夫定理" },
-	   { 3,"叠加原理" },
-	};
 
-	return Grades[i];
-}*/
 #pragma pack(push,1)
 
 struct FileHead
@@ -37,19 +29,21 @@ struct FileHead
 };
 
 struct Head {
-	int TrialCode;
+	char RequestType[50]; //请求类型 SAVEFILE|RETMSG|
+	char MsgType[50];  // 报文类型 XML/JSON/PIC
+	int TrialCode; 
 	char TrialName[100];
 	char DateTime[20]; //20180528-165401
+	char Pupilage[150]; // 学生身份
+	char FileName[200]; //文件名称
 };
 
+#define HEADFIRSTLEN sizeof(Head)
 //基尔霍夫定理实验结构体  
 //relative error = r_v
 //measured value = m_v
 //calculated value = c_v
 struct KirchhoffTheorem {
-	char StuName[100];
-	uint XueHao;
-	char DateTime[20];
 	int I1_c_v; //计算值 
 	int I1_m_v; //测量值
 	int I1_r_e; //相对误差
